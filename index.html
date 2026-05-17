@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IC Business Systems</title>
+  <meta
+    name="description"
+    content="Websites, customer follow-up, and business automation for small businesses that want to grow without the chaos."
+  >
+  <meta name="theme-color" content="#090909">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css?v=7">
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap topbar-row">
+      <a class="brand" href="#hero" aria-label="IC Business Systems home">
+        <span class="brand-mark" aria-hidden="true">
+          <span class="brand-mark-letters">
+            <span class="brand-mark-i">I</span><span class="brand-mark-c">C</span>
+          </span>
+        </span>
+        <span class="brand-copy">
+          <span class="brand-name">
+            <span class="brand-name-main">IC Business</span>
+            <span class="brand-name-accent">Systems</span>
+          </span>
+          <span class="brand-tag" data-i18n="brand.tag">Built for real small businesses</span>
+          <span class="brand-motto" data-i18n="brand.motto">Automate | Optimize | Grow</span>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="#services" data-i18n="nav.services">Services</a>
+        <a href="#fit" data-i18n="nav.fit">Who It's For</a>
+        <a href="#faq" data-i18n="nav.faq">FAQ</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+      </nav>
+
+      <div class="topbar-actions">
+        <div class="lang-toggle" role="group" aria-label="Language switcher">
+          <button type="button" class="lang-button is-active" data-lang-target="en">EN</button>
+          <button type="button" class="lang-button" data-lang-target="es">ES</button>
+        </div>
+        <a class="button button-small" href="#quote-form" data-i18n="cta.letstalk">Let's Talk</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero" class="hero">
+      <div class="hero-orbit hero-orbit-left" aria-hidden="true"></div>
+      <div class="hero-orbit hero-orbit-right" aria-hidden="true"></div>
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow" data-i18n="hero.eyebrow">Websites, customer leads, and business automation</p>
+          <h1 data-i18n="hero.title">Get more leads, save time, and stay on top of customers.</h1>
+          <p class="hero-text" data-i18n="hero.text">
+            Websites, customer follow-up, and business automation for small businesses that want to grow without the chaos.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button" href="#quote-form" data-i18n="hero.primaryCta">Get a quote</a>
+            <a class="button button-ghost" href="#showcase" data-i18n="hero.secondaryCta">See before and after</a>
+          </div>
+
+          <ul class="hero-points" aria-label="Key business outcomes">
+            <li data-i18n="hero.point1">Look more professional online</li>
+            <li data-i18n="hero.point2">Stop losing leads in the shuffle</li>
+            <li data-i18n="hero.point3">Keep customer follow-up moving</li>
+          </ul>
+
+          <div class="signal-row">
+            <span data-i18n="signal.one">Built for owner-operators</span>
+            <span data-i18n="signal.two">Blue-collar aware</span>
+            <span data-i18n="signal.three">Plain-English systems</span>
+          </div>
+
+          <div class="hero-proof">
+            <div class="proof-chip">
+              <span class="proof-chip-label" data-i18n="hero.proof1.label">What owners usually want</span>
+              <strong data-i18n="hero.proof1.value">More calls, better follow-up, less chaos</strong>
+            </div>
+            <div class="proof-chip">
+              <span class="proof-chip-label" data-i18n="hero.proof2.label">What this is built for</span>
+              <strong data-i18n="hero.proof2.value">Small businesses that need cleaner systems</strong>
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero-form-shell">
+          <div id="quote-form" class="form-card">
+            <p class="form-kicker" data-i18n="form.kicker">Get a quote</p>
+            <h2 data-i18n="form.title">Tell me what your business needs.</h2>
+            <p class="form-text" data-i18n="form.text">
+              Fill this out and I can look at what is messy, what is costing you time, and where the biggest upgrade is.
+            </p>
+
+            <form
+              class="quote-form"
+              action="https://formsubmit.co/irvingcarrion1@gmail.com"
+              method="POST"
+            >
+              <input type="hidden" name="_subject" value="IC Business Systems Quote Request">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_template" value="table">
+              <input type="hidden" name="_autoresponse" value="Thanks for reaching out to IC Business Systems. I got your request and will review it soon.">
+              <input type="text" name="_honey" class="hp-field" tabindex="-1" autocomplete="off">
+
+              <label class="field">
+                <span data-i18n="form.name">Name</span>
+                <input type="text" name="name" required autocomplete="name">
+              </label>
+
+              <label class="field">
+                <span data-i18n="form.business">Business Name</span>
+                <input type="text" name="business_name" required autocomplete="organization">
+              </label>
+
+              <div class="field-row">
+                <label class="field">
+                  <span data-i18n="form.email">Email</span>
+                  <input type="email" name="email" required autocomplete="email">
+                </label>
+
+                <label class="field">
+                  <span data-i18n="form.phone">Phone</span>
+                  <input type="tel" name="phone" required autocomplete="tel">
+                </label>
+              </div>
+
+              <label class="field">
+                <span data-i18n="form.need">What do you need help with?</span>
+                <select name="project_type" required>
+                  <option value="" selected disabled data-i18n="form.select">Select one</option>
+                  <option value="website" data-i18n="form.option1">Website</option>
+                  <option value="lead-follow-up" data-i18n="form.option2">Lead follow-up</option>
+                  <option value="automation" data-i18n="form.option3">Business automation</option>
+                  <option value="not-sure" data-i18n="form.option4">Not sure yet</option>
+                </select>
+              </label>
+
+              <label class="field">
+                <span data-i18n="form.message">What feels messy right now?</span>
+                <textarea name="message" rows="4" placeholder="Missed calls, weak website, bad follow-up, too much admin..." data-i18n-placeholder="form.placeholder"></textarea>
+              </label>
+
+              <button type="submit" class="button button-wide" data-i18n="form.submit">Send request</button>
+            </form>
+
+            <p class="form-note" data-i18n="form.note">You leave your phone and email once. I review the mess, then I reach out with the best next move.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="trust">
+      <div class="wrap trust-grid">
+        <div class="trust-intro">
+          <p class="section-kicker" data-i18n="trust.kicker">Why this is different</p>
+          <h2 data-i18n="trust.title">Built for real small businesses.</h2>
+        </div>
+
+        <div class="trust-copy">
+          <p class="trust-lede" data-i18n="trust.lede">
+            Built by someone who understands blue-collar businesses and the mess that shows up when the work is good but the system behind it is not.
+          </p>
+          <div class="trust-compare">
+            <article class="compare-card compare-card-old">
+              <p class="compare-label" data-i18n="trust.old.label">What owners usually deal with</p>
+              <ul class="compare-list">
+                <li data-i18n="trust.old.item1">Outdated website</li>
+                <li data-i18n="trust.old.item2">Slow follow-up</li>
+                <li data-i18n="trust.old.item3">Leads slipping through</li>
+              </ul>
+            </article>
+
+            <article class="compare-card compare-card-new">
+              <p class="compare-label" data-i18n="trust.new.label">What this is built to fix</p>
+              <ul class="compare-list">
+                <li data-i18n="trust.new.item1">Cleaner digital presence</li>
+                <li data-i18n="trust.new.item2">Faster customer response</li>
+                <li data-i18n="trust.new.item3">More organized lead flow</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="diagnostic alt-surface">
+      <div class="wrap">
+        <div class="section-head section-head-tight">
+          <p class="section-kicker" data-i18n="diagnostic.kicker">What this usually fixes</p>
+          <h2 data-i18n="diagnostic.title">Most owners do not need more software. They need fewer leaks.</h2>
+          <p data-i18n="diagnostic.text">
+            These are the problems that usually cost small businesses money before they ever realize it.
+          </p>
+        </div>
+
+        <div class="diagnostic-grid">
+          <article class="diag-card">
+            <p class="card-number">01</p>
+            <h3 data-i18n="diagnostic.card1.title">Leads disappear after the first call or message</h3>
+            <p data-i18n="diagnostic.card1.text">The site looks fine, but there is no clean follow-up system behind it, so people cool off and disappear.</p>
+          </article>
+
+          <article class="diag-card">
+            <p class="card-number">02</p>
+            <h3 data-i18n="diagnostic.card2.title">The business does good work but looks behind online</h3>
+            <p data-i18n="diagnostic.card2.text">Weak websites and messy contact flow make a legit business feel smaller and less trustworthy than it really is.</p>
+          </article>
+
+          <article class="diag-card">
+            <p class="card-number">03</p>
+            <h3 data-i18n="diagnostic.card3.title">Too much admin keeps landing on the owner</h3>
+            <p data-i18n="diagnostic.card3.text">When everything depends on memory, manual texting, and back-and-forth, the business starts dragging on the operator.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="services">
+      <div class="wrap">
+        <div class="services-layout">
+          <div class="services-copy">
+            <p class="section-kicker" data-i18n="services.kicker">Services</p>
+            <h2 data-i18n="services.title">Three practical upgrades that usually move the business fastest.</h2>
+            <p data-i18n="services.text">
+              Less theory, less tech talk, more clean fixes that make the business look better and run better.
+            </p>
+          </div>
+
+          <div class="services-rail">
+            <article class="service-row">
+              <div class="service-row-head">
+                <p class="card-number">01</p>
+                <h3 data-i18n="services.card1.title">Websites</h3>
+              </div>
+              <p data-i18n="services.card1.text">
+                Cleaner sites that make the business feel more legit the second someone lands on it.
+              </p>
+            </article>
+
+            <article class="service-row">
+              <div class="service-row-head">
+                <p class="card-number">02</p>
+                <h3 data-i18n="services.card2.title">Lead Follow-Up</h3>
+              </div>
+              <p data-i18n="services.card2.text">
+                Better quote capture, faster response, and less dead time between inquiry and booked job.
+              </p>
+            </article>
+
+            <article class="service-row">
+              <div class="service-row-head">
+                <p class="card-number">03</p>
+                <h3 data-i18n="services.card3.title">Business Automation</h3>
+              </div>
+              <p data-i18n="services.card3.text">
+                Time-saving systems that cut repeat admin and keep the owner from being the whole system.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="showcase" class="showcase alt-surface">
+      <div class="wrap showcase-grid">
+        <div class="showcase-copy">
+          <p class="section-kicker" data-i18n="showcase.kicker">Before and after</p>
+          <h2 data-i18n="showcase.title">The difference should be obvious in five seconds.</h2>
+          <p data-i18n="showcase.text">
+            The upgrade is not just prettier design. It is clearer trust, cleaner quote capture, and less friction for the next step.
+          </p>
+
+          <div class="showcase-points">
+            <div class="showcase-point">
+              <span class="showcase-point-value" data-i18n="showcase.point1.value">Before</span>
+              <span class="showcase-point-label" data-i18n="showcase.point1.label">Outdated, generic, easy to ignore</span>
+            </div>
+            <div class="showcase-point">
+              <span class="showcase-point-value" data-i18n="showcase.point2.value">After</span>
+              <span class="showcase-point-label" data-i18n="showcase.point2.label">Sharper trust and a clear next step</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="showcase-visual">
+          <div class="showcase-compare">
+            <article class="showcase-frame showcase-frame-before">
+              <p class="showcase-frame-label" data-i18n="showcase.frameBefore.label">Before</p>
+              <div class="showcase-frame-window">
+                <div class="showcase-frame-bar">
+                  <span></span><span></span><span></span>
+                </div>
+                <div class="showcase-frame-body showcase-frame-body-before">
+                  <div class="showcase-stack">
+                    <span class="showcase-line showcase-line-wide"></span>
+                    <span class="showcase-line showcase-line-mid"></span>
+                    <span class="showcase-line showcase-line-short"></span>
+                  </div>
+                  <div class="showcase-note-block">
+                    <span data-i18n="showcase.frameBefore.item1">Weak first impression</span>
+                    <span data-i18n="showcase.frameBefore.item2">No clear next step</span>
+                    <span data-i18n="showcase.frameBefore.item3">Leads cool off</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="showcase-frame showcase-frame-after">
+              <p class="showcase-frame-label" data-i18n="showcase.frameAfter.label">After</p>
+              <div class="showcase-frame-window">
+                <div class="showcase-frame-bar">
+                  <span></span><span></span><span></span>
+                </div>
+                <div class="showcase-frame-body showcase-frame-body-after">
+                  <div class="mockup-beam" aria-hidden="true"></div>
+                  <div class="mockup-hero">
+                    <p class="mockup-kicker" data-i18n="showcase.mockup.kicker">Premium business presence</p>
+                    <h3 data-i18n="showcase.mockup.title">Get seen. Get trusted. Get more inquiries.</h3>
+                    <p class="mockup-subline" data-i18n="showcase.mockup.subline">A sharper offer, stronger tone, and a quote path people actually follow.</p>
+                  </div>
+                  <div class="mockup-voice-row">
+                    <span class="mockup-voice-chip" data-i18n="showcase.mockup.badge1">Clear offer</span>
+                    <span class="mockup-voice-chip" data-i18n="showcase.mockup.badge2">Brand voice</span>
+                    <span class="mockup-voice-chip" data-i18n="showcase.mockup.badge3">Bilingual ready</span>
+                  </div>
+                  <div class="mockup-stage">
+                    <div class="mockup-stage-copy">
+                      <strong data-i18n="showcase.mockup.stageTitle">A business page with real presence</strong>
+                      <p data-i18n="showcase.mockup.stageText">The message gets tighter, the hierarchy gets cleaner, and the next step stops feeling random.</p>
+                    </div>
+                    <div class="mockup-cards">
+                      <article class="mockup-card mockup-card-accent">
+                        <strong data-i18n="showcase.mockup.card1.title">Quote capture</strong>
+                        <span data-i18n="showcase.mockup.card1.text">Clear form with the right questions</span>
+                      </article>
+                      <article class="mockup-card">
+                        <strong data-i18n="showcase.mockup.card2.title">Fast follow-up</strong>
+                        <span data-i18n="showcase.mockup.card2.text">Cleaner response path for new leads</span>
+                      </article>
+                      <article class="mockup-card">
+                        <strong data-i18n="showcase.mockup.card3.title">Better trust</strong>
+                        <span data-i18n="showcase.mockup.card3.text">Stronger tone, sharper first impression</span>
+                      </article>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="fit" class="fit">
+      <div class="wrap fit-grid">
+        <div>
+          <p class="section-kicker" data-i18n="fit.kicker">Who it's for</p>
+          <h2 data-i18n="fit.title">Broad enough for any small business. Strongest for operators who wear a lot of hats.</h2>
+        </div>
+
+        <ul class="fit-list">
+          <li data-i18n="fit.item1">Local service businesses</li>
+          <li data-i18n="fit.item2">Contractors and trades</li>
+          <li data-i18n="fit.item3">Owner-operators</li>
+          <li data-i18n="fit.item4">Small businesses with outdated websites</li>
+          <li data-i18n="fit.item5">Teams that need better lead handling and follow-up</li>
+          <li data-i18n="fit.item6">Businesses that want to look sharper without getting buried in tech</li>
+        </ul>
+
+        <div class="fit-visual">
+          <div class="fit-panel">
+            <p class="fit-preview-kicker" data-i18n="fit.visual.kicker">What a better system looks like</p>
+            <h3 data-i18n="fit.visual.title">Cleaner site. Faster follow-up. More confidence.</h3>
+            <p data-i18n="fit.visual.text">A business should feel organized before someone even makes the first call.</p>
+
+            <div class="fit-stack">
+              <div class="fit-strip">
+                <span class="fit-strip-label" data-i18n="fit.visual.metric1.label">Quote requests</span>
+                <strong data-i18n="fit.visual.metric1.value">Captured even when you are busy</strong>
+              </div>
+              <div class="fit-strip">
+                <span class="fit-strip-label" data-i18n="fit.visual.metric2.label">First impression</span>
+                <strong data-i18n="fit.visual.metric2.value">Feels sharper in under five seconds</strong>
+              </div>
+              <div class="fit-strip">
+                <span class="fit-strip-label" data-i18n="fit.visual.metric3.label">Owner workload</span>
+                <strong data-i18n="fit.visual.metric3.value">Less chasing and back-and-forth</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="process" class="process">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="section-kicker" data-i18n="process.kicker">How it works</p>
+          <h2 data-i18n="process.title">Three moves, then the business feels sharper.</h2>
+        </div>
+
+        <div class="process-track">
+          <article class="process-node">
+            <span class="process-step">01</span>
+            <h3 data-i18n="process.card1.title">We look at where customers are slipping through</h3>
+            <p data-i18n="process.card1.text">Website, follow-up, contact flow, and where things are getting missed.</p>
+          </article>
+
+          <article class="process-node">
+            <span class="process-step">02</span>
+            <h3 data-i18n="process.card2.title">We build a cleaner system</h3>
+            <p data-i18n="process.card2.text">A better site, stronger lead flow, or a simpler process that saves time.</p>
+          </article>
+
+          <article class="process-node">
+            <span class="process-step">03</span>
+            <h3 data-i18n="process.card3.title">You get a business that looks better and runs smoother</h3>
+            <p data-i18n="process.card3.text">More trust, better organization, and fewer customer opportunities getting lost.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="faq">
+      <div class="wrap faq-grid">
+        <div class="faq-intro">
+          <p class="section-kicker" data-i18n="faq.kicker">Frequently asked questions</p>
+          <h2 data-i18n="faq.title">The questions most owners ask before they reach out.</h2>
+          <p data-i18n="faq.text">
+            If you are not a technical person, that is fine. This should still make sense.
+          </p>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary data-i18n="faq.q1">What kind of businesses do you work with?</summary>
+            <div class="faq-answer">
+              <p data-i18n="faq.a1">Any small business, but this is especially strong for local service businesses, trades, owner-operators, and businesses that need better follow-up and a stronger online presence.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary data-i18n="faq.q2">Do I need a brand new website?</summary>
+            <div class="faq-answer">
+              <p data-i18n="faq.a2">Not always. Sometimes the best move is a cleaner website. Sometimes it is fixing contact flow, follow-up, or how leads are being handled. The point is solving the real problem, not forcing a rebuild.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary data-i18n="faq.q3">What does business automation actually mean?</summary>
+            <div class="faq-answer">
+              <p data-i18n="faq.a3">It means setting up simple systems that save time and reduce missed opportunities. That could be lead follow-up, inquiry routing, reminders, intake, or repetitive admin work that keeps slowing the business down.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary data-i18n="faq.q4">Do I need to understand any of the tech?</summary>
+            <div class="faq-answer">
+              <p data-i18n="faq.a4">No. The whole point is to make this easier to use, not harder to understand. The work should feel clear on your side and useful in the real business.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary data-i18n="faq.q5">Can you help bilingual businesses too?</summary>
+            <div class="faq-answer">
+              <p data-i18n="faq.a5">Yes. If your customers move between English and Spanish, the website and customer flow can be built to support that more naturally.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary data-i18n="faq.q6">How much does this usually cost?</summary>
+            <div class="faq-answer">
+              <p data-i18n="faq.a6">It depends on what actually needs to be fixed. Some businesses need a cleaner website. Some need follow-up and intake fixed first. The quote form helps me see the real problem so I can recommend the right scope instead of guessing.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary data-i18n="faq.q7">How long does this usually take?</summary>
+            <div class="faq-answer">
+              <p data-i18n="faq.a7">Smaller fixes can move fast. Bigger builds take longer. The first step is figuring out whether you need one clean fix or a fuller system build.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary data-i18n="faq.q8">How do we get started?</summary>
+            <div class="faq-answer">
+              <p data-i18n="faq.a8">Fill out the quote form, leave your phone and email, and explain what feels messy right now. From there, I can look at what the biggest win is and what the next move should be.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="wrap contact-shell">
+        <div class="contact-copy">
+          <p class="section-kicker" data-i18n="contact.kicker">Contact</p>
+          <h2 data-i18n="contact.title">Need a better website, better follow-up, or a system that saves time?</h2>
+          <p data-i18n="contact.text">
+            Start with the quote form above, or reach out directly if you already know what you need.
+          </p>
+
+          <div class="contact-actions">
+            <a class="button" href="tel:9546109284" data-i18n="contact.call">Call or text</a>
+            <a class="button button-ghost" href="mailto:irvingcarrion1@gmail.com" data-i18n="contact.email">Email for now</a>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-item">
+            <span class="contact-label" data-i18n="contact.phoneLabel">Phone</span>
+            <a href="tel:9546109284">954.610.9284</a>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label" data-i18n="contact.emailLabel">Email</span>
+            <a href="mailto:irvingcarrion1@gmail.com">irvingcarrion1@gmail.com</a>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label" data-i18n="contact.websiteLabel">Website</span>
+            <span data-i18n="contact.websiteValue">Domain coming next</span>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label" data-i18n="contact.igLabel">Instagram</span>
+            <span data-i18n="contact.igValue">Brand page coming next</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-row">
+      <div class="footer-brand">
+        <span class="footer-brand-mark" aria-hidden="true">
+          <span class="brand-mark-letters">
+            <span class="brand-mark-i">I</span><span class="brand-mark-c">C</span>
+          </span>
+        </span>
+        <p data-i18n="footer.name">IC Business Systems</p>
+      </div>
+      <p data-i18n="footer.text">Built for small businesses that want to grow without the chaos.</p>
+    </div>
+  </footer>
+
+  <div class="mobile-cta">
+    <a class="button mobile-cta-main" href="#quote-form" data-i18n="cta.letstalk">Get Quote</a>
+    <a class="button button-ghost mobile-cta-side" href="tel:9546109284" data-i18n="contact.call">Call or text</a>
+  </div>
+
+  <script src="./script.js?v=7"></script>
+</body>
+</html>
