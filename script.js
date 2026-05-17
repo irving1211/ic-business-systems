@@ -510,6 +510,9 @@ const setMenuOpen = (open) => {
   if (!hamburger || !mobileMenu) return;
   hamburger.classList.toggle("is-open", open);
   hamburger.setAttribute("aria-expanded", open ? "true" : "false");
+  const openLabel = hamburger.dataset.labelOpen || "Open menu";
+  const closeLabel = hamburger.dataset.labelClose || "Close menu";
+  hamburger.setAttribute("aria-label", open ? closeLabel : openLabel);
   mobileMenu.classList.toggle("is-open", open);
   mobileMenu.setAttribute("aria-hidden", open ? "false" : "true");
   document.body.classList.toggle("menu-open", open);

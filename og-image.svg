@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <radialGradient id="glow" cx="22%" cy="28%" r="55%">
+      <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="#D4AF37" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="markGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E8C75F"/>
+      <stop offset="100%" stop-color="#A8842A"/>
+    </linearGradient>
+    <linearGradient id="ruleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#D4AF37" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#D4AF37" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#D4AF37" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="#0A0A0A"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+
+  <rect x="64" y="64" width="120" height="120" rx="16" fill="url(#markGrad)" stroke="#E8C75F" stroke-width="1"/>
+  <text x="124" y="128" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-weight="700" font-size="68" fill="#0A0A0A" text-anchor="middle" dominant-baseline="middle">IC</text>
+
+  <text x="64" y="290" font-family="'Inter', system-ui, sans-serif" font-size="22" font-weight="600" letter-spacing="6" fill="#D4AF37">IC BUSINESS SYSTEMS</text>
+
+  <text x="64" y="380" font-family="Georgia, 'Times New Roman', serif" font-weight="600" font-size="76" fill="#FFFFFF">Sharper sites.</text>
+  <text x="64" y="468" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-weight="500" font-size="76" fill="#D4AF37">Cleaner systems.</text>
+
+  <rect x="64" y="500" width="240" height="2" fill="url(#ruleGrad)"/>
+
+  <text x="64" y="552" font-family="'Inter', system-ui, sans-serif" font-size="22" font-weight="400" fill="#C9C5BD">Websites &#183; Lead follow-up &#183; Business automation</text>
+  <text x="64" y="586" font-family="'Inter', system-ui, sans-serif" font-size="18" font-weight="500" letter-spacing="2" fill="#8B8780">BILINGUAL EN / ES &#183; LAWRENCE, MA</text>
+</svg>
