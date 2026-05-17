@@ -251,16 +251,18 @@ p { margin: 0; }
 
 .topbar-actions { display: flex; align-items: center; gap: 14px; }
 
-.topbar-phone {
-  font-family: var(--serif);
+.topbar-email {
+  font-family: var(--sans);
   font-weight: 500;
-  font-size: 16px;
-  color: var(--text);
-  letter-spacing: -0.005em;
+  font-size: 13.5px;
+  color: var(--text-2);
+  letter-spacing: 0.01em;
   white-space: nowrap;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 1px;
 }
 
-.topbar-phone:hover { color: var(--gold); }
+.topbar-email:hover { color: var(--gold); border-bottom-color: var(--gold); }
 
 .lang-toggle {
   display: inline-flex;
@@ -1083,11 +1085,12 @@ section { padding: var(--pad-section) 0; position: relative; }
   font-family: var(--serif);
   font-weight: 500;
   font-style: italic;
-  font-size: clamp(44px, 6.5vw, 72px);
+  font-size: clamp(28px, 4.4vw, 48px);
   color: var(--text);
   margin: 32px 0 24px;
-  letter-spacing: -0.02em;
-  line-height: 1;
+  letter-spacing: -0.015em;
+  line-height: 1.1;
+  word-break: break-all;
 }
 
 .contact-phone:hover { color: var(--gold); }
@@ -1218,7 +1221,7 @@ section { padding: var(--pad-section) 0; position: relative; }
 }
 
 @media (max-width: 820px) {
-  .topbar-phone { display: none; }
+  .topbar-email { display: none; }
   .nav { display: none; }
   .hamburger { display: inline-flex; }
   .button-small { display: none; }
@@ -1261,7 +1264,7 @@ section { padding: var(--pad-section) 0; position: relative; }
   .lang-toggle { display: none; }
   .brand-tag { display: none; }
   .form-card { padding: 22px 20px; }
-  .contact-phone { font-size: 40px; }
+  .contact-phone { font-size: 26px; }
   .contact-actions .button { width: 100%; }
   .mobile-cta .button { font-size: 12px; padding: 12px 10px; letter-spacing: 0.05em; }
 }
