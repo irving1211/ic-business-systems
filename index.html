@@ -3,100 +3,146 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IC Business Systems</title>
+  <title>IC Business Systems — Sharper sites, cleaner lead follow-up, small business automation</title>
   <meta
     name="description"
-    content="Websites, customer follow-up, and business automation for small businesses that want to grow without the chaos."
+    content="Websites, lead follow-up, and business automation for local service businesses, contractors, and owner-operators. Bilingual EN/ES. Built by a working tradesman in Lawrence, MA."
   >
-  <meta name="theme-color" content="#090909">
+  <meta name="theme-color" content="#0A0A0A">
+  <meta name="color-scheme" content="dark">
+  <link rel="canonical" href="https://irving1211.github.io/ic-business-systems/">
+
+  <!-- Open Graph / social preview -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="IC Business Systems">
+  <meta property="og:title" content="IC Business Systems — Sharper sites, cleaner lead follow-up, small business automation">
+  <meta property="og:description" content="Websites, lead follow-up, and business automation for local service businesses, contractors, and owner-operators. Bilingual EN/ES.">
+  <meta property="og:url" content="https://irving1211.github.io/ic-business-systems/">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="es_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="IC Business Systems">
+  <meta name="twitter:description" content="Sharper sites. Cleaner lead follow-up. Small-business automation, plain English.">
+
+  <!-- Favicon (inline SVG) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%230A0A0A'/><text x='50%25' y='54%25' font-family='Georgia, serif' font-style='italic' font-size='36' font-weight='700' fill='%23D4AF37' text-anchor='middle' dominant-baseline='middle'>IC</text></svg>">
+
+  <!-- Structured data: LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "IC Business Systems",
+    "description": "Websites, lead follow-up, and small-business automation for local service businesses, contractors, and owner-operators.",
+    "telephone": "+1-954-610-9284",
+    "email": "irvingcarrion1@gmail.com",
+    "url": "https://irving1211.github.io/ic-business-systems/",
+    "areaServed": [
+      {"@type": "AdministrativeArea", "name": "Massachusetts"},
+      {"@type": "City", "name": "Lawrence, MA"},
+      {"@type": "City", "name": "Framingham, MA"}
+    ],
+    "founder": {"@type": "Person", "name": "Irving Carrion"},
+    "knowsLanguage": ["en", "es"],
+    "priceRange": "$$"
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css?v=7">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;0,700;1,500;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css?v=8">
 </head>
 <body>
   <header class="topbar">
     <div class="wrap topbar-row">
       <a class="brand" href="#hero" aria-label="IC Business Systems home">
-        <span class="brand-mark" aria-hidden="true">
-          <span class="brand-mark-letters">
-            <span class="brand-mark-i">I</span><span class="brand-mark-c">C</span>
-          </span>
-        </span>
+        <span class="brand-mark" aria-hidden="true">IC</span>
         <span class="brand-copy">
-          <span class="brand-name">
-            <span class="brand-name-main">IC Business</span>
-            <span class="brand-name-accent">Systems</span>
-          </span>
+          <span class="brand-name" data-i18n="brand.name">IC Business Systems</span>
           <span class="brand-tag" data-i18n="brand.tag">Built for real small businesses</span>
-          <span class="brand-motto" data-i18n="brand.motto">Automate | Optimize | Grow</span>
         </span>
       </a>
 
       <nav class="nav" aria-label="Primary">
+        <a href="#proof" data-i18n="nav.work">Work</a>
         <a href="#services" data-i18n="nav.services">Services</a>
-        <a href="#fit" data-i18n="nav.fit">Who It's For</a>
+        <a href="#systems" data-i18n="nav.systems">Systems</a>
+        <a href="#process" data-i18n="nav.process">Process</a>
         <a href="#faq" data-i18n="nav.faq">FAQ</a>
         <a href="#contact" data-i18n="nav.contact">Contact</a>
       </nav>
 
       <div class="topbar-actions">
+        <a class="topbar-phone" href="tel:9546109284" aria-label="Call or text">954.610.9284</a>
         <div class="lang-toggle" role="group" aria-label="Language switcher">
           <button type="button" class="lang-button is-active" data-lang-target="en">EN</button>
           <button type="button" class="lang-button" data-lang-target="es">ES</button>
         </div>
-        <a class="button button-small" href="#quote-form" data-i18n="cta.letstalk">Let's Talk</a>
+        <a class="button button-small" href="#quote-form" data-i18n="cta.audit">Free audit</a>
+        <button type="button" class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </div>
   </header>
 
+  <div id="mobile-menu" class="mobile-menu" aria-hidden="true">
+    <div class="mobile-menu-inner">
+      <nav aria-label="Mobile">
+        <a href="#proof" data-i18n="nav.work">Work</a>
+        <a href="#services" data-i18n="nav.services">Services</a>
+        <a href="#systems" data-i18n="nav.systems">Systems</a>
+        <a href="#process" data-i18n="nav.process">Process</a>
+        <a href="#founder" data-i18n="nav.founder">About</a>
+        <a href="#faq" data-i18n="nav.faq">FAQ</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+      </nav>
+      <div class="mobile-menu-cta">
+        <a class="button button-wide" href="#quote-form" data-i18n="cta.audit">Free audit</a>
+        <a class="button button-ghost button-wide" href="tel:9546109284" data-i18n="contact.call">Call or text</a>
+      </div>
+      <div class="mobile-menu-meta">
+        <a href="tel:9546109284">954.610.9284</a>
+        <a href="mailto:irvingcarrion1@gmail.com">irvingcarrion1@gmail.com</a>
+      </div>
+    </div>
+  </div>
+
   <main>
     <section id="hero" class="hero">
-      <div class="hero-orbit hero-orbit-left" aria-hidden="true"></div>
-      <div class="hero-orbit hero-orbit-right" aria-hidden="true"></div>
       <div class="wrap hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow" data-i18n="hero.eyebrow">Websites, customer leads, and business automation</p>
-          <h1 data-i18n="hero.title">Get more leads, save time, and stay on top of customers.</h1>
+          <p class="eyebrow" data-i18n="hero.eyebrow">For local service businesses &amp; owner-operators</p>
+          <h1 data-i18n="hero.title">We stop the leaks in your leads, your follow-up, and your day-to-day.</h1>
           <p class="hero-text" data-i18n="hero.text">
-            Websites, customer follow-up, and business automation for small businesses that want to grow without the chaos.
+            Sharper websites, cleaner lead capture, and simple systems that handle the work piling up around the operator. Built for the businesses that grew faster than the tools behind them.
           </p>
 
           <div class="hero-actions">
-            <a class="button" href="#quote-form" data-i18n="hero.primaryCta">Get a quote</a>
-            <a class="button button-ghost" href="#showcase" data-i18n="hero.secondaryCta">See before and after</a>
+            <a class="button" href="#quote-form" data-i18n="hero.primaryCta">Get a free workflow audit</a>
+            <a class="button button-ghost" href="tel:9546109284" data-i18n="hero.secondaryCta">Or call 954.610.9284</a>
           </div>
 
-          <ul class="hero-points" aria-label="Key business outcomes">
-            <li data-i18n="hero.point1">Look more professional online</li>
-            <li data-i18n="hero.point2">Stop losing leads in the shuffle</li>
-            <li data-i18n="hero.point3">Keep customer follow-up moving</li>
+          <ul class="hero-points" aria-label="What this fixes">
+            <li data-i18n="hero.point1">Look the part online so people stop scrolling past</li>
+            <li data-i18n="hero.point2">Catch the calls and quotes you&rsquo;re losing to dead air</li>
+            <li data-i18n="hero.point3">Take the admin off the owner&rsquo;s plate</li>
           </ul>
 
           <div class="signal-row">
-            <span data-i18n="signal.one">Built for owner-operators</span>
-            <span data-i18n="signal.two">Blue-collar aware</span>
-            <span data-i18n="signal.three">Plain-English systems</span>
-          </div>
-
-          <div class="hero-proof">
-            <div class="proof-chip">
-              <span class="proof-chip-label" data-i18n="hero.proof1.label">What owners usually want</span>
-              <strong data-i18n="hero.proof1.value">More calls, better follow-up, less chaos</strong>
-            </div>
-            <div class="proof-chip">
-              <span class="proof-chip-label" data-i18n="hero.proof2.label">What this is built for</span>
-              <strong data-i18n="hero.proof2.value">Small businesses that need cleaner systems</strong>
-            </div>
+            <span data-i18n="signal.one">Bilingual EN / ES</span>
+            <span data-i18n="signal.two">Built by a working tradesman</span>
+            <span data-i18n="signal.three">Lawrence &amp; Framingham, MA</span>
           </div>
         </div>
 
         <aside class="hero-form-shell">
           <div id="quote-form" class="form-card">
-            <p class="form-kicker" data-i18n="form.kicker">Get a quote</p>
-            <h2 data-i18n="form.title">Tell me what your business needs.</h2>
+            <p class="form-kicker" data-i18n="form.kicker">Free workflow audit</p>
+            <h2 data-i18n="form.title">Tell me what feels messy.</h2>
             <p class="form-text" data-i18n="form.text">
-              Fill this out and I can look at what is messy, what is costing you time, and where the biggest upgrade is.
+              I&rsquo;ll look at where leads are leaking, where the admin is piling up, and where the biggest upgrade is. No charge for the look.
             </p>
 
             <form
@@ -104,11 +150,11 @@
               action="https://formsubmit.co/irvingcarrion1@gmail.com"
               method="POST"
             >
-              <input type="hidden" name="_subject" value="IC Business Systems Quote Request">
+              <input type="hidden" name="_subject" value="IC Business Systems — workflow audit request">
               <input type="hidden" name="_captcha" value="false">
               <input type="hidden" name="_template" value="table">
               <input type="hidden" name="_autoresponse" value="Thanks for reaching out to IC Business Systems. I got your request and will review it soon.">
-              <input type="text" name="_honey" class="hp-field" tabindex="-1" autocomplete="off">
+              <input type="text" name="_honey" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
 
               <label class="field">
                 <span data-i18n="form.name">Name</span>
@@ -116,7 +162,7 @@
               </label>
 
               <label class="field">
-                <span data-i18n="form.business">Business Name</span>
+                <span data-i18n="form.business">Business name</span>
                 <input type="text" name="business_name" required autocomplete="organization">
               </label>
 
@@ -136,89 +182,113 @@
                 <span data-i18n="form.need">What do you need help with?</span>
                 <select name="project_type" required>
                   <option value="" selected disabled data-i18n="form.select">Select one</option>
-                  <option value="website" data-i18n="form.option1">Website</option>
-                  <option value="lead-follow-up" data-i18n="form.option2">Lead follow-up</option>
-                  <option value="automation" data-i18n="form.option3">Business automation</option>
-                  <option value="not-sure" data-i18n="form.option4">Not sure yet</option>
+                  <option value="website" data-i18n="form.option1">Website cleanup or rebuild</option>
+                  <option value="lead-follow-up" data-i18n="form.option2">Lead capture &amp; follow-up</option>
+                  <option value="automation" data-i18n="form.option3">Workflow automation</option>
+                  <option value="not-sure" data-i18n="form.option4">Not sure — start with the audit</option>
                 </select>
               </label>
 
               <label class="field">
                 <span data-i18n="form.message">What feels messy right now?</span>
-                <textarea name="message" rows="4" placeholder="Missed calls, weak website, bad follow-up, too much admin..." data-i18n-placeholder="form.placeholder"></textarea>
+                <textarea name="message" rows="4" placeholder="Missed calls, weak website, slow follow-up, too much admin..." data-i18n-placeholder="form.placeholder"></textarea>
               </label>
 
               <button type="submit" class="button button-wide" data-i18n="form.submit">Send request</button>
             </form>
 
-            <p class="form-note" data-i18n="form.note">You leave your phone and email once. I review the mess, then I reach out with the best next move.</p>
+            <p class="form-note" data-i18n="form.note">Leave your phone and email once. I review the mess, then I reach out with the best next move.</p>
           </div>
         </aside>
       </div>
     </section>
 
-    <section class="trust">
-      <div class="wrap trust-grid">
-        <div class="trust-intro">
-          <p class="section-kicker" data-i18n="trust.kicker">Why this is different</p>
-          <h2 data-i18n="trust.title">Built for real small businesses.</h2>
+    <section id="proof" class="proof">
+      <div class="wrap">
+        <div class="section-head section-head-tight">
+          <p class="section-kicker" data-i18n="proof.kicker">What changes</p>
+          <h2 data-i18n="proof.title">From feeling behind to feeling current.</h2>
+          <p data-i18n="proof.text">Same business. Sharper face. Cleaner systems behind it. The difference shows up in the first five seconds.</p>
         </div>
 
-        <div class="trust-copy">
-          <p class="trust-lede" data-i18n="trust.lede">
-            Built by someone who understands blue-collar businesses and the mess that shows up when the work is good but the system behind it is not.
-          </p>
-          <div class="trust-compare">
-            <article class="compare-card compare-card-old">
-              <p class="compare-label" data-i18n="trust.old.label">What owners usually deal with</p>
-              <ul class="compare-list">
-                <li data-i18n="trust.old.item1">Outdated website</li>
-                <li data-i18n="trust.old.item2">Slow follow-up</li>
-                <li data-i18n="trust.old.item3">Leads slipping through</li>
-              </ul>
-            </article>
+        <div class="proof-compare">
+          <article class="proof-card proof-card-before">
+            <div class="proof-card-head">
+              <span class="proof-tag proof-tag-before" data-i18n="proof.before.tag">Before</span>
+              <h3 data-i18n="proof.before.title">Looks behind. Feels ignored.</h3>
+            </div>
+            <ul class="proof-list">
+              <li data-i18n="proof.before.item1">Outdated website that loads slow and looks like 2014</li>
+              <li data-i18n="proof.before.item2">No clear next step — visitors leave without calling</li>
+              <li data-i18n="proof.before.item3">Phone number buried in a footer no one scrolls to</li>
+              <li data-i18n="proof.before.item4">Quote requests die in a personal inbox</li>
+              <li data-i18n="proof.before.item5">Missed calls never come back</li>
+              <li data-i18n="proof.before.item6">No follow-up — leads cool off in 48 hours</li>
+            </ul>
+          </article>
 
-            <article class="compare-card compare-card-new">
-              <p class="compare-label" data-i18n="trust.new.label">What this is built to fix</p>
-              <ul class="compare-list">
-                <li data-i18n="trust.new.item1">Cleaner digital presence</li>
-                <li data-i18n="trust.new.item2">Faster customer response</li>
-                <li data-i18n="trust.new.item3">More organized lead flow</li>
-              </ul>
-            </article>
-          </div>
+          <article class="proof-card proof-card-after">
+            <div class="proof-card-head">
+              <span class="proof-tag proof-tag-after" data-i18n="proof.after.tag">After</span>
+              <h3 data-i18n="proof.after.title">Looks current. Feels handled.</h3>
+            </div>
+            <ul class="proof-list">
+              <li data-i18n="proof.after.item1">Sharper site that loads fast and reads like a real business</li>
+              <li data-i18n="proof.after.item2">One clear next step on every screen</li>
+              <li data-i18n="proof.after.item3">Phone number above the fold, click-to-call on mobile</li>
+              <li data-i18n="proof.after.item4">Quote requests routed instantly with an autoresponse</li>
+              <li data-i18n="proof.after.item5">Missed calls get a text-back the moment they hang up</li>
+              <li data-i18n="proof.after.item6">Leads stay warm with a simple follow-up sequence</li>
+            </ul>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="diagnostic alt-surface">
+    <section id="work" class="recent-work">
       <div class="wrap">
         <div class="section-head section-head-tight">
-          <p class="section-kicker" data-i18n="diagnostic.kicker">What this usually fixes</p>
-          <h2 data-i18n="diagnostic.title">Most owners do not need more software. They need fewer leaks.</h2>
-          <p data-i18n="diagnostic.text">
-            These are the problems that usually cost small businesses money before they ever realize it.
-          </p>
+          <p class="section-kicker" data-i18n="work.kicker">Recent work</p>
+          <h2 data-i18n="work.title">Real businesses, just shipped.</h2>
+          <p data-i18n="work.text">Three sites from the last two weeks. Open them on your phone — that&rsquo;s where their customers will see them first.</p>
         </div>
 
-        <div class="diagnostic-grid">
-          <article class="diag-card">
-            <p class="card-number">01</p>
-            <h3 data-i18n="diagnostic.card1.title">Leads disappear after the first call or message</h3>
-            <p data-i18n="diagnostic.card1.text">The site looks fine, but there is no clean follow-up system behind it, so people cool off and disappear.</p>
-          </article>
+        <div class="work-grid">
+          <a class="work-card" href="https://irving1211.github.io/sigs-kitchen-bbq/" target="_blank" rel="noopener">
+            <div class="work-card-thumb work-card-thumb-1" aria-hidden="true">
+              <span class="work-card-monogram">SK</span>
+            </div>
+            <div class="work-card-body">
+              <p class="work-card-kicker" data-i18n="work.card1.kicker">Slow-smoked food truck &amp; catering</p>
+              <h3 data-i18n="work.card1.title">Sig&rsquo;s Kitchen BBQ</h3>
+              <p data-i18n="work.card1.text">Mobile-first menu and booking page the owner can hand out in person. Fremont, NH &amp; Methuen, MA.</p>
+              <span class="work-card-link" data-i18n="work.card1.cta">Open the site &rarr;</span>
+            </div>
+          </a>
 
-          <article class="diag-card">
-            <p class="card-number">02</p>
-            <h3 data-i18n="diagnostic.card2.title">The business does good work but looks behind online</h3>
-            <p data-i18n="diagnostic.card2.text">Weak websites and messy contact flow make a legit business feel smaller and less trustworthy than it really is.</p>
-          </article>
+          <a class="work-card" href="https://irving1211.github.io/smeredith-plumbing/" target="_blank" rel="noopener">
+            <div class="work-card-thumb work-card-thumb-2" aria-hidden="true">
+              <span class="work-card-monogram">SM</span>
+            </div>
+            <div class="work-card-body">
+              <p class="work-card-kicker" data-i18n="work.card2.kicker">Plumbing &amp; heating</p>
+              <h3 data-i18n="work.card2.title">S. Meredith Plumbing</h3>
+              <p data-i18n="work.card2.text">Trust-first site that gets the phone ringing — service area, licensing, and one giant call button. Saugus, MA.</p>
+              <span class="work-card-link" data-i18n="work.card2.cta">Open the site &rarr;</span>
+            </div>
+          </a>
 
-          <article class="diag-card">
-            <p class="card-number">03</p>
-            <h3 data-i18n="diagnostic.card3.title">Too much admin keeps landing on the owner</h3>
-            <p data-i18n="diagnostic.card3.text">When everything depends on memory, manual texting, and back-and-forth, the business starts dragging on the operator.</p>
-          </article>
+          <a class="work-card" href="https://irving1211.github.io/mia-beauty-boutique/" target="_blank" rel="noopener">
+            <div class="work-card-thumb work-card-thumb-3" aria-hidden="true">
+              <span class="work-card-monogram">MB</span>
+            </div>
+            <div class="work-card-body">
+              <p class="work-card-kicker" data-i18n="work.card3.kicker">Dominican hair salon</p>
+              <h3 data-i18n="work.card3.title">M&iacute;a Beauty Boutique</h3>
+              <p data-i18n="work.card3.text">Bilingual ES/EN, walk-ins welcome, 40+ years in the chair. Lawrence, MA.</p>
+              <span class="work-card-link" data-i18n="work.card3.cta">Open the site &rarr;</span>
+            </div>
+          </a>
         </div>
       </div>
     </section>
@@ -227,11 +297,9 @@
       <div class="wrap">
         <div class="services-layout">
           <div class="services-copy">
-            <p class="section-kicker" data-i18n="services.kicker">Services</p>
-            <h2 data-i18n="services.title">Three practical upgrades that usually move the business fastest.</h2>
-            <p data-i18n="services.text">
-              Less theory, less tech talk, more clean fixes that make the business look better and run better.
-            </p>
+            <p class="section-kicker" data-i18n="services.kicker">What I build</p>
+            <h2 data-i18n="services.title">Three upgrades that usually move the business fastest.</h2>
+            <p data-i18n="services.text">Less theory. Less tech talk. Clean fixes that make the business look better and run better.</p>
           </div>
 
           <div class="services-rail">
@@ -241,27 +309,27 @@
                 <h3 data-i18n="services.card1.title">Websites</h3>
               </div>
               <p data-i18n="services.card1.text">
-                Cleaner sites that make the business feel more legit the second someone lands on it.
+                Sharper sites that load fast, read clearly, and make the business feel legit the second someone lands on it. Bilingual ready.
               </p>
             </article>
 
             <article class="service-row">
               <div class="service-row-head">
                 <p class="card-number">02</p>
-                <h3 data-i18n="services.card2.title">Lead Follow-Up</h3>
+                <h3 data-i18n="services.card2.title">Lead follow-up</h3>
               </div>
               <p data-i18n="services.card2.text">
-                Better quote capture, faster response, and less dead time between inquiry and booked job.
+                Better quote capture, instant routing, faster response, and a simple follow-up sequence so warm leads stop going cold.
               </p>
             </article>
 
             <article class="service-row">
               <div class="service-row-head">
                 <p class="card-number">03</p>
-                <h3 data-i18n="services.card3.title">Business Automation</h3>
+                <h3 data-i18n="services.card3.title">Business automation</h3>
               </div>
               <p data-i18n="services.card3.text">
-                Time-saving systems that cut repeat admin and keep the owner from being the whole system.
+                Small systems that catch missed calls, send reminders, ask for reviews, and keep the owner from being the whole system.
               </p>
             </article>
           </div>
@@ -269,133 +337,80 @@
       </div>
     </section>
 
-    <section id="showcase" class="showcase alt-surface">
-      <div class="wrap showcase-grid">
-        <div class="showcase-copy">
-          <p class="section-kicker" data-i18n="showcase.kicker">Before and after</p>
-          <h2 data-i18n="showcase.title">The difference should be obvious in five seconds.</h2>
-          <p data-i18n="showcase.text">
-            The upgrade is not just prettier design. It is clearer trust, cleaner quote capture, and less friction for the next step.
-          </p>
-
-          <div class="showcase-points">
-            <div class="showcase-point">
-              <span class="showcase-point-value" data-i18n="showcase.point1.value">Before</span>
-              <span class="showcase-point-label" data-i18n="showcase.point1.label">Outdated, generic, easy to ignore</span>
-            </div>
-            <div class="showcase-point">
-              <span class="showcase-point-value" data-i18n="showcase.point2.value">After</span>
-              <span class="showcase-point-label" data-i18n="showcase.point2.label">Sharper trust and a clear next step</span>
-            </div>
-          </div>
+    <section id="systems" class="systems alt-surface">
+      <div class="wrap">
+        <div class="section-head section-head-tight">
+          <p class="section-kicker" data-i18n="systems.kicker">What gets cleaner behind the scenes</p>
+          <h2 data-i18n="systems.title">Small systems that catch the work you&rsquo;re losing.</h2>
+          <p data-i18n="systems.text">Plain-English automations that handle the parts of the day where leads slip and admin piles up. Trigger &rarr; action &rarr; outcome.</p>
         </div>
 
-        <div class="showcase-visual">
-          <div class="showcase-compare">
-            <article class="showcase-frame showcase-frame-before">
-              <p class="showcase-frame-label" data-i18n="showcase.frameBefore.label">Before</p>
-              <div class="showcase-frame-window">
-                <div class="showcase-frame-bar">
-                  <span></span><span></span><span></span>
-                </div>
-                <div class="showcase-frame-body showcase-frame-body-before">
-                  <div class="showcase-stack">
-                    <span class="showcase-line showcase-line-wide"></span>
-                    <span class="showcase-line showcase-line-mid"></span>
-                    <span class="showcase-line showcase-line-short"></span>
-                  </div>
-                  <div class="showcase-note-block">
-                    <span data-i18n="showcase.frameBefore.item1">Weak first impression</span>
-                    <span data-i18n="showcase.frameBefore.item2">No clear next step</span>
-                    <span data-i18n="showcase.frameBefore.item3">Leads cool off</span>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <article class="showcase-frame showcase-frame-after">
-              <p class="showcase-frame-label" data-i18n="showcase.frameAfter.label">After</p>
-              <div class="showcase-frame-window">
-                <div class="showcase-frame-bar">
-                  <span></span><span></span><span></span>
-                </div>
-                <div class="showcase-frame-body showcase-frame-body-after">
-                  <div class="mockup-beam" aria-hidden="true"></div>
-                  <div class="mockup-hero">
-                    <p class="mockup-kicker" data-i18n="showcase.mockup.kicker">Premium business presence</p>
-                    <h3 data-i18n="showcase.mockup.title">Get seen. Get trusted. Get more inquiries.</h3>
-                    <p class="mockup-subline" data-i18n="showcase.mockup.subline">A sharper offer, stronger tone, and a quote path people actually follow.</p>
-                  </div>
-                  <div class="mockup-voice-row">
-                    <span class="mockup-voice-chip" data-i18n="showcase.mockup.badge1">Clear offer</span>
-                    <span class="mockup-voice-chip" data-i18n="showcase.mockup.badge2">Brand voice</span>
-                    <span class="mockup-voice-chip" data-i18n="showcase.mockup.badge3">Bilingual ready</span>
-                  </div>
-                  <div class="mockup-stage">
-                    <div class="mockup-stage-copy">
-                      <strong data-i18n="showcase.mockup.stageTitle">A business page with real presence</strong>
-                      <p data-i18n="showcase.mockup.stageText">The message gets tighter, the hierarchy gets cleaner, and the next step stops feeling random.</p>
-                    </div>
-                    <div class="mockup-cards">
-                      <article class="mockup-card mockup-card-accent">
-                        <strong data-i18n="showcase.mockup.card1.title">Quote capture</strong>
-                        <span data-i18n="showcase.mockup.card1.text">Clear form with the right questions</span>
-                      </article>
-                      <article class="mockup-card">
-                        <strong data-i18n="showcase.mockup.card2.title">Fast follow-up</strong>
-                        <span data-i18n="showcase.mockup.card2.text">Cleaner response path for new leads</span>
-                      </article>
-                      <article class="mockup-card">
-                        <strong data-i18n="showcase.mockup.card3.title">Better trust</strong>
-                        <span data-i18n="showcase.mockup.card3.text">Stronger tone, sharper first impression</span>
-                      </article>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="fit" class="fit">
-      <div class="wrap fit-grid">
-        <div>
-          <p class="section-kicker" data-i18n="fit.kicker">Who it's for</p>
-          <h2 data-i18n="fit.title">Broad enough for any small business. Strongest for operators who wear a lot of hats.</h2>
-        </div>
-
-        <ul class="fit-list">
-          <li data-i18n="fit.item1">Local service businesses</li>
-          <li data-i18n="fit.item2">Contractors and trades</li>
-          <li data-i18n="fit.item3">Owner-operators</li>
-          <li data-i18n="fit.item4">Small businesses with outdated websites</li>
-          <li data-i18n="fit.item5">Teams that need better lead handling and follow-up</li>
-          <li data-i18n="fit.item6">Businesses that want to look sharper without getting buried in tech</li>
-        </ul>
-
-        <div class="fit-visual">
-          <div class="fit-panel">
-            <p class="fit-preview-kicker" data-i18n="fit.visual.kicker">What a better system looks like</p>
-            <h3 data-i18n="fit.visual.title">Cleaner site. Faster follow-up. More confidence.</h3>
-            <p data-i18n="fit.visual.text">A business should feel organized before someone even makes the first call.</p>
-
-            <div class="fit-stack">
-              <div class="fit-strip">
-                <span class="fit-strip-label" data-i18n="fit.visual.metric1.label">Quote requests</span>
-                <strong data-i18n="fit.visual.metric1.value">Captured even when you are busy</strong>
-              </div>
-              <div class="fit-strip">
-                <span class="fit-strip-label" data-i18n="fit.visual.metric2.label">First impression</span>
-                <strong data-i18n="fit.visual.metric2.value">Feels sharper in under five seconds</strong>
-              </div>
-              <div class="fit-strip">
-                <span class="fit-strip-label" data-i18n="fit.visual.metric3.label">Owner workload</span>
-                <strong data-i18n="fit.visual.metric3.value">Less chasing and back-and-forth</strong>
-              </div>
+        <div class="systems-grid">
+          <article class="flow-card">
+            <p class="flow-card-label" data-i18n="systems.card1.label">Missed-call text-back</p>
+            <div class="flow-steps">
+              <span class="flow-step" data-i18n="systems.card1.trigger">Missed call</span>
+              <span class="flow-arrow" aria-hidden="true">&rarr;</span>
+              <span class="flow-step" data-i18n="systems.card1.action">Text back sent in seconds</span>
+              <span class="flow-arrow" aria-hidden="true">&rarr;</span>
+              <span class="flow-step flow-step-outcome" data-i18n="systems.card1.outcome">Lead stays warm</span>
             </div>
-          </div>
+          </article>
+
+          <article class="flow-card">
+            <p class="flow-card-label" data-i18n="systems.card2.label">Instant lead routing</p>
+            <div class="flow-steps">
+              <span class="flow-step" data-i18n="systems.card2.trigger">Website form submitted</span>
+              <span class="flow-arrow" aria-hidden="true">&rarr;</span>
+              <span class="flow-step" data-i18n="systems.card2.action">Routed straight to your phone</span>
+              <span class="flow-arrow" aria-hidden="true">&rarr;</span>
+              <span class="flow-step flow-step-outcome" data-i18n="systems.card2.outcome">Faster response</span>
+            </div>
+          </article>
+
+          <article class="flow-card">
+            <p class="flow-card-label" data-i18n="systems.card3.label">Quote follow-up</p>
+            <div class="flow-steps">
+              <span class="flow-step" data-i18n="systems.card3.trigger">Quote requested</span>
+              <span class="flow-arrow" aria-hidden="true">&rarr;</span>
+              <span class="flow-step" data-i18n="systems.card3.action">Follow-up scheduled automatically</span>
+              <span class="flow-arrow" aria-hidden="true">&rarr;</span>
+              <span class="flow-step flow-step-outcome" data-i18n="systems.card3.outcome">Fewer lost opportunities</span>
+            </div>
+          </article>
+
+          <article class="flow-card">
+            <p class="flow-card-label" data-i18n="systems.card4.label">Review ask</p>
+            <div class="flow-steps">
+              <span class="flow-step" data-i18n="systems.card4.trigger">Job completed</span>
+              <span class="flow-arrow" aria-hidden="true">&rarr;</span>
+              <span class="flow-step" data-i18n="systems.card4.action">Review request sent</span>
+              <span class="flow-arrow" aria-hidden="true">&rarr;</span>
+              <span class="flow-step flow-step-outcome" data-i18n="systems.card4.outcome">Stronger reputation</span>
+            </div>
+          </article>
+
+          <article class="flow-card">
+            <p class="flow-card-label" data-i18n="systems.card5.label">Lead tracking</p>
+            <div class="flow-steps">
+              <span class="flow-step" data-i18n="systems.card5.trigger">New inquiry comes in</span>
+              <span class="flow-arrow" aria-hidden="true">&rarr;</span>
+              <span class="flow-step" data-i18n="systems.card5.action">Organized in one tracker</span>
+              <span class="flow-arrow" aria-hidden="true">&rarr;</span>
+              <span class="flow-step flow-step-outcome" data-i18n="systems.card5.outcome">Nothing slips</span>
+            </div>
+          </article>
+
+          <article class="flow-card">
+            <p class="flow-card-label" data-i18n="systems.card6.label">Admin cleanup</p>
+            <div class="flow-steps">
+              <span class="flow-step" data-i18n="systems.card6.trigger">Repeating admin task</span>
+              <span class="flow-arrow" aria-hidden="true">&rarr;</span>
+              <span class="flow-step" data-i18n="systems.card6.action">Handled in the background</span>
+              <span class="flow-arrow" aria-hidden="true">&rarr;</span>
+              <span class="flow-step flow-step-outcome" data-i18n="systems.card6.outcome">Owner does owner work</span>
+            </div>
+          </article>
         </div>
       </div>
     </section>
@@ -403,96 +418,148 @@
     <section id="process" class="process">
       <div class="wrap">
         <div class="section-head">
-          <p class="section-kicker" data-i18n="process.kicker">How it works</p>
-          <h2 data-i18n="process.title">Three moves, then the business feels sharper.</h2>
+          <p class="section-kicker" data-i18n="process.kicker">How this works in 30 days</p>
+          <h2 data-i18n="process.title">Four steps. Four weeks. A business that feels sharper.</h2>
         </div>
 
         <div class="process-track">
           <article class="process-node">
-            <span class="process-step">01</span>
-            <h3 data-i18n="process.card1.title">We look at where customers are slipping through</h3>
-            <p data-i18n="process.card1.text">Website, follow-up, contact flow, and where things are getting missed.</p>
+            <span class="process-step" data-i18n="process.week1.step">Week 1</span>
+            <h3 data-i18n="process.card1.title">We find the leaks</h3>
+            <p data-i18n="process.card1.text">Free workflow audit. Website, follow-up, contact flow, and where things are getting missed. You see the map.</p>
           </article>
 
           <article class="process-node">
-            <span class="process-step">02</span>
-            <h3 data-i18n="process.card2.title">We build a cleaner system</h3>
-            <p data-i18n="process.card2.text">A better site, stronger lead flow, or a simpler process that saves time.</p>
+            <span class="process-step" data-i18n="process.week2.step">Week 2</span>
+            <h3 data-i18n="process.card2.title">I build the cleaner version</h3>
+            <p data-i18n="process.card2.text">A better site, a sharper lead flow, or a simpler process — whichever moves the most weight first.</p>
           </article>
 
           <article class="process-node">
-            <span class="process-step">03</span>
-            <h3 data-i18n="process.card3.title">You get a business that looks better and runs smoother</h3>
-            <p data-i18n="process.card3.text">More trust, better organization, and fewer customer opportunities getting lost.</p>
+            <span class="process-step" data-i18n="process.week3.step">Week 3</span>
+            <h3 data-i18n="process.card3.title">We launch and put it in front of customers</h3>
+            <p data-i18n="process.card3.text">Site goes live, automations come online, phone routing tested with real calls. You start collecting wins.</p>
+          </article>
+
+          <article class="process-node">
+            <span class="process-step" data-i18n="process.week4.step">Week 4</span>
+            <h3 data-i18n="process.card4.title">We tune what gets used most</h3>
+            <p data-i18n="process.card4.text">Real-world adjustments based on the first two weeks of leads. The business stops dragging on the operator.</p>
           </article>
         </div>
+      </div>
+    </section>
+
+    <section id="founder" class="founder alt-surface">
+      <div class="wrap founder-grid">
+        <div class="founder-portrait" aria-hidden="true">
+          <div class="founder-portrait-inner">
+            <span class="founder-portrait-mark">IC</span>
+            <span class="founder-portrait-caption" data-i18n="founder.portrait.caption">Irving Carrion &middot; Lawrence, MA</span>
+          </div>
+        </div>
+        <div class="founder-copy">
+          <p class="section-kicker" data-i18n="founder.kicker">Who you&rsquo;re working with</p>
+          <h2 data-i18n="founder.title">Irving — I build systems with my hands and on screens.</h2>
+          <p data-i18n="founder.p1">
+            I&rsquo;m a third-year plumbing apprentice working out of Lawrence and Framingham, MA. I&rsquo;ve also spent the last few years building the kind of automation systems large tech companies pay six figures for.
+          </p>
+          <p data-i18n="founder.p2">
+            That mix is the whole point. I know what it feels like to drive between job sites with the phone ringing — and I know how to build the system that catches every one of those calls.
+          </p>
+          <p data-i18n="founder.p3">
+            The work shows up on time and reads like English. No jargon, no agency theater. Bilingual EN/ES, blue-collar aware, and built to last past launch week.
+          </p>
+          <div class="founder-meta">
+            <span data-i18n="founder.meta1">Lawrence &amp; Framingham, MA</span>
+            <span data-i18n="founder.meta2">Bilingual EN / ES</span>
+            <span data-i18n="founder.meta3">Available evenings &amp; weekends</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="fit" class="fit">
+      <div class="wrap fit-grid">
+        <div class="fit-copy">
+          <p class="section-kicker" data-i18n="fit.kicker">Best fit</p>
+          <h2 data-i18n="fit.title">If the business runs on the owner, this is for you.</h2>
+          <p data-i18n="fit.text">I work best with operators who do the work, answer the phone, and know exactly where the day is leaking.</p>
+        </div>
+
+        <ul class="fit-list">
+          <li data-i18n="fit.item1">Local service businesses (plumbing, HVAC, electrical, grooming, cleaning, landscaping)</li>
+          <li data-i18n="fit.item2">Contractors &amp; trades</li>
+          <li data-i18n="fit.item3">Owner-operators with outdated websites</li>
+          <li data-i18n="fit.item4">Bilingual EN / ES businesses serving Spanish-speaking customers</li>
+          <li data-i18n="fit.item5">Family-run shops growing past one person&rsquo;s memory</li>
+          <li data-i18n="fit.item6">Service businesses that want to look sharper without getting buried in tech</li>
+        </ul>
       </div>
     </section>
 
     <section id="faq" class="faq">
       <div class="wrap faq-grid">
         <div class="faq-intro">
-          <p class="section-kicker" data-i18n="faq.kicker">Frequently asked questions</p>
+          <p class="section-kicker" data-i18n="faq.kicker">Common questions</p>
           <h2 data-i18n="faq.title">The questions most owners ask before they reach out.</h2>
-          <p data-i18n="faq.text">
-            If you are not a technical person, that is fine. This should still make sense.
-          </p>
+          <p data-i18n="faq.text">If you&rsquo;re not a tech person, that&rsquo;s fine. This should still make sense.</p>
         </div>
 
         <div class="faq-list">
           <details class="faq-item">
             <summary data-i18n="faq.q1">What kind of businesses do you work with?</summary>
             <div class="faq-answer">
-              <p data-i18n="faq.a1">Any small business, but this is especially strong for local service businesses, trades, owner-operators, and businesses that need better follow-up and a stronger online presence.</p>
+              <p data-i18n="faq.a1">Any small business, but this is especially strong for local service businesses, trades, owner-operators, and bilingual businesses that need better follow-up and a stronger online presence.</p>
             </div>
           </details>
 
           <details class="faq-item">
-            <summary data-i18n="faq.q2">Do I need a brand new website?</summary>
+            <summary data-i18n="faq.q2">Do I need a brand-new website?</summary>
             <div class="faq-answer">
-              <p data-i18n="faq.a2">Not always. Sometimes the best move is a cleaner website. Sometimes it is fixing contact flow, follow-up, or how leads are being handled. The point is solving the real problem, not forcing a rebuild.</p>
+              <p data-i18n="faq.a2">Not always. Sometimes the best move is a cleaner website. Sometimes it&rsquo;s fixing contact flow, follow-up, or how leads are handled. The point is solving the real problem, not forcing a rebuild.</p>
             </div>
           </details>
 
           <details class="faq-item">
             <summary data-i18n="faq.q3">What does business automation actually mean?</summary>
             <div class="faq-answer">
-              <p data-i18n="faq.a3">It means setting up simple systems that save time and reduce missed opportunities. That could be lead follow-up, inquiry routing, reminders, intake, or repetitive admin work that keeps slowing the business down.</p>
+              <p data-i18n="faq.a3">Simple systems that save time and stop missed opportunities. Missed-call text-backs, lead routing, follow-up reminders, review requests, basic admin cleanup — the stuff that quietly costs you money every day.</p>
             </div>
           </details>
 
           <details class="faq-item">
             <summary data-i18n="faq.q4">Do I need to understand any of the tech?</summary>
             <div class="faq-answer">
-              <p data-i18n="faq.a4">No. The whole point is to make this easier to use, not harder to understand. The work should feel clear on your side and useful in the real business.</p>
+              <p data-i18n="faq.a4">No. The whole point is to make this easier to use, not harder to understand. The work shows up clear on your side and useful in the real business.</p>
             </div>
           </details>
 
           <details class="faq-item">
-            <summary data-i18n="faq.q5">Can you help bilingual businesses too?</summary>
+            <summary data-i18n="faq.q5">Can you help bilingual businesses?</summary>
             <div class="faq-answer">
-              <p data-i18n="faq.a5">Yes. If your customers move between English and Spanish, the website and customer flow can be built to support that more naturally.</p>
+              <p data-i18n="faq.a5">Yes. I work in English and Spanish. If your customers move between both, the website and the customer flow get built to support that naturally — not as a translation tacked on at the end.</p>
             </div>
           </details>
 
           <details class="faq-item">
             <summary data-i18n="faq.q6">How much does this usually cost?</summary>
             <div class="faq-answer">
-              <p data-i18n="faq.a6">It depends on what actually needs to be fixed. Some businesses need a cleaner website. Some need follow-up and intake fixed first. The quote form helps me see the real problem so I can recommend the right scope instead of guessing.</p>
+              <p data-i18n="faq.a6">It depends on what actually needs fixing. The free workflow audit comes first so I can quote the real scope instead of guessing. Most small-business builds land between $600 and $2,500.</p>
             </div>
           </details>
 
           <details class="faq-item">
             <summary data-i18n="faq.q7">How long does this usually take?</summary>
             <div class="faq-answer">
-              <p data-i18n="faq.a7">Smaller fixes can move fast. Bigger builds take longer. The first step is figuring out whether you need one clean fix or a fuller system build.</p>
+              <p data-i18n="faq.a7">Most builds are live in 2 to 4 weeks. Smaller fixes can move in days. The first step is figuring out whether you need one clean fix or a fuller system build.</p>
             </div>
           </details>
 
           <details class="faq-item">
             <summary data-i18n="faq.q8">How do we get started?</summary>
             <div class="faq-answer">
-              <p data-i18n="faq.a8">Fill out the quote form, leave your phone and email, and explain what feels messy right now. From there, I can look at what the biggest win is and what the next move should be.</p>
+              <p data-i18n="faq.a8">Fill out the form at the top, leave your phone and email, and tell me what feels messy. Free workflow audit comes back within 48 hours with the biggest win and what the next move should be.</p>
             </div>
           </details>
         </div>
@@ -503,20 +570,20 @@
       <div class="wrap contact-shell">
         <div class="contact-copy">
           <p class="section-kicker" data-i18n="contact.kicker">Contact</p>
-          <h2 data-i18n="contact.title">Need a better website, better follow-up, or a system that saves time?</h2>
-          <p data-i18n="contact.text">
-            Start with the quote form above, or reach out directly if you already know what you need.
-          </p>
+          <h2 data-i18n="contact.title">Need a sharper site, better follow-up, or a system that saves time?</h2>
+          <p data-i18n="contact.text">Start with the free workflow audit at the top of the page, or reach out directly if you already know what you need.</p>
+
+          <a class="contact-phone" href="tel:9546109284" aria-label="Call or text Irving">954.610.9284</a>
 
           <div class="contact-actions">
-            <a class="button" href="tel:9546109284" data-i18n="contact.call">Call or text</a>
-            <a class="button button-ghost" href="mailto:irvingcarrion1@gmail.com" data-i18n="contact.email">Email for now</a>
+            <a class="button" href="#quote-form" data-i18n="contact.audit">Free workflow audit</a>
+            <a class="button button-ghost" href="mailto:irvingcarrion1@gmail.com" data-i18n="contact.email">Email me</a>
           </div>
         </div>
 
         <div class="contact-card">
           <div class="contact-item">
-            <span class="contact-label" data-i18n="contact.phoneLabel">Phone</span>
+            <span class="contact-label" data-i18n="contact.phoneLabel">Phone &amp; text</span>
             <a href="tel:9546109284">954.610.9284</a>
           </div>
           <div class="contact-item">
@@ -524,12 +591,12 @@
             <a href="mailto:irvingcarrion1@gmail.com">irvingcarrion1@gmail.com</a>
           </div>
           <div class="contact-item">
-            <span class="contact-label" data-i18n="contact.websiteLabel">Website</span>
-            <span data-i18n="contact.websiteValue">Domain coming next</span>
+            <span class="contact-label" data-i18n="contact.areaLabel">Service area</span>
+            <span data-i18n="contact.areaValue">Lawrence &amp; Framingham, MA · remote available</span>
           </div>
           <div class="contact-item">
-            <span class="contact-label" data-i18n="contact.igLabel">Instagram</span>
-            <span data-i18n="contact.igValue">Brand page coming next</span>
+            <span class="contact-label" data-i18n="contact.hoursLabel">Hours</span>
+            <span data-i18n="contact.hoursValue">Evenings &amp; weekends · responses within 48 hours</span>
           </div>
         </div>
       </div>
@@ -539,22 +606,25 @@
   <footer class="footer">
     <div class="wrap footer-row">
       <div class="footer-brand">
-        <span class="footer-brand-mark" aria-hidden="true">
-          <span class="brand-mark-letters">
-            <span class="brand-mark-i">I</span><span class="brand-mark-c">C</span>
-          </span>
-        </span>
-        <p data-i18n="footer.name">IC Business Systems</p>
+        <span class="footer-brand-mark" aria-hidden="true">IC</span>
+        <div>
+          <p class="footer-name" data-i18n="footer.name">IC Business Systems</p>
+          <p class="footer-text" data-i18n="footer.text">Sharper sites. Cleaner lead follow-up. Small-business systems that hold up after launch.</p>
+        </div>
       </div>
-      <p data-i18n="footer.text">Built for small businesses that want to grow without the chaos.</p>
+      <div class="footer-meta">
+        <a href="tel:9546109284">954.610.9284</a>
+        <a href="mailto:irvingcarrion1@gmail.com">irvingcarrion1@gmail.com</a>
+        <span data-i18n="footer.location">Lawrence, MA</span>
+      </div>
     </div>
   </footer>
 
   <div class="mobile-cta">
-    <a class="button mobile-cta-main" href="#quote-form" data-i18n="cta.letstalk">Get Quote</a>
+    <a class="button mobile-cta-main" href="#quote-form" data-i18n="cta.audit">Free audit</a>
     <a class="button button-ghost mobile-cta-side" href="tel:9546109284" data-i18n="contact.call">Call or text</a>
   </div>
 
-  <script src="./script.js?v=7"></script>
+  <script src="./script.js?v=8"></script>
 </body>
 </html>
