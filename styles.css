@@ -917,51 +917,43 @@ section { padding: var(--pad-section) 0; position: relative; }
 }
 
 .founder-portrait {
+  position: relative;
+  margin: 0;
   aspect-ratio: 4 / 5;
   border-radius: var(--radius-md);
-  background:
-    radial-gradient(circle at 30% 25%, rgba(212, 175, 55, 0.45), transparent 60%),
-    linear-gradient(160deg, #1F1F1F 0%, #0A0A0A 60%, #2A1F0A 100%);
-  position: relative;
   overflow: hidden;
-  display: flex;
-  align-items: flex-end;
-  padding: 32px;
   border: 1px solid var(--border-gold);
+  background: var(--bg-deeper);
 }
 
-.founder-portrait::before {
+.founder-portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.founder-portrait::after {
   content: "";
   position: absolute;
   inset: 0;
-  background:
-    radial-gradient(circle at 70% 80%, rgba(212, 175, 55, 0.18), transparent 50%);
-}
-
-.founder-portrait-inner {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.founder-portrait-mark {
-  font-family: var(--serif);
-  font-style: italic;
-  font-weight: 600;
-  font-size: clamp(80px, 13vw, 140px);
-  line-height: 0.9;
-  letter-spacing: -0.04em;
-  color: var(--gold);
-  text-shadow: 0 4px 32px rgba(212, 175, 55, 0.45);
+  background: linear-gradient(180deg, transparent 55%, rgba(10, 10, 10, 0.78) 100%);
+  pointer-events: none;
 }
 
 .founder-portrait-caption {
+  position: absolute;
+  left: 24px;
+  right: 24px;
+  bottom: 20px;
+  z-index: 1;
+  font-family: var(--sans);
   font-size: 12px;
-  letter-spacing: 0.16em;
+  font-weight: 500;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.78);
+  color: var(--gold);
+  margin: 0;
 }
 
 .founder-copy { display: flex; flex-direction: column; gap: 18px; }
