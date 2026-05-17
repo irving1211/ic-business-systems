@@ -1231,7 +1231,7 @@ section { padding: var(--pad-section) 0; position: relative; }
   body { padding-bottom: 80px; }
   .mobile-cta { display: flex; }
 
-  .hero { padding-top: 32px; padding-bottom: 64px; }
+  .hero { padding-top: 80px; padding-bottom: 64px; }
   .hero h1 { max-width: none; }
 
   .proof-compare { grid-template-columns: 1fr; gap: 36px; }
