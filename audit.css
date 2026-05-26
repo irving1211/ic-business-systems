@@ -1,0 +1,317 @@
+/* audit.css — scoped to audit.html only.
+   Inherits all base tokens + chrome styles from styles.css.
+   No new design tokens; status colors inline because they're audit-only. */
+
+.audit-page {
+  padding-top: clamp(40px, 6vw, 80px);
+  padding-bottom: var(--pad-section);
+}
+
+.audit-intro {
+  text-align: left;
+  max-width: 720px;
+  margin-bottom: clamp(32px, 4vw, 56px);
+}
+
+.audit-intro h1 {
+  font-family: var(--serif);
+  font-size: clamp(36px, 5vw, 56px);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  margin: 12px 0 16px;
+  color: var(--text);
+}
+
+.audit-subhead {
+  font-size: clamp(16px, 1.4vw, 18px);
+  line-height: 1.6;
+  color: var(--text-2);
+  margin: 0 0 16px;
+}
+
+.audit-tip {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-2);
+  margin: 0;
+  padding: 12px 14px;
+  background: var(--gold-soft);
+  border-left: 3px solid var(--gold);
+  border-radius: var(--radius-sm);
+}
+
+.audit-work {
+  display: grid;
+  gap: 28px;
+}
+
+.audit-form {
+  display: grid;
+  gap: 24px;
+}
+
+.audit-card {
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: clamp(20px, 3vw, 32px);
+}
+
+.audit-card-title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 2vw, 24px);
+  font-weight: 600;
+  margin: 0 0 16px;
+  color: var(--text);
+}
+
+/* The site already defines .field. Re-style nothing globally; tweak only
+   audit-form internals so spacing breathes on a denser screen. */
+.audit-form .field {
+  display: block;
+  margin-bottom: 16px;
+}
+.audit-form .field:last-child {
+  margin-bottom: 0;
+}
+.audit-form .field > span {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: var(--text-2);
+}
+.audit-form input[type="text"],
+.audit-form input[type="url"],
+.audit-form select {
+  width: 100%;
+  padding: 12px 14px;
+  font: inherit;
+  color: var(--text);
+  background: var(--bg-deeper);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  transition: border-color 120ms ease;
+}
+.audit-form input:focus,
+.audit-form select:focus {
+  outline: none;
+  border-color: var(--gold);
+}
+
+.audit-checks {
+  display: grid;
+  gap: 18px;
+  border: 1px solid var(--border);
+}
+
+.check {
+  display: grid;
+  grid-template-columns: 22px 1fr;
+  column-gap: 12px;
+  row-gap: 4px;
+  align-items: start;
+  padding: 12px;
+  background: var(--bg-deeper);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+.check:hover {
+  border-color: var(--border-strong);
+}
+.check input[type="checkbox"] {
+  margin-top: 3px;
+  width: 18px;
+  height: 18px;
+  accent-color: var(--gold);
+  cursor: pointer;
+}
+.check-label {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text);
+}
+.check-help {
+  display: block;
+  grid-column: 2 / -1;
+  color: var(--text-2);
+  font-size: 13px;
+  line-height: 1.5;
+  margin-top: 2px;
+}
+
+.check-radio-group {
+  display: block;
+  cursor: default;
+}
+.check-radio-group .check-label {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text);
+  display: block;
+  margin-bottom: 6px;
+}
+.radio-row {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+.radio {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  background: var(--bg-panel);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--text);
+}
+.radio input[type="radio"] {
+  accent-color: var(--gold);
+  cursor: pointer;
+}
+
+.audit-submit-row {
+  display: flex;
+  justify-content: stretch;
+}
+
+.form-errors {
+  list-style: none;
+  margin: 0;
+  padding: 14px 18px;
+  background: rgba(220, 80, 80, 0.08);
+  border: 1px solid rgba(220, 80, 80, 0.35);
+  border-radius: var(--radius-sm);
+  color: #f3a8a8;
+  font-size: 14px;
+}
+.form-errors li {
+  margin-left: 16px;
+  list-style: disc;
+}
+
+/* Results */
+.audit-results {
+  display: grid;
+  gap: 24px;
+  margin-top: 32px;
+  scroll-margin-top: 80px;
+}
+
+.score-row {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.score-badge {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  padding: 18px 28px;
+  background: var(--bg-deeper);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-md);
+}
+.score-number {
+  font-family: var(--serif);
+  font-size: 56px;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+}
+.score-out {
+  font-size: 18px;
+  color: var(--text-2);
+}
+
+.score-meta {
+  flex: 1;
+  min-width: 220px;
+}
+.score-priority {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 0 0 6px;
+  color: var(--text-2);
+}
+.score-priority.priority-high { color: #e57373; }
+.score-priority.priority-medium { color: #ffb74d; }
+.score-priority.priority-low { color: #81c784; }
+.score-summary {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  color: var(--text);
+}
+
+.leak-issue {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 8px;
+  color: var(--text);
+}
+.leak-fix {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-2);
+  margin: 0;
+}
+
+.findings-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+.findings-list li {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 12px;
+  padding: 12px;
+  background: var(--bg-deeper);
+  border-left: 3px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  align-items: center;
+}
+.findings-list li.status-good { border-left-color: #81c784; }
+.findings-list li.status-warning { border-left-color: #ffb74d; }
+.findings-list li.status-critical { border-left-color: #e57373; }
+.finding-label {
+  font-weight: 600;
+  color: var(--text);
+}
+.finding-issue {
+  color: var(--text-2);
+}
+
+.cta-text {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-2);
+  margin: 0 0 16px;
+}
+.cta-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 640px) {
+  .audit-form .field > span { font-size: 13px; }
+  .score-number { font-size: 44px; }
+  .score-badge { padding: 14px 20px; }
+  .findings-list li { grid-template-columns: 1fr; gap: 4px; }
+  .audit-card { padding: 18px; }
+}

@@ -198,7 +198,49 @@ const translations = {
     "contact.hoursValue": "Evenings & weekends · responses within 48 hours",
     "footer.name": "IC Business Systems",
     "footer.text": "Sharper sites. Cleaner lead follow-up. Small-business systems that hold up after launch.",
-    "footer.location": "Lawrence, MA"
+    "footer.location": "Lawrence, MA",
+    "audit.navlink": "Audit",
+    "audit.eyebrow": "For local service businesses",
+    "audit.title": "Guided 5-check audit",
+    "audit.subhead": "Answer 5 yes/no questions about your site. Get a score and the first thing we'd fix. About 90 seconds.",
+    "audit.tip": "Tip: open your site on your phone in another tab — that's where most of your leads land.",
+    "audit.aboutHeading": "About the site",
+    "audit.businessName": "Business name",
+    "audit.businessNamePlaceholder": "e.g. Fast Fix Plumbing",
+    "audit.websiteUrl": "Website URL",
+    "audit.niche": "Niche",
+    "audit.nichePlaceholder": "Select one",
+    "audit.nichePlumbing": "Plumbing",
+    "audit.nicheHvac": "HVAC",
+    "audit.nicheElectrical": "Electrical",
+    "audit.nicheLandscaping": "Landscaping",
+    "audit.nicheRoofing": "Roofing",
+    "audit.nicheOther": "Other / not listed",
+    "audit.checksHeading": "5 quick checks — answer yes/no for what you see",
+    "audit.checkPhone": "Phone number is easy to find on mobile",
+    "audit.checkPhoneHelp": "What counts: a tap-to-call phone number visible on the first screen without scrolling. Click-to-text counts too.",
+    "audit.checkCta": "Page has one obvious next step",
+    "audit.checkCtaHelp": "What counts: one primary button or CTA (\"Get a quote,\" \"Book now\") that stands out above the fold. If 4 CTAs compete equally, mark this no.",
+    "audit.checkTrust": "Reviews or real work visible near the top",
+    "audit.checkTrustHelp": "What counts: real reviews (Google, Yelp), photos of completed jobs, or a service-area map within the first scroll. Stock photos don't count.",
+    "audit.checkFriction": "Form length",
+    "audit.checkFrictionHelp": "low = 3 or fewer fields (name + phone + service). medium = 4–6 fields. high = 7+ fields or multi-step.",
+    "audit.frictionLow": "Low",
+    "audit.frictionMedium": "Medium",
+    "audit.frictionHigh": "High",
+    "audit.checkMobile": "Reads cleanly on a phone",
+    "audit.checkMobileHelp": "What counts: open it on your phone. Text readable without zoom. Buttons tappable. No weird gaps or broken images.",
+    "audit.submit": "Run the audit",
+    "audit.scoreOf": "/ 100",
+    "audit.topLeakHeading": "Here's what we'd fix first",
+    "audit.findingsHeading": "All 5 findings",
+    "audit.ctaHeading": "Want the full breakdown?",
+    "audit.ctaText": "I'll record a short video walking through what I'd actually fix on your site, then send a one-page action plan. No pitch.",
+    "audit.ctaPrimary": "Get the full video audit",
+    "audit.ctaSecondary": "DM AUDIT on Instagram",
+    "thanks.title": "Thanks — got it.",
+    "thanks.text": "Got your request. I review every audit personally and reach out within 1 business day (sometimes same day during weekdays — I'm also a 3rd-year apprentice plumber, so jobsite days happen). If urgent, mention \"urgent\" in your reply.",
+    "thanks.back": "Back to home"
   },
   es: {
     "brand.name": "IC Business Systems",
@@ -375,7 +417,49 @@ const translations = {
     "contact.hoursValue": "Noches y fines de semana · respuestas en 48 horas",
     "footer.name": "IC Business Systems",
     "footer.text": "Sitios más nítidos. Seguimiento más limpio. Sistemas que aguantan después del lanzamiento.",
-    "footer.location": "Lawrence, MA"
+    "footer.location": "Lawrence, MA",
+    "audit.navlink": "Auditoría",
+    "audit.eyebrow": "Para negocios de servicios locales",
+    "audit.title": "Auditoría guiada de 5 puntos",
+    "audit.subhead": "Responde 5 preguntas de sí/no sobre tu sitio. Recibe una puntuación y la primera cosa que arreglaríamos. Unos 90 segundos.",
+    "audit.tip": "Tip: abre tu sitio en el teléfono en otra pestaña — es donde llegan la mayoría de tus clientes.",
+    "audit.aboutHeading": "Sobre el sitio",
+    "audit.businessName": "Nombre del negocio",
+    "audit.businessNamePlaceholder": "ej. Fast Fix Plumbing",
+    "audit.websiteUrl": "URL del sitio",
+    "audit.niche": "Rubro",
+    "audit.nichePlaceholder": "Elige uno",
+    "audit.nichePlumbing": "Plomería",
+    "audit.nicheHvac": "HVAC",
+    "audit.nicheElectrical": "Electricidad",
+    "audit.nicheLandscaping": "Jardinería",
+    "audit.nicheRoofing": "Techado",
+    "audit.nicheOther": "Otro / no listado",
+    "audit.checksHeading": "5 chequeos rápidos — responde sí/no según lo que ves",
+    "audit.checkPhone": "El teléfono se encuentra fácil en el móvil",
+    "audit.checkPhoneHelp": "Qué cuenta: un teléfono con clic-para-llamar visible en la primera pantalla sin scroll. Clic-para-mensaje también cuenta.",
+    "audit.checkCta": "La página tiene un próximo paso obvio",
+    "audit.checkCtaHelp": "Qué cuenta: un botón principal o CTA (\"Obtén una cotización,\" \"Reserva ahora\") que destaca arriba del pliegue. Si hay 4 CTAs compitiendo, marca no.",
+    "audit.checkTrust": "Reseñas o trabajo real visibles cerca del inicio",
+    "audit.checkTrustHelp": "Qué cuenta: reseñas reales (Google, Yelp), fotos de trabajos terminados, o un mapa de área de servicio dentro del primer scroll. Las fotos de stock no cuentan.",
+    "audit.checkFriction": "Largo del formulario",
+    "audit.checkFrictionHelp": "bajo = 3 o menos campos (nombre + teléfono + servicio). medio = 4–6 campos. alto = 7+ campos o multi-paso.",
+    "audit.frictionLow": "Bajo",
+    "audit.frictionMedium": "Medio",
+    "audit.frictionHigh": "Alto",
+    "audit.checkMobile": "Se lee bien en el teléfono",
+    "audit.checkMobileHelp": "Qué cuenta: ábrelo en tu teléfono. Texto legible sin zoom. Botones presionables. Sin espacios raros o imágenes rotas.",
+    "audit.submit": "Hacer la auditoría",
+    "audit.scoreOf": "/ 100",
+    "audit.topLeakHeading": "Esto es lo que arreglaríamos primero",
+    "audit.findingsHeading": "Los 5 hallazgos",
+    "audit.ctaHeading": "¿Quieres el desglose completo?",
+    "audit.ctaText": "Grabaré un video corto explicando lo que arreglaría en tu sitio, y te mando un plan de acción de una página. Sin presión.",
+    "audit.ctaPrimary": "Recibe la auditoría en video",
+    "audit.ctaSecondary": "DM AUDIT por Instagram",
+    "thanks.title": "Gracias — recibido.",
+    "thanks.text": "Recibí tu solicitud. Reviso cada auditoría personalmente y respondo en 1 día hábil (a veces el mismo día entre semana — también soy aprendiz de plomería de 3er año, así que los días de trabajo en obra pasan). Si es urgente, ponlo en tu respuesta.",
+    "thanks.back": "Volver al inicio"
   }
 };
 
@@ -415,8 +499,15 @@ const observer = new IntersectionObserver(
 revealTargets.forEach((node) => observer.observe(node));
 
 /* ============ Active nav state ============ */
+// Only consider bare in-page anchors (`#section`). Cross-page hrefs like
+// `/#proof` (used by audit.html nav to jump back to home + scroll) are valid
+// HTML links but NOT valid CSS selectors — guard against the SyntaxError.
 const sectionTargets = navLinks
-  .map((link) => document.querySelector(link.getAttribute("href")))
+  .map((link) => {
+    const href = link.getAttribute("href");
+    if (!href || href[0] !== "#" || href.length < 2) return null;
+    try { return document.querySelector(href); } catch { return null; }
+  })
   .filter(Boolean);
 
 const setActiveNav = (id) => {
@@ -476,6 +567,13 @@ const setLanguage = (lang) => {
   }
 
   try { window.localStorage.setItem("icbs-language", lang); } catch {}
+
+  // Notify dynamic-content modules (audit.js) to re-localize after we've
+  // already swapped static [data-i18n] copy. Fired AFTER documentElement.lang
+  // is updated so listeners can read the new locale immediately.
+  try {
+    window.dispatchEvent(new CustomEvent("icbs:languagechange", { detail: { lang } }));
+  } catch (e) { /* CustomEvent unsupported in ancient browsers — ignore */ }
 };
 
 const detectLanguage = () => {

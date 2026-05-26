@@ -1,0 +1,11 @@
+# Claude / Claudex state — local-only; never deploy.
+.claude/
+
+# Sync helper artifacts — created mid-flight by sync-shared.mjs, should
+# never exist at rest after a successful sync.
+*.tmp
+.sync-shared.lock
+
+# OS noise
+.DS_Store
+Thumbs.db

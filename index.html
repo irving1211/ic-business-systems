@@ -56,6 +56,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;0,700;1,500;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles.css?v=12">
+
+  <!-- Privacy-friendly analytics. Swap or remove to change provider; prefill inline script guards window.plausible so absence never throws. -->
+  <script defer data-domain="icbusinesssystems.com" src="https://plausible.io/js/script.js"></script>
 </head>
 <body>
   <header class="topbar">
@@ -73,6 +76,7 @@
         <a href="#services" data-i18n="nav.services">Services</a>
         <a href="#systems" data-i18n="nav.systems">Systems</a>
         <a href="#process" data-i18n="nav.process">Process</a>
+        <a href="/audit.html" data-i18n="audit.navlink">Audit</a>
         <a href="#faq" data-i18n="nav.faq">FAQ</a>
         <a href="#contact" data-i18n="nav.contact">Contact</a>
       </nav>
@@ -98,6 +102,7 @@
         <a href="#services" data-i18n="nav.services">Services</a>
         <a href="#systems" data-i18n="nav.systems">Systems</a>
         <a href="#process" data-i18n="nav.process">Process</a>
+        <a href="/audit.html" data-i18n="audit.navlink">Audit</a>
         <a href="#founder" data-i18n="nav.founder">About</a>
         <a href="#faq" data-i18n="nav.faq">FAQ</a>
         <a href="#contact" data-i18n="nav.contact">Contact</a>
@@ -161,6 +166,7 @@
               <input type="hidden" name="_captcha" value="false">
               <input type="hidden" name="_template" value="table">
               <input type="hidden" name="_autoresponse" value="Thanks for reaching out to IC Business Systems. I got your request and will review it soon.">
+              <input type="hidden" name="_next" value="https://icbusinesssystems.com/thanks.html">
               <input type="text" name="_honey" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
 
               <label class="field">
@@ -632,6 +638,69 @@
     <a class="button button-ghost mobile-cta-side" href="mailto:irving@icbusinesssystems.com" data-i18n="contact.call">Email</a>
   </div>
 
-  <script src="./script.js?v=11"></script>
+  <!-- Audit → contact-form prefill (Release 1). Dynamic import of validate.mjs
+       so a module load failure (404 / CDN cache skew / syntax error) cannot
+       break the lead path; the .catch() emits a Plausible signal and no-ops. -->
+  <script type="module">
+    const STORAGE_KEY = 'icbs.pendingAudit';
+    const TTL_MS = 30 * 60 * 1000; // 30 minutes
+    const track = (event) => {
+      if (typeof window.plausible === 'function') {
+        try { window.plausible(event); } catch (e) {}
+      }
+    };
+
+    import("./validate.mjs?v=1").then(({ validatePendingAudit }) => {
+      const raw = sessionStorage.getItem(STORAGE_KEY);
+      if (!raw) return;
+      let data = null;
+      try { data = JSON.parse(raw); } catch (e) {
+        sessionStorage.removeItem(STORAGE_KEY);
+        track('Quote Prefill Failed');
+        return;
+      }
+      const validated = validatePendingAudit(data);
+      const isExpired = validated && (Date.now() - validated.ts > TTL_MS);
+      if (!validated || isExpired) {
+        sessionStorage.removeItem(STORAGE_KEY);
+        track('Quote Prefill Failed');
+        return;
+      }
+      const form = document.querySelector('form.quote-form');
+      if (!form) {
+        // User landed on home but not the contact form; keep payload for later.
+        return;
+      }
+      const biz = form.querySelector('[name="business_name"]');
+      const msg = form.querySelector('[name="message"]');
+      const proj = form.querySelector('[name="project_type"]');
+      if (biz && validated.businessName) biz.value = validated.businessName;
+      if (proj) proj.value = 'not-sure';
+      if (msg) {
+        const lines = [
+          'From the guided audit:',
+          '  Score: ' + validated.score + '/100',
+          '  Site: ' + (validated.websiteUrl || ''),
+          '  Top leak: ' + (validated.topLeakIssue || 'none'),
+          '  Niche: ' + (validated.niche || '')
+        ];
+        msg.value = lines.join('\n');
+      }
+      // Clear sessionStorage on form-submit ATTEMPT only. Confirmed-success
+      // tracking happens from thanks.html on FormSubmit's _next redirect.
+      form.addEventListener('submit', () => {
+        sessionStorage.removeItem(STORAGE_KEY);
+        track('Quote Submit Attempted');
+      }, { once: true });
+      track('Quote Prefill Success');
+      if (location.hash === '#quote-form' && biz) biz.focus();
+    }).catch((err) => {
+      // Module 404 / network / parse error. Lead path unaffected.
+      sessionStorage.removeItem(STORAGE_KEY);
+      track('Quote Prefill Failed');
+    });
+  </script>
+
+  <script src="./script.js?v=13"></script>
 </body>
 </html>
