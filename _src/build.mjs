@@ -20,6 +20,8 @@ const PAGES = {
 
 const escapeHtml = (s) => String(s)
   .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+// git on Windows may check files out with CRLF; templates and --check compare on LF.
+const readLf = (p) => readFileSync(p, "utf8").replace(/\r\n/g, "\n");
 
 function checkParity() {
   const en = Object.keys(strings.en), es = Object.keys(strings.es);
@@ -49,7 +51,7 @@ function render(tpl, lang, page) {
   };
   // includes first (one level is enough for this site; repeat for nested partials)
   for (let i = 0; i < 3; i++) {
-    tpl = tpl.replace(/\{\{>\s*([\w-]+)\s*\}\}/g, (_, name) => readFileSync(join(SRC, "partials", name + ".html"), "utf8"));
+    tpl = tpl.replace(/\{\{>\s*([\w-]+)\s*\}\}/g, (_, name) => readLf(join(SRC, "partials", name + ".html")));
   }
   const used = new Set();
   let out = tpl
@@ -72,13 +74,13 @@ const check = process.argv.includes("--check");
 let stale = 0;
 const allUsed = new Set();
 for (const page of Object.keys(PAGES)) {
-  const tpl = readFileSync(join(SRC, "pages", page + ".html"), "utf8");
+  const tpl = readLf(join(SRC, "pages", page + ".html"));
   for (const lang of ["en", "es"]) {
     const { html, used } = render(tpl, lang, page);
     used.forEach((k) => allUsed.add(k));
     const outPath = join(ROOT, PAGES[page].out[lang]);
     if (check) {
-      if (!existsSync(outPath) || readFileSync(outPath, "utf8") !== html) { console.error("stale:", PAGES[page].out[lang]); stale++; }
+      if (!existsSync(outPath) || readLf(outPath) !== html) { console.error("stale:", PAGES[page].out[lang]); stale++; }
       continue;
     }
     mkdirSync(dirname(outPath), { recursive: true });
@@ -101,7 +103,7 @@ ${INDEXABLE.flatMap((page) => ["en", "es"].map((lang) => `  <url>
 const robots = `User-agent: *\nAllow: /\n\nSitemap: ${ORIGIN}/sitemap.xml\n`;
 for (const [name, body] of [["sitemap.xml", sitemap], ["robots.txt", robots]]) {
   const outPath = join(ROOT, name);
-  if (check) { if (!existsSync(outPath) || readFileSync(outPath, "utf8") !== body) { console.error("stale:", name); stale++; } continue; }
+  if (check) { if (!existsSync(outPath) || readLf(outPath) !== body) { console.error("stale:", name); stale++; } continue; }
   writeFileSync(outPath, body);
   console.log("wrote", name);
 }
