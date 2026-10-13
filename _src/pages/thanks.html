@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="{{@lang}}">
+<head>
+  <title>{{t:thanks.metaTitle}}</title>
+  <meta name="description" content="{{t:thanks.description}}">
+  <meta name="robots" content="noindex,nofollow">
+{{> head}}
+</head>
+<body class="page-thanks">
+{{> header}}
+
+  <main id="main" class="thanks">
+    <div class="wrap thanks-inner">
+      <svg class="thanks-pipe" viewBox="0 0 120 48" aria-hidden="true" focusable="false"><path class="pipe-run" d="M4 24 H52 V8 H116"/><circle class="fitting" cx="52" cy="24" r="4"/><circle class="fitting" cx="52" cy="8" r="4"/><circle class="packet packet-done" cx="116" cy="8" r="6"/></svg>
+      <h1>{{t:thanks.title}}</h1>
+      <p class="thanks-lede">{{t:thanks.p1}}</p>
+      <p>{{t:thanks.p2}} <a href="mailto:irving@icbusinesssystems.com">irving@icbusinesssystems.com</a></p>
+      <div class="thanks-actions">
+        <a class="button" href="{{@base}}#work">{{t:thanks.work}}</a>
+        <a class="text-link" href="{{@base}}">{{t:thanks.back}} <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </main>
+
+{{> footer}}
+
+  <!-- Confirmed-success signal: FormSubmit redirects here (_next) only after accepting the request.
+       Event name kept as "Quote Submitted" so the RUNBOOK baseline stays comparable. -->
+  <script>
+    try { window.plausible('Quote Submitted', { props: { lang: document.documentElement.lang } }); } catch (e) {}
+  </script>
+  <script src="/site.js?v={{@v}}" defer></script>
+</body>
+</html>

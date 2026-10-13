@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://icbusinesssystems.com/sitemap.xml

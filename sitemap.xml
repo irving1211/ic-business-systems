@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://icbusinesssystems.com/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://icbusinesssystems.com/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://icbusinesssystems.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://icbusinesssystems.com/"/>
+  </url>
+  <url>
+    <loc>https://icbusinesssystems.com/es/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://icbusinesssystems.com/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://icbusinesssystems.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://icbusinesssystems.com/"/>
+  </url>
+  <url>
+    <loc>https://icbusinesssystems.com/audit.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://icbusinesssystems.com/audit.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://icbusinesssystems.com/es/audit.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://icbusinesssystems.com/audit.html"/>
+  </url>
+  <url>
+    <loc>https://icbusinesssystems.com/es/audit.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://icbusinesssystems.com/audit.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://icbusinesssystems.com/es/audit.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://icbusinesssystems.com/audit.html"/>
+  </url>
+</urlset>

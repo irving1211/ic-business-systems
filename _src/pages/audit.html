@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="{{@lang}}">
+<head>
+  <title>{{t:audit.metaTitle}}</title>
+  <meta name="description" content="{{t:audit.description}}">
+{{> head}}
+  <link rel="stylesheet" href="/audit.css?v={{@v}}">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="IC Business Systems">
+  <meta property="og:title" content="{{t:audit.metaTitle}}">
+  <meta property="og:description" content="{{t:audit.description}}">
+  <meta property="og:url" content="{{@canonical}}">
+  <meta property="og:locale" content="{{@ogLocale}}">
+  <meta property="og:image" content="https://icbusinesssystems.com/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://icbusinesssystems.com/og-image.png">
+</head>
+<body class="page-audit">
+{{> header}}
+
+  <main id="main" class="audit-page">
+    <section class="wrap audit-intro">
+      <p class="hero-kicker">{{t:audit.eyebrow}}</p>
+      <h1>{{t:audit.title}}</h1>
+      <p class="audit-subhead">{{t:audit.subhead}}</p>
+      <p class="audit-tip">{{t:audit.tip}}</p>
+    </section>
+
+    <section class="wrap audit-work">
+      <form id="audit-form" class="audit-form" novalidate>
+        <div class="audit-card">
+          <h2 class="audit-card-title">{{t:audit.aboutHeading}}</h2>
+          <div class="field">
+            <label for="a-biz">{{t:audit.businessName}}</label>
+            <input type="text" id="a-biz" name="business_name" required autocomplete="organization" maxlength="100" placeholder="{{t:audit.businessNamePlaceholder}}">
+          </div>
+          <div class="field">
+            <label for="a-url">{{t:audit.websiteUrl}}</label>
+            <input type="url" id="a-url" name="website_url" required inputmode="url" maxlength="500" placeholder="https://example.com">
+          </div>
+          <div class="field">
+            <label for="a-niche">{{t:audit.niche}}</label>
+            <select id="a-niche" name="niche" required>
+              <option value="" disabled selected>{{t:audit.nichePlaceholder}}</option>
+              <option value="plumbing">{{t:audit.nichePlumbing}}</option>
+              <option value="hvac">{{t:audit.nicheHvac}}</option>
+              <option value="electrical">{{t:audit.nicheElectrical}}</option>
+              <option value="landscaping">{{t:audit.nicheLandscaping}}</option>
+              <option value="roofing">{{t:audit.nicheRoofing}}</option>
+              <option value="other">{{t:audit.nicheOther}}</option>
+            </select>
+          </div>
+        </div>
+
+        <fieldset class="audit-card audit-checks">
+          <legend class="audit-card-title">{{t:audit.checksHeading}}</legend>
+
+          <label class="check">
+            <input type="checkbox" name="phoneVisible">
+            <span class="check-label">{{t:audit.checkPhone}}</span>
+            <small class="check-help">{{t:audit.checkPhoneHelp}}</small>
+          </label>
+          <label class="check">
+            <input type="checkbox" name="ctaClear">
+            <span class="check-label">{{t:audit.checkCta}}</span>
+            <small class="check-help">{{t:audit.checkCtaHelp}}</small>
+          </label>
+          <label class="check">
+            <input type="checkbox" name="trustProof">
+            <span class="check-label">{{t:audit.checkTrust}}</span>
+            <small class="check-help">{{t:audit.checkTrustHelp}}</small>
+          </label>
+          <fieldset class="check check-radio-group">
+            <legend class="check-label">{{t:audit.checkFriction}}</legend>
+            <small class="check-help">{{t:audit.checkFrictionHelp}}</small>
+            <div class="radio-row">
+              <label class="radio"><input type="radio" name="formFriction" value="low" required> <span>{{t:audit.frictionLow}}</span></label>
+              <label class="radio"><input type="radio" name="formFriction" value="medium"> <span>{{t:audit.frictionMedium}}</span></label>
+              <label class="radio"><input type="radio" name="formFriction" value="high"> <span>{{t:audit.frictionHigh}}</span></label>
+            </div>
+          </fieldset>
+          <label class="check">
+            <input type="checkbox" name="mobileReadable">
+            <span class="check-label">{{t:audit.checkMobile}}</span>
+            <small class="check-help">{{t:audit.checkMobileHelp}}</small>
+          </label>
+        </fieldset>
+
+        <div class="audit-submit-row">
+          <button type="submit" class="button button-large button-block">{{t:audit.submit}}</button>
+        </div>
+        <ul id="audit-errors" class="form-errors" hidden></ul>
+      </form>
+
+      <section id="audit-results" class="audit-results" hidden aria-live="polite">
+        <div class="audit-card results-summary">
+          <div class="score-row">
+            <div class="score-badge">
+              <span class="score-number" id="result-score">—</span>
+              <span class="score-out">{{t:audit.scoreOf}}</span>
+            </div>
+            <div class="score-meta">
+              <p class="score-priority" id="result-priority"></p>
+              <p class="score-summary" id="result-summary"></p>
+            </div>
+          </div>
+        </div>
+        <div class="audit-card results-top-leak">
+          <h2 class="audit-card-title">{{t:audit.topLeakHeading}}</h2>
+          <p class="leak-issue" id="result-top-leak-issue"></p>
+          <p class="leak-fix" id="result-top-leak-fix"></p>
+        </div>
+        <div class="audit-card results-findings">
+          <h2 class="audit-card-title">{{t:audit.findingsHeading}}</h2>
+          <ul class="findings-list" id="result-findings"></ul>
+        </div>
+        <div class="audit-card results-cta">
+          <h2 class="audit-card-title">{{t:audit.ctaHeading}}</h2>
+          <p class="cta-text">{{t:audit.ctaText}}</p>
+          <div class="cta-row">
+            <a id="cta-send" class="button" href="{{@base}}#review" data-track="CTA Click" data-position="self-check">{{t:audit.ctaPrimary}}</a>
+            <a class="button button-ghost" href="https://www.instagram.com/icbusinesssystems/" target="_blank" rel="noopener">{{t:audit.ctaSecondary}}</a>
+          </div>
+        </div>
+      </section>
+    </section>
+  </main>
+
+{{> footer}}
+
+  <script type="module" src="/audit.js?v=1"></script>
+  <script src="/site.js?v={{@v}}" defer></script>
+</body>
+</html>

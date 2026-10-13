@@ -1,0 +1,32 @@
+  <a class="skip" href="#main">{{t:skip}}</a>
+  <header class="topbar">
+    <div class="wrap topbar-row">
+      <a class="brand" href="{{@base}}" aria-label="{{t:brand.home}}">
+        <span class="brand-mark" aria-hidden="true">IC</span>
+        <span class="brand-name">IC Business Systems</span>
+      </a>
+      <nav class="nav" aria-label="{{t:nav.label}}">
+        <a href="{{@base}}#work">{{t:nav.work}}</a>
+        <a href="{{@base}}#build">{{t:nav.build}}</a>
+        <a href="{{@base}}#pricing">{{t:nav.pricing}}</a>
+        <a href="{{@base}}#about">{{t:nav.about}}</a>
+      </nav>
+      <div class="topbar-actions">
+        <a class="lang-link" href="{{@altUrl}}" hreflang="{{t:lang.switchShort}}" lang="{{t:lang.switchShort}}" aria-label="{{t:lang.switchLabel}}" data-track="Language Switch">{{t:lang.switchShort}}</a>
+        <a class="button button-small" href="{{@base}}#review" data-track="CTA Click" data-position="header">{{t:nav.cta}}</a>
+        <button type="button" class="menu-button" aria-expanded="false" aria-controls="menu" data-label-open="{{t:nav.menuOpen}}" data-label-close="{{t:nav.menuClose}}">
+          <span class="menu-icon" aria-hidden="true"></span><span class="visually-hidden">{{t:nav.menuOpen}}</span>
+        </button>
+      </div>
+    </div>
+    <div id="menu" class="menu" hidden>
+      <nav class="wrap menu-inner" aria-label="{{t:nav.label}}">
+        <a href="{{@base}}#work">{{t:nav.work}}</a>
+        <a href="{{@base}}#build">{{t:nav.build}}</a>
+        <a href="{{@base}}#pricing">{{t:nav.pricing}}</a>
+        <a href="{{@base}}#about">{{t:nav.about}}</a>
+        <a href="{{@altUrl}}" lang="{{t:lang.switchShort}}" data-track="Language Switch">{{t:lang.switchLong}}</a>
+        <a class="button" href="{{@base}}#review" data-track="CTA Click" data-position="menu">{{t:cta.primary}}</a>
+      </nav>
+    </div>
+  </header>

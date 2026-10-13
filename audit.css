@@ -1,317 +1,61 @@
-/* audit.css — scoped to audit.html only.
-   Inherits all base tokens + chrome styles from styles.css.
-   No new design tokens; status colors inline because they're audit-only. */
+/* audit.css — the 90-second self-check (audit.html, es/audit.html).
+   Uses the tokens in styles.css. The form sits on paper so it reads like a working checklist.
+   IDs and names are fixed by audit.js (synced from lead-audit-tool) — restyle only. */
 
-.audit-page {
-  padding-top: clamp(40px, 6vw, 80px);
-  padding-bottom: var(--pad-section);
-}
+.audit-page { padding-block: clamp(40px, 6vw, 88px) var(--section); }
+.audit-intro { max-width: 46rem; margin-bottom: clamp(32px, 4vw, 48px); }
+.audit-intro h1 { font: 600 clamp(2.4rem, 5vw, 3.8rem)/1.04 var(--display); letter-spacing: -.018em; margin-bottom: 18px; }
+.audit-subhead { font-size: 1.1875rem; color: var(--text-muted); margin-bottom: 18px; }
+.audit-tip { margin: 0; padding: 12px 16px; border-left: 3px solid var(--action); background: var(--surface); color: var(--text-muted); font-size: .9375rem; border-radius: 0 6px 6px 0; }
 
-.audit-intro {
-  text-align: left;
-  max-width: 720px;
-  margin-bottom: clamp(32px, 4vw, 56px);
-}
+.audit-work { display: grid; gap: 28px; max-width: 52rem; }
+.audit-form { display: grid; gap: 20px; }
+.audit-card { margin: 0; padding: clamp(20px, 3vw, 32px); border: 1px solid var(--paper-line); border-radius: 12px; background: var(--paper-card); color: var(--ink); min-width: 0; }
+.audit-card-title { font: 600 1.375rem/1.2 var(--display); margin: 0 0 18px; padding: 0; color: var(--ink); }
+.audit-card .field + .field { margin-top: 16px; }
+.audit-card :focus-visible { outline-color: var(--gold-ink); }
+.audit-card a { color: var(--gold-ink); }
 
-.audit-intro h1 {
-  font-family: var(--serif);
-  font-size: clamp(36px, 5vw, 56px);
-  font-weight: 600;
-  line-height: 1.1;
-  letter-spacing: -0.01em;
-  margin: 12px 0 16px;
-  color: var(--text);
-}
+.audit-checks { display: grid; gap: 12px; }
+.audit-checks > legend { float: left; width: 100%; }
+.check { display: grid; grid-template-columns: 26px minmax(0, 1fr); column-gap: 14px; row-gap: 4px; align-items: start; padding: 14px 16px; border: 1.5px solid var(--paper-line); border-radius: 8px; cursor: pointer; margin: 0; min-width: 0; }
+.check:has(input:checked) { border-color: var(--ink); background: var(--paper-select); }
+.check input[type="checkbox"] { width: 24px; height: 24px; margin: 0; accent-color: var(--ink); grid-row: span 2; }
+.check-label { font-weight: 600; color: var(--ink); padding: 0; }
+.check-help { color: var(--ink-muted); font-size: .875rem; line-height: 1.5; grid-column: 2; }
+.check-radio-group { grid-template-columns: minmax(0, 1fr); cursor: default; }
+.check-radio-group .check-help { grid-column: 1; }
+.check-radio-group > legend { float: left; width: 100%; margin-bottom: 4px; }
+.radio-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+.radio { display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 0 16px; border: 1.5px solid var(--field-line); border-radius: 6px; cursor: pointer; font-weight: 500; }
+.radio:has(input:checked) { border-color: var(--ink); background: var(--paper-select); }
+.radio input { width: 24px; height: 24px; margin: 0; accent-color: var(--ink); }
 
-.audit-subhead {
-  font-size: clamp(16px, 1.4vw, 18px);
-  line-height: 1.6;
-  color: var(--text-2);
-  margin: 0 0 16px;
-}
+.audit-submit-row { margin-top: 4px; }
+.form-errors { margin: 0; padding: 14px 16px 14px 36px; border: 2px solid var(--error-line-dark); border-radius: 6px; color: var(--error-text-dark); background: var(--error-bg-dark); }
 
-.audit-tip {
-  font-size: 14px;
-  line-height: 1.5;
-  color: var(--text-2);
-  margin: 0;
-  padding: 12px 14px;
-  background: var(--gold-soft);
-  border-left: 3px solid var(--gold);
-  border-radius: var(--radius-sm);
-}
-
-.audit-work {
-  display: grid;
-  gap: 28px;
-}
-
-.audit-form {
-  display: grid;
-  gap: 24px;
-}
-
-.audit-card {
-  background: var(--bg-panel);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-md);
-  padding: clamp(20px, 3vw, 32px);
-}
-
-.audit-card-title {
-  font-family: var(--serif);
-  font-size: clamp(20px, 2vw, 24px);
-  font-weight: 600;
-  margin: 0 0 16px;
-  color: var(--text);
-}
-
-/* The site already defines .field. Re-style nothing globally; tweak only
-   audit-form internals so spacing breathes on a denser screen. */
-.audit-form .field {
-  display: block;
-  margin-bottom: 16px;
-}
-.audit-form .field:last-child {
-  margin-bottom: 0;
-}
-.audit-form .field > span {
-  display: block;
-  font-size: 14px;
-  font-weight: 500;
-  margin-bottom: 6px;
-  color: var(--text-2);
-}
-.audit-form input[type="text"],
-.audit-form input[type="url"],
-.audit-form select {
-  width: 100%;
-  padding: 12px 14px;
-  font: inherit;
-  color: var(--text);
-  background: var(--bg-deeper);
-  border: 1px solid var(--border-strong);
-  border-radius: var(--radius-sm);
-  transition: border-color 120ms ease;
-}
-.audit-form input:focus,
-.audit-form select:focus {
-  outline: none;
-  border-color: var(--gold);
-}
-
-.audit-checks {
-  display: grid;
-  gap: 18px;
-  border: 1px solid var(--border);
-}
-
-.check {
-  display: grid;
-  grid-template-columns: 22px 1fr;
-  column-gap: 12px;
-  row-gap: 4px;
-  align-items: start;
-  padding: 12px;
-  background: var(--bg-deeper);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
-  cursor: pointer;
-}
-.check:hover {
-  border-color: var(--border-strong);
-}
-.check input[type="checkbox"] {
-  margin-top: 3px;
-  width: 18px;
-  height: 18px;
-  accent-color: var(--gold);
-  cursor: pointer;
-}
-.check-label {
-  font-size: 15px;
-  font-weight: 500;
-  color: var(--text);
-}
-.check-help {
-  display: block;
-  grid-column: 2 / -1;
-  color: var(--text-2);
-  font-size: 13px;
-  line-height: 1.5;
-  margin-top: 2px;
-}
-
-.check-radio-group {
-  display: block;
-  cursor: default;
-}
-.check-radio-group .check-label {
-  font-size: 15px;
-  font-weight: 500;
-  color: var(--text);
-  display: block;
-  margin-bottom: 6px;
-}
-.radio-row {
-  display: flex;
-  gap: 12px;
-  margin-top: 10px;
-  flex-wrap: wrap;
-}
-.radio {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 8px 14px;
-  background: var(--bg-panel);
-  border: 1px solid var(--border-strong);
-  border-radius: var(--radius-sm);
-  cursor: pointer;
-  font-size: 14px;
-  color: var(--text);
-}
-.radio input[type="radio"] {
-  accent-color: var(--gold);
-  cursor: pointer;
-}
-
-.audit-submit-row {
-  display: flex;
-  justify-content: stretch;
-}
-
-.form-errors {
-  list-style: none;
-  margin: 0;
-  padding: 14px 18px;
-  background: rgba(220, 80, 80, 0.08);
-  border: 1px solid rgba(220, 80, 80, 0.35);
-  border-radius: var(--radius-sm);
-  color: #f3a8a8;
-  font-size: 14px;
-}
-.form-errors li {
-  margin-left: 16px;
-  list-style: disc;
-}
-
-/* Results */
-.audit-results {
-  display: grid;
-  gap: 24px;
-  margin-top: 32px;
-  scroll-margin-top: 80px;
-}
-
-.score-row {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  flex-wrap: wrap;
-}
-
-.score-badge {
-  display: inline-flex;
-  align-items: baseline;
-  gap: 6px;
-  padding: 18px 28px;
-  background: var(--bg-deeper);
-  border: 1px solid var(--border-gold);
-  border-radius: var(--radius-md);
-}
-.score-number {
-  font-family: var(--serif);
-  font-size: 56px;
-  font-weight: 700;
-  color: var(--gold);
-  line-height: 1;
-}
-.score-out {
-  font-size: 18px;
-  color: var(--text-2);
-}
-
-.score-meta {
-  flex: 1;
-  min-width: 220px;
-}
-.score-priority {
-  font-size: 14px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  margin: 0 0 6px;
-  color: var(--text-2);
-}
-.score-priority.priority-high { color: #e57373; }
-.score-priority.priority-medium { color: #ffb74d; }
-.score-priority.priority-low { color: #81c784; }
-.score-summary {
-  font-size: 16px;
-  line-height: 1.5;
-  margin: 0;
-  color: var(--text);
-}
-
-.leak-issue {
-  font-size: 18px;
-  font-weight: 600;
-  margin: 0 0 8px;
-  color: var(--text);
-}
-.leak-fix {
-  font-size: 15px;
-  line-height: 1.6;
-  color: var(--text-2);
-  margin: 0;
-}
-
-.findings-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  gap: 8px;
-}
-.findings-list li {
-  display: grid;
-  grid-template-columns: 100px 1fr;
-  gap: 12px;
-  padding: 12px;
-  background: var(--bg-deeper);
-  border-left: 3px solid var(--border);
-  border-radius: var(--radius-sm);
-  font-size: 14px;
-  align-items: center;
-}
-.findings-list li.status-good { border-left-color: #81c784; }
-.findings-list li.status-warning { border-left-color: #ffb74d; }
-.findings-list li.status-critical { border-left-color: #e57373; }
-.finding-label {
-  font-weight: 600;
-  color: var(--text);
-}
-.finding-issue {
-  color: var(--text-2);
-}
-
-.cta-text {
-  font-size: 15px;
-  line-height: 1.6;
-  color: var(--text-2);
-  margin: 0 0 16px;
-}
-.cta-row {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
-@media (max-width: 640px) {
-  .audit-form .field > span { font-size: 13px; }
-  .score-number { font-size: 44px; }
-  .score-badge { padding: 14px 20px; }
-  .findings-list li { grid-template-columns: 1fr; gap: 4px; }
-  .audit-card { padding: 18px; }
-}
+.audit-results { display: grid; gap: 20px; scroll-margin-top: 24px; }
+.score-row { display: flex; flex-wrap: wrap; align-items: center; gap: 20px 28px; }
+.score-badge { display: inline-flex; align-items: baseline; gap: 6px; padding: 16px 24px; border-radius: 10px; background: var(--ink); }
+.score-number { font: 600 3.4rem/1 var(--display); color: var(--action); font-variant-numeric: tabular-nums; }
+.score-out { color: var(--text-muted); font: 400 1rem/1 var(--mono); }
+.score-meta { flex: 1; min-width: 14rem; }
+.score-priority { margin: 0 0 6px; font: 500 .8125rem/1.3 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-muted); }
+.score-priority.priority-high { color: var(--error); }
+.score-priority.priority-medium { color: var(--gold-ink); }
+.score-priority.priority-low { color: var(--ok-ink); }
+.score-summary { margin: 0; color: var(--ink); }
+.leak-issue { margin: 0 0 8px; font-weight: 600; font-size: 1.125rem; }
+.leak-fix { margin: 0; color: var(--ink-muted); }
+.findings-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.findings-list li { display: grid; gap: 2px; padding: 12px 14px 12px 16px; border-left: 4px solid var(--paper-dash); background: var(--paper-soft); border-radius: 0 6px 6px 0; }
+.findings-list li.status-good { border-left-color: var(--ok); }
+.findings-list li.status-warning { border-left-color: var(--gold-ink); }
+.findings-list li.status-critical { border-left-color: var(--error); }
+.finding-label { font-weight: 600; }
+.finding-issue { color: var(--ink-muted); font-size: .9375rem; }
+.results-cta { background: var(--ink); border-color: var(--ink); color: var(--text); }
+.results-cta .audit-card-title { color: var(--text); }
+.results-cta .cta-text { color: var(--text-muted); }
+.results-cta :focus-visible { outline-color: var(--focus); }
+.cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px; }
