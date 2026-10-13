@@ -71,8 +71,9 @@
   <main id="main" class="thanks">
     <div class="wrap thanks-inner">
       <svg class="thanks-pipe" viewBox="0 0 120 48" aria-hidden="true" focusable="false"><path class="pipe-run" d="M4 24 H52 V8 H116"/><circle class="fitting" cx="52" cy="24" r="4"/><circle class="fitting" cx="52" cy="8" r="4"/><circle class="packet packet-done" cx="116" cy="8" r="6"/></svg>
-      <h1>Got it. Your review is on my list.</h1>
-      <p class="thanks-lede">I'll look at your site the way your customers do, then send your video and three fixes within 3 business days.</p>
+      <h1 data-paid-title="Got it. I'll be in touch.">Got it. Your review is on my list.</h1>
+      <p class="thanks-lede" data-paid-text="I'll reply within 2 business days to set up a short call about {topic}."
+         data-topic-consulting="consulting and troubleshooting" data-topic-support="monthly website support" data-topic-ongoing="ongoing consulting and implementation" data-topic-project="a new website or larger project">I'll look at your site the way your customers do, then send your video and three fixes within 3 business days.</p>
       <p>If you chose email, a confirmation is on its way. Anything urgent? Write to me directly. <a href="mailto:irving@icbusinesssystems.com">irving@icbusinesssystems.com</a></p>
       <div class="thanks-actions">
         <a class="button" href="/#work">See the work while you wait</a>
@@ -104,7 +105,17 @@
   <!-- Confirmed-success signal: FormSubmit redirects here (_next) only after accepting the request.
        Event name kept as "Quote Submitted" so the RUNBOOK baseline stays comparable. -->
   <script>
-    try { window.plausible('Quote Submitted', { props: { lang: document.documentElement.lang } }); } catch (e) {}
+    (function () {
+      // FormSubmit's _next carries ?topic=… for paid inquiries; the free review is the default text.
+      var topic = new URLSearchParams(location.search).get('topic') || 'review';
+      var lede = document.querySelector('.thanks-lede');
+      var label = lede && lede.getAttribute('data-topic-' + topic);
+      if (label) {
+        document.querySelector('h1').textContent = document.querySelector('h1').getAttribute('data-paid-title');
+        lede.textContent = lede.getAttribute('data-paid-text').replace('{topic}', label);
+      } else { topic = 'review'; }
+      try { window.plausible('Quote Submitted', { props: { lang: document.documentElement.lang, topic: topic } }); } catch (e) {}
+    })();
   </script>
   <script src="/site.js?v=20" defer></script>
 </body>

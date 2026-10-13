@@ -325,16 +325,48 @@ h1, h2, h3 { margin: 0; text-wrap: balance; }
 .price-row dt { font: 600 1.375rem/1.2 var(--display); }
 .price-amount { margin: 0; font: 600 1.5rem/1.2 var(--display); color: var(--action); font-variant-numeric: tabular-nums lining-nums; }
 .price-desc { margin: 0; color: var(--text-muted); }
-.price-row-care dt, .price-row-care .price-amount { font-size: 1.2rem; }
-.price-row-care .price-amount { color: var(--text-muted); }
-.price-terms { margin: 28px 0 0; color: var(--text-muted); max-width: 52rem; }
+.price-terms { margin: 24px 0 0; color: var(--text-muted); max-width: 52rem; }
+
+/* plans: three comparable columns; every plan lists the same parts in the same order */
+.plans { display: grid; gap: 20px; }
+@media (min-width: 980px) { .plans { grid-template-columns: repeat(3, minmax(0, 1fr)); } .plans .plan-name { min-height: 2.4em; } }
+.plan { display: flex; flex-direction: column; gap: 14px; min-width: 0; padding: 28px 24px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--bg); }
+.plan-name { font: 600 clamp(1.3rem, 1.8vw, 1.5rem)/1.2 var(--display); }
+.plan-price { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; margin: 0; }
+.plan-amount { font: 600 2.1rem/1.1 var(--display); color: var(--action); font-variant-numeric: tabular-nums lining-nums; }
+.plan-unit { font: 400 .875rem/1.3 var(--mono); color: var(--text-faint); }
+.plan-label { display: block; margin: 0 0 4px; font: 500 .72rem/1.3 var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--action); }
+.plan-best { margin: 0; color: var(--text); }
+.plan-list { list-style: none; margin: -6px 0 0; padding: 0; display: grid; gap: 8px; color: var(--text-muted); font-size: .9688rem; }
+.plan-list li { position: relative; padding-left: 24px; }
+.plan-list li::before { content: ""; position: absolute; left: 2px; top: .5em; width: 10px; height: 6px; border-left: 2px solid var(--action); border-bottom: 2px solid var(--action); transform: rotate(-45deg); }
+.plan-terms { margin: 4px 0 0; padding-top: 14px; border-top: 1px solid var(--border); display: grid; gap: 12px; }
+.plan-terms dt { font: 500 .72rem/1.3 var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--text-faint); }
+.plan-terms dd { margin: 4px 0 0; color: var(--text-muted); font-size: .9063rem; line-height: 1.55; }
+.plan-cta { margin-top: auto; width: 100%; }
+.plans .plan-terms { margin-bottom: 8px; }
+.project { display: grid; gap: 28px; margin-top: 20px; padding: 28px 24px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--bg); }
+@media (min-width: 980px) { .project { grid-template-columns: minmax(0, 1fr) minmax(0, 2.1fr); gap: 48px; padding: 32px 32px; } }
+.project-head { display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+.project-head .plan-amount { font-size: 1.75rem; }
+.project-how { margin: 0; color: var(--text-muted); }
+.project-head .plan-cta { margin-top: 6px; }
+.project-body { min-width: 0; }
+.project .price-row { padding: 18px 0; }
+.project .price-row:first-child { border-top: 0; padding-top: 0; }
+@media (min-width: 900px) { .project .price-row { grid-template-columns: minmax(0, 12rem) minmax(0, 10.5rem) minmax(0, 1fr); } }
+.project .price-row dt { font-size: 1.2rem; }
+.project .price-amount { font-size: 1.25rem; }
+.price-note { margin: 28px 0 0; color: var(--text-muted); max-width: 52rem; }
+.price-note a { color: var(--text); font-weight: 600; text-decoration-color: var(--action); text-underline-offset: 5px; display: inline-flex; align-items: center; gap: 6px; min-height: 44px; }
+.topic-note { margin: 4px 0 0; padding: 10px 12px; border-left: 3px solid var(--gold-ink); background: var(--paper-select); color: var(--ink); font-size: .9375rem; border-radius: 0 6px 6px 0; }
 
 /* about */
 .about-grid { display: grid; gap: 40px; align-items: center; }
 @media (min-width: 900px) { .about-grid { grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 80px; } }
 .about-grid-text { grid-template-columns: minmax(0, 1fr) !important; }
 .about-grid-text .about-copy { max-width: 46rem; }
-.price-row-small dt, .price-row-small .price-amount { font-size: 1.2rem; }
+
 .portrait { margin: 0; max-width: 440px; }
 .portrait img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; border-radius: var(--radius); }
 .about-copy h2 { font: 600 clamp(2rem, 4vw, 3.2rem)/1.06 var(--display); margin-bottom: 24px; }

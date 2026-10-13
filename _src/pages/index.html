@@ -47,7 +47,10 @@
         {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "{{t:build.1.t}}", "description": "{{t:build.1.d}}"}},
         {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "{{t:build.2.t}}", "description": "{{t:build.2.d}}"}},
         {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "{{t:build.3.t}}", "description": "{{t:build.3.d}}"}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "{{t:build.4.t}}", "description": "{{t:build.4.d}}"}}
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "{{t:build.4.t}}", "description": "{{t:build.4.d}}"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "{{t:plan.c.name}}", "description": "{{t:plan.c.best}}"}, "priceSpecification": {"@type": "UnitPriceSpecification", "price": "75", "priceCurrency": "USD", "unitText": "HOUR"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "{{t:plan.s.name}}", "description": "{{t:plan.s.best}}"}, "priceSpecification": {"@type": "UnitPriceSpecification", "minPrice": "150", "priceCurrency": "USD", "unitText": "MONTH"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "{{t:plan.o.name}}", "description": "{{t:plan.o.best}}"}, "priceSpecification": {"@type": "UnitPriceSpecification", "minPrice": "300", "priceCurrency": "USD", "unitText": "MONTH"}}
       ]
     }
   }
@@ -303,21 +306,91 @@
       </div>
     </section>
 
-    <!-- ================= PRICING (PENDING Irving's OK to publish) ================= -->
+    <!-- ================= PRICING (approved 2026-10-13: consulting $75/h, support from $150/mo, ongoing from $300/mo, projects by quote) ================= -->
     <section id="pricing" class="section pricing" aria-labelledby="pricing-title">
       <div class="wrap">
         <header class="section-head">
           <h2 id="pricing-title">{{t:price.title}}</h2>
           <p>{{t:price.intro}}</p>
         </header>
-        <dl class="prices">
-          <div class="price-row"><dt>{{t:price.1.n}}</dt><dd class="price-amount">{{t:price.1.p}}</dd><dd class="price-desc">{{t:price.1.d}}</dd></div>
-          <div class="price-row"><dt>{{t:price.2.n}}</dt><dd class="price-amount">{{t:price.2.p}}</dd><dd class="price-desc">{{t:price.2.d}}</dd></div>
-          <div class="price-row"><dt>{{t:price.3.n}}</dt><dd class="price-amount">{{t:price.3.p}}</dd><dd class="price-desc">{{t:price.3.d}}</dd></div>
-          <div class="price-row price-row-small"><dt>{{t:price.5.n}}</dt><dd class="price-amount">{{t:price.5.p}}</dd><dd class="price-desc">{{t:price.5.d}}</dd></div>
-          <div class="price-row price-row-care"><dt>{{t:price.4.n}}</dt><dd class="price-amount">{{t:price.4.p}}</dd><dd class="price-desc">{{t:price.4.d}}</dd></div>
-        </dl>
-        <p class="price-terms">{{t:price.terms}}</p>
+
+        <div class="plans">
+          <article class="plan" aria-labelledby="plan-c">
+            <h3 id="plan-c" class="plan-name">{{t:plan.c.name}}</h3>
+            <p class="plan-price"><span class="plan-amount">{{t:plan.c.price}}</span> <span class="plan-unit">{{t:plan.c.unit}}</span></p>
+            <p class="plan-best"><span class="plan-label">{{t:plan.best}}</span> {{t:plan.c.best}}</p>
+            <h4 class="plan-label">{{t:plan.includes}}</h4>
+            <ul class="plan-list">
+              <li>{{t:plan.c.i1}}</li>
+              <li>{{t:plan.c.i2}}</li>
+              <li>{{t:plan.c.i3}}</li>
+            </ul>
+            <dl class="plan-terms">
+              <div><dt>{{t:plan.how}}</dt><dd>{{t:plan.c.how}}</dd></div>
+              <div><dt>{{t:plan.not}}</dt><dd>{{t:plan.c.not}}</dd></div>
+            </dl>
+            <a class="button plan-cta" href="?topic=consulting#review" data-topic="consulting" data-track="CTA Click" data-position="pricing-consulting">{{t:cta.discuss}}</a>
+          </article>
+
+          <article class="plan" aria-labelledby="plan-s">
+            <h3 id="plan-s" class="plan-name">{{t:plan.s.name}}</h3>
+            <p class="plan-price"><span class="plan-amount">{{t:plan.s.price}}</span> <span class="plan-unit">{{t:plan.s.unit}}</span></p>
+            <p class="plan-best"><span class="plan-label">{{t:plan.best}}</span> {{t:plan.s.best}}</p>
+            <h4 class="plan-label">{{t:plan.includes}}</h4>
+            <ul class="plan-list">
+              <li>{{t:plan.s.i1}}</li>
+              <li>{{t:plan.s.i2}}</li>
+              <li>{{t:plan.s.i3}}</li>
+              <li>{{t:plan.s.i4}}</li>
+            </ul>
+            <dl class="plan-terms">
+              <div><dt>{{t:plan.not}}</dt><dd>{{t:plan.s.not}}</dd></div>
+              <div><dt>{{t:plan.extra}}</dt><dd>{{t:plan.s.extra}}</dd></div>
+              <div><dt>{{t:plan.terms}}</dt><dd>{{t:plan.monthly}}</dd></div>
+            </dl>
+            <a class="button plan-cta" href="?topic=support#review" data-topic="support" data-track="CTA Click" data-position="pricing-support">{{t:cta.discuss}}</a>
+          </article>
+
+          <article class="plan" aria-labelledby="plan-o">
+            <h3 id="plan-o" class="plan-name">{{t:plan.o.name}}</h3>
+            <p class="plan-price"><span class="plan-amount">{{t:plan.o.price}}</span> <span class="plan-unit">{{t:plan.o.unit}}</span></p>
+            <p class="plan-best"><span class="plan-label">{{t:plan.best}}</span> {{t:plan.o.best}}</p>
+            <h4 class="plan-label">{{t:plan.includes}}</h4>
+            <ul class="plan-list">
+              <li>{{t:plan.o.i1}}</li>
+              <li>{{t:plan.o.i2}}</li>
+              <li>{{t:plan.o.i3}}</li>
+              <li>{{t:plan.o.i4}}</li>
+            </ul>
+            <dl class="plan-terms">
+              <div><dt>{{t:plan.not}}</dt><dd>{{t:plan.o.not}}</dd></div>
+              <div><dt>{{t:plan.extra}}</dt><dd>{{t:plan.o.extra}}</dd></div>
+              <div><dt>{{t:plan.terms}}</dt><dd>{{t:plan.monthly}}</dd></div>
+            </dl>
+            <a class="button plan-cta" href="?topic=ongoing#review" data-topic="ongoing" data-track="CTA Click" data-position="pricing-ongoing">{{t:cta.discuss}}</a>
+          </article>
+        </div>
+
+        <article class="project" aria-labelledby="plan-p">
+          <div class="project-head">
+            <h3 id="plan-p" class="plan-name">{{t:proj.name}}</h3>
+            <p class="plan-price"><span class="plan-amount">{{t:proj.price}}</span></p>
+            <p class="plan-best"><span class="plan-label">{{t:plan.best}}</span> {{t:proj.best}}</p>
+            <p class="project-how">{{t:proj.how}}</p>
+            <a class="button plan-cta" href="?topic=project#review" data-topic="project" data-track="CTA Click" data-position="pricing-project">{{t:cta.discuss}}</a>
+          </div>
+          <div class="project-body">
+            <dl class="prices">
+              <div class="price-row"><dt>{{t:price.1.n}}</dt><dd class="price-amount">{{t:price.1.p}}</dd><dd class="price-desc">{{t:price.1.d}}</dd></div>
+              <div class="price-row"><dt>{{t:price.2.n}}</dt><dd class="price-amount">{{t:price.2.p}}</dd><dd class="price-desc">{{t:price.2.d}}</dd></div>
+              <div class="price-row"><dt>{{t:price.3.n}}</dt><dd class="price-amount">{{t:price.3.p}}</dd><dd class="price-desc">{{t:price.3.d}}</dd></div>
+              <div class="price-row price-row-small"><dt>{{t:price.5.n}}</dt><dd class="price-amount">{{t:price.5.p}}</dd><dd class="price-desc">{{t:price.5.d}}</dd></div>
+            </dl>
+            <p class="price-terms">{{t:price.terms}}</p>
+          </div>
+        </article>
+
+        <p class="price-note">{{t:price.reviewNote}} <a href="#review" data-topic="review" data-track="CTA Click" data-position="pricing-review">{{t:cta.primary}} <span aria-hidden="true">→</span></a></p>
       </div>
     </section>
 
@@ -366,7 +439,10 @@
             <details><summary>{{t:faq.q8}}</summary><p>{{t:faq.a8}}</p></details>
             <details><summary>{{t:faq.q5}}</summary><p>{{t:faq.a5}}</p></details>
             <details><summary>{{t:faq.q6}}</summary><p>{{t:faq.a6}}</p></details>
+            <details><summary>{{t:faq.q9}}</summary><p>{{t:faq.a9}}</p></details>
             <details><summary>{{t:faq.q7}}</summary><p>{{t:faq.a7}}</p></details>
+            <details><summary>{{t:faq.q10}}</summary><p>{{t:faq.a10}}</p></details>
+            <details><summary>{{t:faq.q11}}</summary><p>{{t:faq.a11}}</p></details>
           </div>
         </div>
       </div>
@@ -403,7 +479,12 @@
         <div class="form-card" id="quote-form">
           <form class="review-form" action="https://formsubmit.co/irvingcarrion.17@gmail.com" method="POST" aria-label="{{t:form.label}}" data-review-form
                 data-err-site="{{t:form.errSite}}" data-err-name="{{t:form.errName}}" data-err-email="{{t:form.errEmail}}" data-err-phone="{{t:form.errPhone}}"
-                data-label-email="{{t:form.contactEmail}}" data-label-text="{{t:form.contactText}}" data-label-call="{{t:form.contactCall}}" data-sending="{{t:form.sending}}">
+                data-label-email="{{t:form.contactEmail}}" data-label-text="{{t:form.contactText}}" data-label-call="{{t:form.contactCall}}" data-sending="{{t:form.sending}}"
+                data-site-required="{{t:form.site}}" data-site-optional="{{t:form.siteOptional}}" data-topic-note="{{t:form.topicNote}}"
+                data-subject-review="{{t:form.subject}}" data-subject-consulting="{{t:form.subject.consulting}}" data-subject-support="{{t:form.subject.support}}" data-subject-ongoing="{{t:form.subject.ongoing}}" data-subject-project="{{t:form.subject.project}}"
+                data-autoresponse-review="{{t:form.autoresponse}}" data-autoresponse-paid="{{t:form.autoresponsePaid}}"
+                data-topic-consulting="{{t:topic.consulting}}" data-topic-support="{{t:topic.support}}" data-topic-ongoing="{{t:topic.ongoing}}" data-topic-project="{{t:topic.project}}"
+                data-next="{{@thanksAbs}}">
             <input type="hidden" name="_subject" value="{{t:form.subject}}">
             <input type="hidden" name="_captcha" value="false">
             <input type="hidden" name="_template" value="table">
@@ -417,6 +498,17 @@
               <ul></ul>
             </div>
 
+            <div class="field">
+              <label for="f-topic">{{t:form.topic}}</label>
+              <select id="f-topic" name="topic">
+                <option value="review" selected>{{t:form.t.review}}</option>
+                <option value="consulting">{{t:form.t.consulting}}</option>
+                <option value="support">{{t:form.t.support}}</option>
+                <option value="ongoing">{{t:form.t.ongoing}}</option>
+                <option value="project">{{t:form.t.project}}</option>
+              </select>
+              <p class="topic-note" id="f-topic-note" aria-live="polite" hidden></p>
+            </div>
             <div class="field">
               <label for="f-site">{{t:form.site}}</label>
               <p class="hint" id="f-site-hint">{{t:form.siteHint}}</p>

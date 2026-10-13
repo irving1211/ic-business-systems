@@ -180,9 +180,46 @@
     const clearError = (input) => { input.removeAttribute("aria-invalid"); const e = errEl(input); if (e) { e.hidden = true; e.textContent = ""; } input.setAttribute("aria-describedby", input.dataset.hint || ""); if (!input.getAttribute("aria-describedby")) input.removeAttribute("aria-describedby"); };
     site.dataset.hint = "f-site-hint";
 
+    // "What's this about?": the free review is the default; paid topics change the
+    // email subject, autoresponse, thanks page and make the website field optional.
+    const topicSel = form.querySelector("#f-topic");
+    const topicNote = form.querySelector("#f-topic-note");
+    const siteLabel = form.querySelector('label[for="f-site"]');
+    const TOPICS = ["review", "consulting", "support", "ongoing", "project"];
+    const cap = (t) => t.charAt(0).toUpperCase() + t.slice(1);
+    const hiddenField = (n) => form.querySelector(`input[name="${n}"]`);
+    const setTopic = (t) => {
+      if (!TOPICS.includes(t)) t = "review";
+      const paid = t !== "review";
+      const label = form.dataset["topic" + cap(t)] || "";
+      topicSel.value = t;
+      hiddenField("_subject").value = form.dataset["subject" + cap(t)];
+      hiddenField("_autoresponse").value = paid ? form.dataset.autoresponsePaid.replace("{topic}", label) : form.dataset.autoresponseReview;
+      hiddenField("_next").value = paid ? form.dataset.next + "?topic=" + t : form.dataset.next;
+      topicNote.textContent = paid ? form.dataset.topicNote.replace("{topic}", label) : "";
+      topicNote.hidden = !paid;
+      site.required = !paid;
+      siteLabel.textContent = paid ? form.dataset.siteOptional : form.dataset.siteRequired;
+      clearError(site);
+    };
+    topicSel.addEventListener("change", () => setTopic(topicSel.value));
+    setTopic(new URLSearchParams(location.search).get("topic") || "review");
+
+    // Pricing buttons: preselect the topic and go to the form without a page reload.
+    document.addEventListener("click", (ev) => {
+      const link = ev.target.closest("a[data-topic]");
+      if (!link) return;
+      ev.preventDefault();
+      const t = link.dataset.topic;
+      setTopic(t);
+      history.replaceState(null, "", location.pathname + (t === "review" ? "" : "?topic=" + t) + "#review");
+      document.getElementById("review").scrollIntoView({ behavior: reduceMotion.matches ? "auto" : "smooth", block: "start" });
+      topicSel.focus({ preventScroll: true });
+    });
+
     const validate = () => {
       const problems = [];
-      if (site.value.trim().length < 4) problems.push([site, form.dataset.errSite]);
+      if (site.required && site.value.trim().length < 4) problems.push([site, form.dataset.errSite]);
       if (name.value.trim().length < 2) problems.push([name, form.dataset.errName]);
       const v = contact.value.trim();
       if (contact.type === "email") { if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v)) problems.push([contact, form.dataset.errEmail]); }
@@ -190,7 +227,7 @@
       return problems;
     };
 
-    form.addEventListener("focusin", () => { if (!started) { started = true; track("Review Form Start"); } });
+    form.addEventListener("focusin", () => { if (!started) { started = true; track("Review Form Start", { topic: topicSel.value }); } });
     [site, name, contact].forEach((input) => input.addEventListener("input", () => { if (input.getAttribute("aria-invalid")) clearError(input); }));
 
     form.addEventListener("submit", (ev) => {
@@ -215,7 +252,7 @@
       summary.hidden = true;
       submitBtn.disabled = true;
       submitBtn.textContent = form.dataset.sending;
-      track("Quote Submit Attempted");
+      track("Quote Submit Attempted", { topic: topicSel.value });
     });
     // bfcache: re-enable the button if the visitor comes back
     const submitLabel = submitBtn.textContent;

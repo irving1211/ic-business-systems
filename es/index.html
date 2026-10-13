@@ -74,7 +74,10 @@
         {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Que te encuentren y te crean", "description": "Sitios web escritos en código, o en Squarespace si quieres editarlo tú. Perfil de Empresa de Google, Search Console y lo básico de búsqueda local. En inglés, en español o en los dos."}},
         {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Que pedir sea fácil", "description": "Formularios de solicitud y cotización que hacen las preguntas correctas para cada servicio, revisan tu área de servicio, aceptan fotos y enlazan a las herramientas de citas que ya usas."}},
         {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Responder cada solicitud", "description": "Cada solicitud llega al correo correcto en el momento en que se envía, con la respuesta ya dirigida al cliente. Un registro que le da un estado a cada solicitud."}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Menos tiempo en papeleo", "description": "Pedidos de reseñas después de un trabajo terminado, envío a un CRM y hojas de cálculo que hacen las cuentas repetitivas. Un proceso a la vez, con una prueba escrita para cada uno."}}
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Menos tiempo en papeleo", "description": "Pedidos de reseñas después de un trabajo terminado, envío a un CRM y hojas de cálculo que hacen las cuentas repetitivas. Un proceso a la vez, con una prueba escrita para cada uno."}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Consultoría y solución de problemas", "description": "Algo no funciona, o quieres una segunda opinión sobre una herramienta."}, "priceSpecification": {"@type": "UnitPriceSpecification", "price": "75", "priceCurrency": "USD", "unitText": "HOUR"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Soporte mensual del sitio web", "description": "Tu sitio funciona y quieres que alguien lo mantenga al día."}, "priceSpecification": {"@type": "UnitPriceSpecification", "minPrice": "150", "priceCurrency": "USD", "unitText": "MONTH"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Consultoría e implementación continua", "description": "Quieres ayuda constante para mejorar tu sitio, tus herramientas y cómo se mueve el trabajo en tu negocio."}, "priceSpecification": {"@type": "UnitPriceSpecification", "minPrice": "300", "priceCurrency": "USD", "unitText": "MONTH"}}
       ]
     }
   }
@@ -362,21 +365,91 @@
       </div>
     </section>
 
-    <!-- ================= PRICING (PENDING Irving's OK to publish) ================= -->
+    <!-- ================= PRICING (approved 2026-10-13: consulting $75/h, support from $150/mo, ongoing from $300/mo, projects by quote) ================= -->
     <section id="pricing" class="section pricing" aria-labelledby="pricing-title">
       <div class="wrap">
         <header class="section-head">
           <h2 id="pricing-title">Precios claros. Alcance por escrito.</h2>
-          <p>Cada proyecto empieza con un alcance y un precio por escrito. No se cobra nada que no esté ahí.</p>
+          <p>Ayuda puntual, soporte mensual, trabajo continuo o un proyecto más grande. Escojas lo que escojas, acordamos el alcance antes de cobrar nada.</p>
         </header>
-        <dl class="prices">
-          <div class="price-row"><dt>Sitio esencial</dt><dd class="price-amount">$1,000–$1,500</dd><dd class="price-desc">De una a cinco páginas sencillas, un formulario de contacto, diseño pensado para el teléfono y configuración del dominio. Normalmente 1–2 semanas.</dd></div>
-          <div class="price-row"><dt>Sitio signature</dt><dd class="price-amount">$2,500–$5,000</dd><dd class="price-desc">De cinco a ocho páginas, galerías, un flujo de solicitud o citas, analítica probada y un número fijo de extras, como páginas en español o un selector de servicios guiado. Normalmente 2–4 semanas.</dd></div>
-          <div class="price-row"><dt>Sitio y sistemas</dt><dd class="price-amount">Desde $6,000</dd><dd class="price-desc">Un sitio completo más hasta dos procesos definidos, como envío a un CRM o seguimiento, y un reporte. El precio se fija después de una llamada de descubrimiento. Normalmente 4–8 semanas o más.</dd></div>
-          <div class="price-row price-row-small"><dt>Trabajos más pequeños</dt><dd class="price-amount">Desde $300</dd><dd class="price-desc">Para un sitio que ya tienes: una página nueva de anuncio o de solicitudes, configuración de analítica, o un proceso para pedir reseñas. Se cotiza después de tu revisión gratis.</dd></div>
-          <div class="price-row price-row-care"><dt>Mantenimiento mensual (opcional)</dt><dd class="price-amount">$75 o $150 al mes</dd><dd class="price-desc">Una revisión mensual más 30 o 90 minutos de cambios. El hosting y las suscripciones se cobran aparte.</dd></div>
-        </dl>
-        <p class="price-terms">Cada proyecto: 50% de depósito para empezar, dos rondas de revisión y 30 días de arreglos después del lanzamiento. Los plazos empiezan cuando tengo tu contenido y tus accesos.</p>
+
+        <div class="plans">
+          <article class="plan" aria-labelledby="plan-c">
+            <h3 id="plan-c" class="plan-name">Consultoría y solución de problemas</h3>
+            <p class="plan-price"><span class="plan-amount">$75</span> <span class="plan-unit">la hora</span></p>
+            <p class="plan-best"><span class="plan-label">Ideal para</span> Algo no funciona, o quieres una segunda opinión sobre una herramienta.</p>
+            <h4 class="plan-label">Incluye</h4>
+            <ul class="plan-list">
+              <li>Encontrar la causa de problemas en tu sitio, tus formularios o tus procesos</li>
+              <li>Revisar las herramientas que usas y recomendarte qué mantener, arreglar o cambiar</li>
+              <li>Arreglos hechos por mí dentro del alcance que acordemos</li>
+            </ul>
+            <dl class="plan-terms">
+              <div><dt>Cómo funciona</dt><dd>Antes de empezar acordamos el alcance y un tiempo estimado. Algunos problemas toman una hora; muchos toman varias. Si va a pasar del estimado, paro y te pregunto primero. Se cobra el tiempo usado: mínimo 1 hora, después en bloques de 15 minutos.</dd></div>
+              <div><dt>No incluye</dt><dd>Hosting, dominios y suscripciones de software. Quedan a tu nombre y se los pagas directamente a esas compañías.</dd></div>
+            </dl>
+            <a class="button plan-cta" href="?topic=consulting#review" data-topic="consulting" data-track="CTA Click" data-position="pricing-consulting">Hablemos de tu proyecto</a>
+          </article>
+
+          <article class="plan" aria-labelledby="plan-s">
+            <h3 id="plan-s" class="plan-name">Soporte mensual del sitio web</h3>
+            <p class="plan-price"><span class="plan-amount">Desde $150</span> <span class="plan-unit">al mes</span></p>
+            <p class="plan-best"><span class="plan-label">Ideal para</span> Tu sitio funciona y quieres que alguien lo mantenga al día.</p>
+            <h4 class="plan-label">Incluye</h4>
+            <ul class="plan-list">
+              <li>Una revisión mensual: que las páginas carguen, que los formularios lleguen, y las fechas de renovación del certificado de seguridad y del dominio</li>
+              <li>Hasta 90 minutos al mes de cambios pequeños: textos, fotos, horarios, precios, cambios de menú o de servicios, arreglos pequeños</li>
+              <li>Una nota corta cada mes con lo que revisé y cambié</li>
+              <li>Respuesta en 2 días hábiles; cambios pequeños listos en 5 días hábiles</li>
+            </ul>
+            <dl class="plan-terms">
+              <div><dt>No incluye</dt><dd>Páginas o funciones nuevas, rediseños, escribir contenido nuevo, manejo de anuncios, trabajo fuera de horario o de emergencia, hosting, dominios y suscripciones. El tiempo que no se use no se acumula.</dd></div>
+              <div><dt>Trabajo extra</dt><dd>$75 la hora, estimado y aprobado antes de empezar. ¿Necesitas más tiempo cada mes? Te cotizo un plan más grande.</dd></div>
+              <div><dt>Condiciones</dt><dd>Mes a mes. Puedes cancelar cuando quieras antes de tu próxima fecha de cobro.</dd></div>
+            </dl>
+            <a class="button plan-cta" href="?topic=support#review" data-topic="support" data-track="CTA Click" data-position="pricing-support">Hablemos de tu proyecto</a>
+          </article>
+
+          <article class="plan" aria-labelledby="plan-o">
+            <h3 id="plan-o" class="plan-name">Consultoría e implementación continua</h3>
+            <p class="plan-price"><span class="plan-amount">Desde $300</span> <span class="plan-unit">al mes</span></p>
+            <p class="plan-best"><span class="plan-label">Ideal para</span> Quieres ayuda constante para mejorar tu sitio, tus herramientas y cómo se mueve el trabajo en tu negocio.</p>
+            <h4 class="plan-label">Incluye</h4>
+            <ul class="plan-list">
+              <li>Hasta 3 horas al mes de consejos y trabajo práctico en tu sitio, tus integraciones y tus procesos</li>
+              <li>Una llamada de planificación de 30 minutos al mes</li>
+              <li>Todo lo del soporte mensual (los cambios pequeños cuentan dentro de tus 3 horas)</li>
+              <li>Respuesta en 1 día hábil</li>
+            </ul>
+            <dl class="plan-terms">
+              <div><dt>No incluye</dt><dd>Sitios nuevos y proyectos grandes (se cotizan aparte), software y suscripciones pagadas, hosting, presupuesto de anuncios, trabajo fuera de horario o de emergencia. Las horas que no se usen no se acumulan.</dd></div>
+              <div><dt>Trabajo extra</dt><dd>$75 la hora, estimado y aprobado antes de empezar.</dd></div>
+              <div><dt>Condiciones</dt><dd>Mes a mes. Puedes cancelar cuando quieras antes de tu próxima fecha de cobro.</dd></div>
+            </dl>
+            <a class="button plan-cta" href="?topic=ongoing#review" data-topic="ongoing" data-track="CTA Click" data-position="pricing-ongoing">Hablemos de tu proyecto</a>
+          </article>
+        </div>
+
+        <article class="project" aria-labelledby="plan-p">
+          <div class="project-head">
+            <h3 id="plan-p" class="plan-name">Sitios web y proyectos más grandes</h3>
+            <p class="plan-price"><span class="plan-amount">Cotización a la medida</span></p>
+            <p class="plan-best"><span class="plan-label">Ideal para</span> Un sitio nuevo, un rediseño grande o un sistema más completo.</p>
+            <p class="project-how">Cada proyecto recibe un alcance y un precio por escrito después de hablar. La mayoría cae en estos rangos:</p>
+            <a class="button plan-cta" href="?topic=project#review" data-topic="project" data-track="CTA Click" data-position="pricing-project">Hablemos de tu proyecto</a>
+          </div>
+          <div class="project-body">
+            <dl class="prices">
+              <div class="price-row"><dt>Sitio esencial</dt><dd class="price-amount">$1,000–$1,500</dd><dd class="price-desc">De una a cinco páginas sencillas, un formulario de contacto, diseño pensado para el teléfono y configuración del dominio. Normalmente 1–2 semanas.</dd></div>
+              <div class="price-row"><dt>Sitio signature</dt><dd class="price-amount">$2,500–$5,000</dd><dd class="price-desc">De cinco a ocho páginas, galerías, un flujo de solicitud o citas, analítica probada y un número fijo de extras, como páginas en español o un selector de servicios guiado. Normalmente 2–4 semanas.</dd></div>
+              <div class="price-row"><dt>Sitio y sistemas</dt><dd class="price-amount">Desde $6,000</dd><dd class="price-desc">Un sitio completo más hasta dos procesos definidos, como envío a un CRM o seguimiento, y un reporte. El precio se fija después de una llamada de descubrimiento. Normalmente 4–8 semanas o más.</dd></div>
+              <div class="price-row price-row-small"><dt>Trabajos pequeños a precio fijo</dt><dd class="price-amount">Desde $300, una sola vez</dd><dd class="price-desc">Para un sitio que ya tienes: una página nueva de anuncio o de solicitudes, configuración de analítica, o un proceso para pedir reseñas.</dd></div>
+            </dl>
+            <p class="price-terms">Cada proyecto: 50% de depósito para empezar, dos rondas de revisión y 30 días de arreglos después del lanzamiento. Los plazos empiezan cuando tengo tu contenido y tus accesos.</p>
+          </div>
+        </article>
+
+        <p class="price-note">¿No sabes por dónde empezar? La revisión gratis no cuesta nada: miro tu sitio desde afuera y te mando tus tres arreglos más valiosos. La consultoría pagada es trabajo práctico dentro de tu sitio o tus herramientas. <a href="#review" data-topic="review" data-track="CTA Click" data-position="pricing-review">Pide tu revisión gratis <span aria-hidden="true">→</span></a></p>
       </div>
     </section>
 
@@ -425,7 +498,10 @@
             <details><summary>¿Solo trabajas con negocios locales?</summary><p>No. Estoy en Lawrence y me reúno en persona con clientes en Massachusetts y New Hampshire. También construyo para negocios de cualquier lugar, a distancia.</p></details>
             <details><summary>¿De quién son el sitio y el dominio?</summary><p>Tuyos. Tu dominio y tus cuentas quedan a tu nombre, y te entrego todo al lanzar.</p></details>
             <details><summary>¿Cuánto tiempo toma?</summary><p>La mayoría de los sitios toman de una a cuatro semanas desde que tengo tu contenido y tus accesos. Los sistemas más grandes toman más, y la fecha te la doy por escrito.</p></details>
-            <details><summary>¿Qué pasa después del lanzamiento?</summary><p>Incluye 30 días de arreglos. Después es opcional: mantenimiento mensual de $75 o $150, o pagar por hora solo cuando necesites algo.</p></details>
+            <details><summary>¿Qué diferencia hay entre la revisión gratis y la consultoría pagada?</summary><p>La revisión gratis es yo mirando tu sitio desde afuera, como lo ve un cliente, y mandándote un video corto con tus tres arreglos más valiosos. La consultoría pagada es trabajo práctico: entro a tu sitio o tus herramientas, encuentro qué falla y lo arreglo, a $75 la hora con el tiempo acordado antes.</p></details>
+            <details><summary>¿Qué pasa después del lanzamiento?</summary><p>Incluye 30 días de arreglos. Después tú decides: soporte mensual desde $150 al mes, o consultoría a $75 la hora solo cuando necesites algo.</p></details>
+            <details><summary>¿El hosting y el software están incluidos?</summary><p>No. El hosting, los dominios y las suscripciones de software quedan a tu nombre y se los pagas directamente a esas compañías. Mis precios cubren mi tiempo y mi trabajo.</p></details>
+            <details><summary>¿Hay contrato para los planes mensuales?</summary><p>No hay contrato largo. Los planes mensuales son mes a mes, y puedes cancelar cuando quieras antes de tu próxima fecha de cobro.</p></details>
           </div>
         </div>
       </div>
@@ -462,7 +538,12 @@
         <div class="form-card" id="quote-form">
           <form class="review-form" action="https://formsubmit.co/irvingcarrion.17@gmail.com" method="POST" aria-label="Solicitud de revisión gratis" data-review-form
                 data-err-site="Agrega tu sitio web o tu perfil de Google para saber qué revisar." data-err-name="Agrega tu nombre para saber a quién le escribo." data-err-email="Agrega un correo como nombre@negocio.com." data-err-phone="Agrega un número de teléfono de al menos 10 dígitos."
-                data-label-email="Correo electrónico" data-label-text="Número de celular" data-label-call="Número de teléfono" data-sending="Enviando…">
+                data-label-email="Correo electrónico" data-label-text="Número de celular" data-label-call="Número de teléfono" data-sending="Enviando…"
+                data-site-required="Sitio web o perfil de Google" data-site-optional="Sitio web o perfil de Google (si tienes)" data-topic-note="Me preguntas por {topic}. Te respondo en 2 días hábiles para coordinar una llamada corta. La revisión gratis es una opción aparte."
+                data-subject-review="IC Business Systems: solicitud de revisión gratis (ES)" data-subject-consulting="IC Business Systems: solicitud de consultoría (ES)" data-subject-support="IC Business Systems: solicitud de soporte mensual (ES)" data-subject-ongoing="IC Business Systems: solicitud de consultoría continua (ES)" data-subject-project="IC Business Systems: consulta de proyecto (ES)"
+                data-autoresponse-review="Gracias por pedir una revisión de tu sitio. Recibí tu solicitud y te mando tu video y tus arreglos en 3 días hábiles. Irving, IC Business Systems" data-autoresponse-paid="Gracias por escribir sobre {topic}. Recibí tu mensaje y te respondo en 2 días hábiles para coordinar una llamada corta. Irving, IC Business Systems"
+                data-topic-consulting="consultoría y solución de problemas" data-topic-support="soporte mensual del sitio web" data-topic-ongoing="consultoría e implementación continua" data-topic-project="un sitio nuevo o un proyecto más grande"
+                data-next="https://icbusinesssystems.com/es/gracias.html">
             <input type="hidden" name="_subject" value="IC Business Systems: solicitud de revisión gratis (ES)">
             <input type="hidden" name="_captcha" value="false">
             <input type="hidden" name="_template" value="table">
@@ -476,6 +557,17 @@
               <ul></ul>
             </div>
 
+            <div class="field">
+              <label for="f-topic">¿De qué se trata?</label>
+              <select id="f-topic" name="topic">
+                <option value="review" selected>Revisión gratis del sitio</option>
+                <option value="consulting">Consultoría y solución de problemas ($75/hora)</option>
+                <option value="support">Soporte mensual del sitio web (desde $150/mes)</option>
+                <option value="ongoing">Consultoría e implementación continua (desde $300/mes)</option>
+                <option value="project">Un sitio nuevo o un proyecto más grande</option>
+              </select>
+              <p class="topic-note" id="f-topic-note" aria-live="polite" hidden></p>
+            </div>
             <div class="field">
               <label for="f-site">Sitio web o perfil de Google</label>
               <p class="hint" id="f-site-hint">Pega la dirección de tu sitio. ¿Todavía no tienes sitio? Pega tu perfil de Google.</p>

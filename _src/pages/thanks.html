@@ -12,8 +12,9 @@
   <main id="main" class="thanks">
     <div class="wrap thanks-inner">
       <svg class="thanks-pipe" viewBox="0 0 120 48" aria-hidden="true" focusable="false"><path class="pipe-run" d="M4 24 H52 V8 H116"/><circle class="fitting" cx="52" cy="24" r="4"/><circle class="fitting" cx="52" cy="8" r="4"/><circle class="packet packet-done" cx="116" cy="8" r="6"/></svg>
-      <h1>{{t:thanks.title}}</h1>
-      <p class="thanks-lede">{{t:thanks.p1}}</p>
+      <h1 data-paid-title="{{t:thanks.paidTitle}}">{{t:thanks.title}}</h1>
+      <p class="thanks-lede" data-paid-text="{{t:thanks.paidP1}}"
+         data-topic-consulting="{{t:topic.consulting}}" data-topic-support="{{t:topic.support}}" data-topic-ongoing="{{t:topic.ongoing}}" data-topic-project="{{t:topic.project}}">{{t:thanks.p1}}</p>
       <p>{{t:thanks.p2}} <a href="mailto:irving@icbusinesssystems.com">irving@icbusinesssystems.com</a></p>
       <div class="thanks-actions">
         <a class="button" href="{{@base}}#work">{{t:thanks.work}}</a>
@@ -27,7 +28,17 @@
   <!-- Confirmed-success signal: FormSubmit redirects here (_next) only after accepting the request.
        Event name kept as "Quote Submitted" so the RUNBOOK baseline stays comparable. -->
   <script>
-    try { window.plausible('Quote Submitted', { props: { lang: document.documentElement.lang } }); } catch (e) {}
+    (function () {
+      // FormSubmit's _next carries ?topic=… for paid inquiries; the free review is the default text.
+      var topic = new URLSearchParams(location.search).get('topic') || 'review';
+      var lede = document.querySelector('.thanks-lede');
+      var label = lede && lede.getAttribute('data-topic-' + topic);
+      if (label) {
+        document.querySelector('h1').textContent = document.querySelector('h1').getAttribute('data-paid-title');
+        lede.textContent = lede.getAttribute('data-paid-text').replace('{topic}', label);
+      } else { topic = 'review'; }
+      try { window.plausible('Quote Submitted', { props: { lang: document.documentElement.lang, topic: topic } }); } catch (e) {}
+    })();
   </script>
   <script src="/site.js?v={{@v}}" defer></script>
 </body>

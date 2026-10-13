@@ -74,7 +74,10 @@
         {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Get found and trusted", "description": "Websites written in code, or built on Squarespace when you want to edit it yourself. Google Business Profile, Search Console and local search basics. English, Spanish, or both."}},
         {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Make asking easy", "description": "Request and quote forms that ask the right questions for each service, check your service area, take photos, and link to the booking tools you already use."}},
         {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Answer every request", "description": "Every request delivered to the right inbox the moment it's sent, with the customer's reply-to already set. A tracker that gives each request a status."}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Spend less time on admin", "description": "Review requests after a finished job, routing into a CRM, and spreadsheets that do the repetitive math. Scoped one workflow at a time, with a written test for each."}}
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Spend less time on admin", "description": "Review requests after a finished job, routing into a CRM, and spreadsheets that do the repetitive math. Scoped one workflow at a time, with a written test for each."}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Consulting &amp; troubleshooting", "description": "Something isn't working, or you want a second opinion on a tool."}, "priceSpecification": {"@type": "UnitPriceSpecification", "price": "75", "priceCurrency": "USD", "unitText": "HOUR"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Monthly website support", "description": "Your site works and you want someone keeping it current."}, "priceSpecification": {"@type": "UnitPriceSpecification", "minPrice": "150", "priceCurrency": "USD", "unitText": "MONTH"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Ongoing consulting &amp; implementation", "description": "You want regular help improving your website, your tools and how work moves through the business."}, "priceSpecification": {"@type": "UnitPriceSpecification", "minPrice": "300", "priceCurrency": "USD", "unitText": "MONTH"}}
       ]
     }
   }
@@ -362,21 +365,91 @@
       </div>
     </section>
 
-    <!-- ================= PRICING (PENDING Irving's OK to publish) ================= -->
+    <!-- ================= PRICING (approved 2026-10-13: consulting $75/h, support from $150/mo, ongoing from $300/mo, projects by quote) ================= -->
     <section id="pricing" class="section pricing" aria-labelledby="pricing-title">
       <div class="wrap">
         <header class="section-head">
           <h2 id="pricing-title">Plain prices. Scope in writing.</h2>
-          <p>Every project starts with a written scope and price. Nothing is billed that isn't on it.</p>
+          <p>One-time help, monthly support, ongoing work or a bigger build. Whatever you pick, we agree on the scope before anything is billed.</p>
         </header>
-        <dl class="prices">
-          <div class="price-row"><dt>Essential website</dt><dd class="price-amount">$1,000–$1,500</dd><dd class="price-desc">One to five simple pages, a contact form, a phone-first layout and domain setup. Usually 1–2 weeks.</dd></div>
-          <div class="price-row"><dt>Signature website</dt><dd class="price-amount">$2,500–$5,000</dd><dd class="price-desc">Five to eight pages, galleries, a request or booking flow, tested analytics, and a set number of extras such as Spanish pages or a guided service picker. Usually 2–4 weeks.</dd></div>
-          <div class="price-row"><dt>Website and systems</dt><dd class="price-amount">From $6,000</dd><dd class="price-desc">A full site plus up to two defined workflows, such as CRM routing or follow-up, and one report. Price set after a discovery call. Usually 4–8 weeks or more.</dd></div>
-          <div class="price-row price-row-small"><dt>Smaller jobs</dt><dd class="price-amount">From $300</dd><dd class="price-desc">For a site you already have: a new landing or request page, analytics and tracking setup, or a review-request workflow. Quoted after your free review.</dd></div>
-          <div class="price-row price-row-care"><dt>Monthly care (optional)</dt><dd class="price-amount">$75 or $150 a month</dd><dd class="price-desc">A monthly check plus 30 or 90 minutes of edits. Hosting and subscriptions are billed separately.</dd></div>
-        </dl>
-        <p class="price-terms">Every project: 50% deposit to start, two review rounds, and 30 days of fixes after launch. Timelines start once I have your content and access.</p>
+
+        <div class="plans">
+          <article class="plan" aria-labelledby="plan-c">
+            <h3 id="plan-c" class="plan-name">Consulting &amp; troubleshooting</h3>
+            <p class="plan-price"><span class="plan-amount">$75</span> <span class="plan-unit">an hour</span></p>
+            <p class="plan-best"><span class="plan-label">Best for</span> Something isn't working, or you want a second opinion on a tool.</p>
+            <h4 class="plan-label">Includes</h4>
+            <ul class="plan-list">
+              <li>Diagnosing website, form or workflow problems</li>
+              <li>Reviewing the tools you use and recommending what to keep, fix or replace</li>
+              <li>Hands-on fixes within the scope we agree on</li>
+            </ul>
+            <dl class="plan-terms">
+              <div><dt>How it works</dt><dd>Before I start, we agree on the scope and an estimated time. Some problems take an hour; many take a few. If it's going to run over the estimate, I stop and ask first. Billed for time used: 1-hour minimum, then 15-minute steps.</dd></div>
+              <div><dt>Not included</dt><dd>Hosting, domains and software subscriptions. They stay in your name and you pay those companies directly.</dd></div>
+            </dl>
+            <a class="button plan-cta" href="?topic=consulting#review" data-topic="consulting" data-track="CTA Click" data-position="pricing-consulting">Discuss your project</a>
+          </article>
+
+          <article class="plan" aria-labelledby="plan-s">
+            <h3 id="plan-s" class="plan-name">Monthly website support</h3>
+            <p class="plan-price"><span class="plan-amount">From $150</span> <span class="plan-unit">a month</span></p>
+            <p class="plan-best"><span class="plan-label">Best for</span> Your site works and you want someone keeping it current.</p>
+            <h4 class="plan-label">Includes</h4>
+            <ul class="plan-list">
+              <li>A monthly check: pages load, forms deliver, security certificate and domain renewal dates</li>
+              <li>Up to 90 minutes a month of small updates: text, photos, hours, prices, menu or service changes, small fixes</li>
+              <li>A short note each month on what I checked and changed</li>
+              <li>Replies within 2 business days; small updates done within 5 business days</li>
+            </ul>
+            <dl class="plan-terms">
+              <div><dt>Not included</dt><dd>New pages or features, redesigns, writing new content, ad management, after-hours or emergency work, hosting, domains and subscriptions. Unused time doesn't roll over.</dd></div>
+              <div><dt>Extra work</dt><dd>$75 an hour, estimated and approved before I start. Need more time every month? I'll quote a larger allowance.</dd></div>
+              <div><dt>Terms</dt><dd>Month to month. Cancel any time before your next billing date.</dd></div>
+            </dl>
+            <a class="button plan-cta" href="?topic=support#review" data-topic="support" data-track="CTA Click" data-position="pricing-support">Discuss your project</a>
+          </article>
+
+          <article class="plan" aria-labelledby="plan-o">
+            <h3 id="plan-o" class="plan-name">Ongoing consulting &amp; implementation</h3>
+            <p class="plan-price"><span class="plan-amount">From $300</span> <span class="plan-unit">a month</span></p>
+            <p class="plan-best"><span class="plan-label">Best for</span> You want regular help improving your website, your tools and how work moves through the business.</p>
+            <h4 class="plan-label">Includes</h4>
+            <ul class="plan-list">
+              <li>Up to 3 hours a month of advice and hands-on work on your website, integrations and workflows</li>
+              <li>One 30-minute planning call a month</li>
+              <li>Everything in Monthly website support (small updates count toward your 3 hours)</li>
+              <li>Replies within 1 business day</li>
+            </ul>
+            <dl class="plan-terms">
+              <div><dt>Not included</dt><dd>New websites and larger builds (quoted separately), paid software and subscriptions, hosting, ad spend, after-hours or emergency work. Unused hours don't roll over.</dd></div>
+              <div><dt>Extra work</dt><dd>$75 an hour, estimated and approved before I start.</dd></div>
+              <div><dt>Terms</dt><dd>Month to month. Cancel any time before your next billing date.</dd></div>
+            </dl>
+            <a class="button plan-cta" href="?topic=ongoing#review" data-topic="ongoing" data-track="CTA Click" data-position="pricing-ongoing">Discuss your project</a>
+          </article>
+        </div>
+
+        <article class="project" aria-labelledby="plan-p">
+          <div class="project-head">
+            <h3 id="plan-p" class="plan-name">Website builds &amp; larger projects</h3>
+            <p class="plan-price"><span class="plan-amount">Custom quote</span></p>
+            <p class="plan-best"><span class="plan-label">Best for</span> A new website, a big redesign or a larger system.</p>
+            <p class="project-how">Every project gets a written scope and price after we talk. Most land in these ranges:</p>
+            <a class="button plan-cta" href="?topic=project#review" data-topic="project" data-track="CTA Click" data-position="pricing-project">Discuss your project</a>
+          </div>
+          <div class="project-body">
+            <dl class="prices">
+              <div class="price-row"><dt>Essential website</dt><dd class="price-amount">$1,000–$1,500</dd><dd class="price-desc">One to five simple pages, a contact form, a phone-first layout and domain setup. Usually 1–2 weeks.</dd></div>
+              <div class="price-row"><dt>Signature website</dt><dd class="price-amount">$2,500–$5,000</dd><dd class="price-desc">Five to eight pages, galleries, a request or booking flow, tested analytics, and a set number of extras such as Spanish pages or a guided service picker. Usually 2–4 weeks.</dd></div>
+              <div class="price-row"><dt>Website and systems</dt><dd class="price-amount">From $6,000</dd><dd class="price-desc">A full site plus up to two defined workflows, such as CRM routing or follow-up, and one report. Price set after a discovery call. Usually 4–8 weeks or more.</dd></div>
+              <div class="price-row price-row-small"><dt>Smaller fixed-price jobs</dt><dd class="price-amount">From $300, one time</dd><dd class="price-desc">For a site you already have: a new landing or request page, analytics and tracking setup, or a review-request workflow.</dd></div>
+            </dl>
+            <p class="price-terms">Every project: 50% deposit to start, two review rounds, and 30 days of fixes after launch. Timelines start once I have your content and access.</p>
+          </div>
+        </article>
+
+        <p class="price-note">Not sure where to start? The free site review costs nothing: I look at your site from the outside and send your three most valuable fixes. Paid consulting is hands-on work inside your website or tools. <a href="#review" data-topic="review" data-track="CTA Click" data-position="pricing-review">Get a free site review <span aria-hidden="true">→</span></a></p>
       </div>
     </section>
 
@@ -425,7 +498,10 @@
             <details><summary>Do you only work with local businesses?</summary><p>No. I'm based in Lawrence and meet clients in person across Massachusetts and New Hampshire. I also build for businesses anywhere, working remotely.</p></details>
             <details><summary>Who owns the site and the domain?</summary><p>You do. Your domain and accounts stay in your name, and I hand everything over at launch.</p></details>
             <details><summary>How long does it take?</summary><p>Most websites take one to four weeks once I have your content and access. Bigger systems take longer, and you get the date in writing.</p></details>
-            <details><summary>What happens after launch?</summary><p>Thirty days of fixes are included. After that it's optional: monthly care at $75 or $150, or pay by the hour only when you need something.</p></details>
+            <details><summary>What's the difference between the free review and paid consulting?</summary><p>The free review is me looking at your site from the outside, the way a customer does, then sending a short video with your three most valuable fixes. Paid consulting is hands-on: I get into your website or tools, find what's wrong and fix it, at $75 an hour with the time agreed first.</p></details>
+            <details><summary>What happens after launch?</summary><p>Thirty days of fixes are included. After that it's up to you: monthly website support from $150 a month, or consulting at $75 an hour only when you need something.</p></details>
+            <details><summary>Are hosting and software included?</summary><p>No. Hosting, domains and software subscriptions stay in your name and you pay those companies directly. My prices cover my time and work.</p></details>
+            <details><summary>Is there a contract for monthly plans?</summary><p>No long contract. Monthly plans are month to month, and you can cancel any time before your next billing date.</p></details>
           </div>
         </div>
       </div>
@@ -462,7 +538,12 @@
         <div class="form-card" id="quote-form">
           <form class="review-form" action="https://formsubmit.co/irvingcarrion.17@gmail.com" method="POST" aria-label="Free site review request" data-review-form
                 data-err-site="Add your website or Google listing so I know what to review." data-err-name="Add your name so I know who I'm writing to." data-err-email="Add an email address like name@business.com." data-err-phone="Add a phone number with at least 10 digits."
-                data-label-email="Email address" data-label-text="Mobile number" data-label-call="Phone number" data-sending="Sending…">
+                data-label-email="Email address" data-label-text="Mobile number" data-label-call="Phone number" data-sending="Sending…"
+                data-site-required="Website or Google listing" data-site-optional="Website or Google listing (if you have one)" data-topic-note="You're asking about {topic}. I'll reply within 2 business days to set up a short call. The free site review is a separate option."
+                data-subject-review="IC Business Systems: free site review request" data-subject-consulting="IC Business Systems: consulting request" data-subject-support="IC Business Systems: monthly support request" data-subject-ongoing="IC Business Systems: ongoing consulting request" data-subject-project="IC Business Systems: project inquiry"
+                data-autoresponse-review="Thanks for asking for a site review. I got your request and will send your video and fixes within 3 business days. Irving, IC Business Systems" data-autoresponse-paid="Thanks for reaching out about {topic}. I got your message and will reply within 2 business days to set up a short call. Irving, IC Business Systems"
+                data-topic-consulting="consulting and troubleshooting" data-topic-support="monthly website support" data-topic-ongoing="ongoing consulting and implementation" data-topic-project="a new website or larger project"
+                data-next="https://icbusinesssystems.com/thanks.html">
             <input type="hidden" name="_subject" value="IC Business Systems: free site review request">
             <input type="hidden" name="_captcha" value="false">
             <input type="hidden" name="_template" value="table">
@@ -476,6 +557,17 @@
               <ul></ul>
             </div>
 
+            <div class="field">
+              <label for="f-topic">What's this about?</label>
+              <select id="f-topic" name="topic">
+                <option value="review" selected>Free site review</option>
+                <option value="consulting">Consulting &amp; troubleshooting ($75/hour)</option>
+                <option value="support">Monthly website support (from $150/month)</option>
+                <option value="ongoing">Ongoing consulting &amp; implementation (from $300/month)</option>
+                <option value="project">A new website or larger project</option>
+              </select>
+              <p class="topic-note" id="f-topic-note" aria-live="polite" hidden></p>
+            </div>
             <div class="field">
               <label for="f-site">Website or Google listing</label>
               <p class="hint" id="f-site-hint">Paste your website address. No website yet? Paste your Google listing.</p>
