@@ -332,6 +332,9 @@ h1, h2, h3 { margin: 0; text-wrap: balance; }
 /* about */
 .about-grid { display: grid; gap: 40px; align-items: center; }
 @media (min-width: 900px) { .about-grid { grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 80px; } }
+.about-grid-text { grid-template-columns: minmax(0, 1fr) !important; }
+.about-grid-text .about-copy { max-width: 46rem; }
+.price-row-small dt, .price-row-small .price-amount { font-size: 1.2rem; }
 .portrait { margin: 0; max-width: 440px; }
 .portrait img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; border-radius: var(--radius); }
 .about-copy h2 { font: 600 clamp(2rem, 4vw, 3.2rem)/1.06 var(--display); margin-bottom: 24px; }
