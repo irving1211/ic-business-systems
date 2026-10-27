@@ -10,7 +10,10 @@ import { strings } from "./strings.mjs";
 const SRC = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(SRC, "..");
 const ORIGIN = "https://icbusinesssystems.com";
-const ASSET_VERSION = "21";
+const ASSET_VERSION = "22";
+// Last content update: shown in each page byline and used as dateModified in its structured data.
+const UPDATED = "2026-10-27";
+const UPDATED_TEXT = { en: "October 27, 2026", es: "27 de octubre de 2026" };
 
 // Service pages share _src/pages/service.html. `svc` picks the strings prefix (svc.<svc>.*),
 // `rel` the three related service pages linked at the bottom.
@@ -61,6 +64,8 @@ function render(tpl, lang, page) {
     thanksPath: PAGES.thanks[lang],
     auditPath: PAGES.audit[lang],
     v: ASSET_VERSION,
+    updated: UPDATED,
+    updatedText: UPDATED_TEXT[lang],
   };
   // includes first (one level is enough for this site; repeat for nested partials)
   for (let i = 0; i < 3; i++) {

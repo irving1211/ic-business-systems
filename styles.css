@@ -389,6 +389,9 @@ h1, h2, h3 { margin: 0; text-wrap: balance; }
 }
 .faq { display: grid; gap: 24px; }
 @media (min-width: 900px) { .faq { grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 64px; } }
+.byline { font: 400 .8125rem/1.5 var(--mono); color: var(--text-faint); margin: 10px 0 0; }
+.byline a { color: var(--text-muted); text-underline-offset: 4px; }
+.byline a:hover { color: var(--text); }
 .faq-title { font: 600 clamp(1.75rem, 3vw, 2.4rem)/1.1 var(--display); }
 .faq-list details { border-top: 1px solid var(--border); }
 .faq-list details:last-child { border-bottom: 1px solid var(--border); }

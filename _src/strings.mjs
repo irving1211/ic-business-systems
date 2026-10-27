@@ -31,7 +31,9 @@ export const strings = {
     // ---------- home: meta ----------
     "home.title": "Websites for Plumbers & HVAC in Lawrence, MA | IC Business Systems",
     "home.description": "Websites, Google Business Profiles and request forms for plumbers, HVAC and local trades in Lawrence, MA and the Merrimack Valley. Built by Irving Carrion. English and Spanish.",
-    "home.ogTitle": "From “who do I call?” to “when can you come?”",
+    "home.ogTitle": "IC Business Systems | From “who do I call?” to “when can you come?”",
+    "byline.by": "By",
+    "byline.updated": "Updated",
 
     // ---------- hero ----------
     "hero.kickerA": "Websites for plumbers, HVAC and local trades ·",
@@ -649,7 +651,9 @@ export const strings = {
 
     "home.title": "Sitios web para plomeros y HVAC en Lawrence, MA | IC Business Systems",
     "home.description": "Sitios web, perfiles de Google Business y formularios de solicitud para plomeros, HVAC y oficios locales en Lawrence, MA y el Merrimack Valley. Hechos por Irving Carrion. En español e inglés.",
-    "home.ogTitle": "De “¿a quién llamo?” a “¿cuándo puedes venir?”",
+    "home.ogTitle": "IC Business Systems | De “¿a quién llamo?” a “¿cuándo puedes venir?”",
+    "byline.by": "Por",
+    "byline.updated": "Actualizado",
 
     "hero.kickerA": "Sitios web para plomeros, HVAC y oficios locales ·",
     "hero.kickerB": "Lawrence, MA · English y español",

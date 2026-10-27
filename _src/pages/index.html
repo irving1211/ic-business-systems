@@ -68,7 +68,7 @@
     "@context": "https://schema.org",
     "@graph": [
       {"@type": "WebSite", "@id": "https://icbusinesssystems.com/#website", "name": "IC Business Systems", "url": "https://icbusinesssystems.com/", "inLanguage": ["en", "es"], "publisher": {"@id": "https://icbusinesssystems.com/#business"}},
-      {"@type": "WebPage", "@id": "{{@canonical}}#webpage", "url": "{{@canonical}}", "name": "{{j:home.title}}", "inLanguage": "{{@lang}}", "isPartOf": {"@id": "https://icbusinesssystems.com/#website"}, "about": {"@id": "https://icbusinesssystems.com/#business"}, "author": {"@id": "https://icbusinesssystems.com/#irving"}, "dateModified": "2026-10-27"}
+      {"@type": "WebPage", "@id": "{{@canonical}}#webpage", "url": "{{@canonical}}", "name": "{{j:home.title}}", "inLanguage": "{{@lang}}", "isPartOf": {"@id": "https://icbusinesssystems.com/#website"}, "about": {"@id": "https://icbusinesssystems.com/#business"}, "author": {"@type": "Person", "@id": "https://icbusinesssystems.com/#irving", "name": "Irving Carrion"}, "dateModified": "{{@updated}}"}
     ]
   }
   </script>
@@ -471,7 +471,10 @@
         </ol>
 
         <div class="faq">
-          <h2 class="faq-title">{{t:faq.title}}</h2>
+          <div class="faq-head">
+            <h2 class="faq-title">{{t:faq.title}}</h2>
+            {{> byline}}
+          </div>
           <div class="faq-list">
             <details><summary>{{t:faq.q1}}</summary><p>{{t:faq.a1}}</p></details>
             <details><summary>{{t:faq.q2}}</summary><p>{{t:faq.a2}}</p></details>
