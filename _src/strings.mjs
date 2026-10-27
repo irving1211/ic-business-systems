@@ -29,12 +29,12 @@ export const strings = {
     "footer.rights": "© 2026 IC Business Systems",
 
     // ---------- home: meta ----------
-    "home.title": "Websites that earn the call | IC Business Systems",
-    "home.description": "Websites and request forms for local businesses, built by Irving Carrion in Lawrence, MA. English and Spanish. Get a free site review.",
+    "home.title": "Websites for Plumbers & HVAC in Lawrence, MA | IC Business Systems",
+    "home.description": "Websites, Google Business Profiles and request forms for plumbers, HVAC and local trades in Lawrence, MA and the Merrimack Valley. Built by Irving Carrion. English and Spanish.",
     "home.ogTitle": "From “who do I call?” to “when can you come?”",
 
     // ---------- hero ----------
-    "hero.kickerA": "For owner-led local businesses ·",
+    "hero.kickerA": "Websites for plumbers, HVAC and local trades ·",
     "hero.kickerB": "Lawrence, MA · English y español",
     "hero.from": "From",
     "hero.q1": "“Who do I call?”",
@@ -206,6 +206,10 @@ export const strings = {
     "faq.a10": "No. Hosting, domains and software subscriptions stay in your name and you pay those companies directly. My prices cover my time and work.",
     "faq.q11": "Is there a contract for monthly plans?",
     "faq.a11": "No long contract. Monthly plans are month to month, and you can cancel any time before your next billing date.",
+    "faq.q12": "Who do you build websites for, and where?",
+    "faq.a12": "Mostly plumbers, HVAC companies and other trades, plus other owner-led local businesses. I'm based in Lawrence, MA and meet clients in person across the Merrimack Valley (Methuen, Andover, North Andover, Haverhill, Lowell) and southern New Hampshire. I also work remotely with businesses anywhere.",
+    "faq.q13": "Is IC Business Systems the same as IC System?",
+    "faq.a13": "No. IC Business Systems is my web design business in Lawrence, MA. It has no connection to IC System, the debt collection company.",
     "price.1.n": "Essential website",
     "price.1.p": "$1,000–$1,500",
     "price.1.d": "One to five simple pages, a contact form, a phone-first layout and domain setup. Usually 1–2 weeks.",
@@ -379,11 +383,11 @@ export const strings = {
     "footer.selfcheck": "Revisa tu sitio en 90 segundos",
     "footer.rights": "© 2026 IC Business Systems",
 
-    "home.title": "Sitios web que se ganan la llamada | IC Business Systems",
-    "home.description": "Sitios web y formularios de solicitud para negocios locales, hechos por Irving Carrion en Lawrence, MA. En español e inglés. Pide tu revisión gratis.",
+    "home.title": "Sitios web para plomeros y HVAC en Lawrence, MA | IC Business Systems",
+    "home.description": "Sitios web, perfiles de Google Business y formularios de solicitud para plomeros, HVAC y oficios locales en Lawrence, MA y el Merrimack Valley. Hechos por Irving Carrion. En español e inglés.",
     "home.ogTitle": "De “¿a quién llamo?” a “¿cuándo puedes venir?”",
 
-    "hero.kickerA": "Para negocios locales con el dueño al frente ·",
+    "hero.kickerA": "Sitios web para plomeros, HVAC y oficios locales ·",
     "hero.kickerB": "Lawrence, MA · English y español",
     "hero.from": "De",
     "hero.q1": "“¿A quién llamo?”",
@@ -551,6 +555,10 @@ export const strings = {
     "faq.a10": "No. El hosting, los dominios y las suscripciones de software quedan a tu nombre y se los pagas directamente a esas compañías. Mis precios cubren mi tiempo y mi trabajo.",
     "faq.q11": "¿Hay contrato para los planes mensuales?",
     "faq.a11": "No hay contrato largo. Los planes mensuales son mes a mes, y puedes cancelar cuando quieras antes de tu próxima fecha de cobro.",
+    "faq.q12": "¿Para quién haces sitios web, y dónde?",
+    "faq.a12": "Sobre todo para plomeros, compañías de HVAC y otros oficios, y también para otros negocios locales donde el dueño está al frente. Estoy en Lawrence, MA y me reúno en persona con clientes en todo el Merrimack Valley (Methuen, Andover, North Andover, Haverhill, Lowell) y el sur de New Hampshire. También trabajo a distancia con negocios de cualquier lugar.",
+    "faq.q13": "¿IC Business Systems es lo mismo que IC System?",
+    "faq.a13": "No. IC Business Systems es mi negocio de diseño web en Lawrence, MA. No tiene ninguna relación con IC System, la compañía de cobranzas.",
     "price.1.n": "Sitio esencial",
     "price.1.p": "$1,000–$1,500",
     "price.1.d": "De una a cinco páginas sencillas, un formulario de contacto, diseño pensado para el teléfono y configuración del dominio. Normalmente 1–2 semanas.",

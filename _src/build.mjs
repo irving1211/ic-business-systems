@@ -55,6 +55,12 @@ function render(tpl, lang, page) {
   }
   const used = new Set();
   let out = tpl
+    // {{j:key}} = the string JSON-escaped (no HTML entities), for use inside ld+json blocks
+    .replace(/\{\{j:([\w.]+)\}\}/g, (_, key) => {
+      if (!(key in strings[lang])) throw new Error(`Unknown string key "${key}" in ${page}`);
+      used.add(key);
+      return JSON.stringify(strings[lang][key]).slice(1, -1);
+    })
     .replace(/\{\{t:([\w.]+)\}\}/g, (_, key) => {
       if (!(key in strings[lang])) throw new Error(`Unknown string key "${key}" in ${page}`);
       used.add(key);

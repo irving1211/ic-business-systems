@@ -26,33 +26,71 @@
     "@type": "ProfessionalService",
     "@id": "https://icbusinesssystems.com/#business",
     "name": "IC Business Systems",
-    "description": "{{t:home.description}}",
+    "description": "{{j:home.description}}",
     "url": "https://icbusinesssystems.com/",
     "email": "irving@icbusinesssystems.com",
     "image": "https://icbusinesssystems.com/og-image.png",
     "logo": "https://icbusinesssystems.com/og-image.png",
+    "disambiguatingDescription": "Web design business in Lawrence, Massachusetts run by Irving Carrion. Not affiliated with IC System, Inc.",
+    "knowsAbout": ["Websites for plumbers", "Websites for HVAC companies", "Websites for contractors", "Google Business Profile setup", "Local SEO", "Squarespace", "Request forms", "Bilingual English and Spanish websites"],
     "address": {"@type": "PostalAddress", "addressLocality": "Lawrence", "addressRegion": "MA", "addressCountry": "US"},
     "areaServed": [
       {"@type": "City", "name": "Lawrence", "containedInPlace": {"@type": "State", "name": "Massachusetts"}},
+      {"@type": "City", "name": "Methuen", "containedInPlace": {"@type": "State", "name": "Massachusetts"}},
+      {"@type": "City", "name": "Andover", "containedInPlace": {"@type": "State", "name": "Massachusetts"}},
+      {"@type": "City", "name": "North Andover", "containedInPlace": {"@type": "State", "name": "Massachusetts"}},
+      {"@type": "City", "name": "Haverhill", "containedInPlace": {"@type": "State", "name": "Massachusetts"}},
+      {"@type": "City", "name": "Lowell", "containedInPlace": {"@type": "State", "name": "Massachusetts"}},
+      {"@type": "City", "name": "Salem", "containedInPlace": {"@type": "State", "name": "New Hampshire"}},
       {"@type": "State", "name": "Massachusetts"},
       {"@type": "State", "name": "New Hampshire"}
     ],
-    "founder": {"@type": "Person", "name": "Irving Carrion", "knowsLanguage": ["en", "es"]},
+    "founder": {"@type": "Person", "@id": "https://icbusinesssystems.com/#irving", "name": "Irving Carrion", "jobTitle": "Web designer", "worksFor": {"@id": "https://icbusinesssystems.com/#business"}, "knowsLanguage": ["en", "es"]},
     "knowsLanguage": ["en", "es"],
     "sameAs": ["https://www.instagram.com/icbusinesssystems/"],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
-      "name": "{{t:build.title}}",
+      "name": "{{j:build.title}}",
       "itemListElement": [
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "{{t:build.1.t}}", "description": "{{t:build.1.d}}"}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "{{t:build.2.t}}", "description": "{{t:build.2.d}}"}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "{{t:build.3.t}}", "description": "{{t:build.3.d}}"}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "{{t:build.4.t}}", "description": "{{t:build.4.d}}"}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "{{t:plan.c.name}}", "description": "{{t:plan.c.best}}"}, "priceSpecification": {"@type": "UnitPriceSpecification", "price": "75", "priceCurrency": "USD", "unitText": "HOUR"}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "{{t:plan.s.name}}", "description": "{{t:plan.s.best}}"}, "priceSpecification": {"@type": "UnitPriceSpecification", "minPrice": "150", "priceCurrency": "USD", "unitText": "MONTH"}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "{{t:plan.o.name}}", "description": "{{t:plan.o.best}}"}, "priceSpecification": {"@type": "UnitPriceSpecification", "minPrice": "300", "priceCurrency": "USD", "unitText": "MONTH"}}
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "{{j:build.1.t}}", "description": "{{j:build.1.d}}"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "{{j:build.2.t}}", "description": "{{j:build.2.d}}"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "{{j:build.3.t}}", "description": "{{j:build.3.d}}"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "{{j:build.4.t}}", "description": "{{j:build.4.d}}"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "{{j:plan.c.name}}", "description": "{{j:plan.c.best}}"}, "priceSpecification": {"@type": "UnitPriceSpecification", "price": "75", "priceCurrency": "USD", "unitText": "HOUR"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "{{j:plan.s.name}}", "description": "{{j:plan.s.best}}"}, "priceSpecification": {"@type": "UnitPriceSpecification", "minPrice": "150", "priceCurrency": "USD", "unitText": "MONTH"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "{{j:plan.o.name}}", "description": "{{j:plan.o.best}}"}, "priceSpecification": {"@type": "UnitPriceSpecification", "minPrice": "300", "priceCurrency": "USD", "unitText": "MONTH"}}
       ]
     }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {"@type": "WebSite", "@id": "https://icbusinesssystems.com/#website", "name": "IC Business Systems", "url": "https://icbusinesssystems.com/", "inLanguage": ["en", "es"], "publisher": {"@id": "https://icbusinesssystems.com/#business"}},
+      {"@type": "WebPage", "@id": "{{@canonical}}#webpage", "url": "{{@canonical}}", "name": "{{j:home.title}}", "inLanguage": "{{@lang}}", "isPartOf": {"@id": "https://icbusinesssystems.com/#website"}, "about": {"@id": "https://icbusinesssystems.com/#business"}, "author": {"@id": "https://icbusinesssystems.com/#irving"}, "dateModified": "2026-10-27"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type": "Question", "name": "{{j:faq.q1}}", "acceptedAnswer": {"@type": "Answer", "text": "{{j:faq.a1}}"}},
+      {"@type": "Question", "name": "{{j:faq.q2}}", "acceptedAnswer": {"@type": "Answer", "text": "{{j:faq.a2}}"}},
+      {"@type": "Question", "name": "{{j:faq.q3}}", "acceptedAnswer": {"@type": "Answer", "text": "{{j:faq.a3}}"}},
+      {"@type": "Question", "name": "{{j:faq.q4}}", "acceptedAnswer": {"@type": "Answer", "text": "{{j:faq.a4}}"}},
+      {"@type": "Question", "name": "{{j:faq.q8}}", "acceptedAnswer": {"@type": "Answer", "text": "{{j:faq.a8}}"}},
+      {"@type": "Question", "name": "{{j:faq.q5}}", "acceptedAnswer": {"@type": "Answer", "text": "{{j:faq.a5}}"}},
+      {"@type": "Question", "name": "{{j:faq.q6}}", "acceptedAnswer": {"@type": "Answer", "text": "{{j:faq.a6}}"}},
+      {"@type": "Question", "name": "{{j:faq.q9}}", "acceptedAnswer": {"@type": "Answer", "text": "{{j:faq.a9}}"}},
+      {"@type": "Question", "name": "{{j:faq.q7}}", "acceptedAnswer": {"@type": "Answer", "text": "{{j:faq.a7}}"}},
+      {"@type": "Question", "name": "{{j:faq.q10}}", "acceptedAnswer": {"@type": "Answer", "text": "{{j:faq.a10}}"}},
+      {"@type": "Question", "name": "{{j:faq.q11}}", "acceptedAnswer": {"@type": "Answer", "text": "{{j:faq.a11}}"}},
+      {"@type": "Question", "name": "{{j:faq.q12}}", "acceptedAnswer": {"@type": "Answer", "text": "{{j:faq.a12}}"}},
+      {"@type": "Question", "name": "{{j:faq.q13}}", "acceptedAnswer": {"@type": "Answer", "text": "{{j:faq.a13}}"}}
+    ]
   }
   </script>
 </head>
@@ -65,11 +103,11 @@
       <div class="hero-bg" aria-hidden="true"></div>
       <div class="wrap hero-grid">
         <div class="hero-copy">
-          <p class="hero-kicker"><span class="kicker-a">{{t:hero.kickerA}}</span> <span>{{t:hero.kickerB}}</span></p>
-          <h1 id="hero-title" class="hero-title">
+          <h1 class="hero-kicker"><span class="kicker-a">{{t:hero.kickerA}}</span> <span>{{t:hero.kickerB}}</span></h1>
+          <p id="hero-title" class="hero-title">
             <span class="ht-line ht-a"><span class="ht-k">{{t:hero.from}}</span> <span class="ht-q">{{t:hero.q1}}</span></span>
             <span class="ht-line ht-b"><span class="ht-k">{{t:hero.to}}</span> <span class="ht-q">{{t:hero.q2}}</span></span>
-          </h1>
+          </p>
           <p class="hero-sub">{{t:hero.sub}}</p>
           <div class="hero-actions">
             <a class="button button-large" href="#review" data-track="CTA Click" data-position="hero">{{t:cta.primary}}</a>
@@ -443,6 +481,8 @@
             <details><summary>{{t:faq.q7}}</summary><p>{{t:faq.a7}}</p></details>
             <details><summary>{{t:faq.q10}}</summary><p>{{t:faq.a10}}</p></details>
             <details><summary>{{t:faq.q11}}</summary><p>{{t:faq.a11}}</p></details>
+            <details><summary>{{t:faq.q12}}</summary><p>{{t:faq.a12}}</p></details>
+            <details><summary>{{t:faq.q13}}</summary><p>{{t:faq.a13}}</p></details>
           </div>
         </div>
       </div>
