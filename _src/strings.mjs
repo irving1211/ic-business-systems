@@ -1090,7 +1090,7 @@ export const strings = {
     "svc.gbpSuspended.cost": "Cada caso es distinto, así que primero miro tu situación y te la cotizo por escrito antes de empezar. Si resulta que solo necesitas verificar el perfil, te lo digo antes de que pagues por una apelación.",
 
     "svc.aiCheck.short": "Revisión de búsqueda con IA",
-    "svc.aiCheck.title": "Revisión de búsqueda con IA para negocios locales en Lawrence, MA | IC Business Systems",
+    "svc.aiCheck.title": "Revisión con IA para negocios en Lawrence, MA | IC Business Systems",
     "svc.aiCheck.description": "Reviso qué dicen ChatGPT, Perplexity y la IA de Google de tu negocio local, a quién nombran en tu lugar y por qué, con una lista de arreglos. Lawrence, MA.",
     "svc.aiCheck.type": "Revisión de visibilidad en búsquedas con IA",
     "svc.aiCheck.h1": "Revisión de búsqueda con IA para negocios locales en Lawrence, MA",
@@ -1125,7 +1125,7 @@ export const strings = {
     "svc.aiCheck.cost": "Te la cotizo por escrito después de la revisión gratis de tu sitio. Si después quieres que haga los arreglos, los cotizo como proyecto o los hago como consultoría a $75 la hora.",
 
     "svc.analytics.short": "Google Analytics y Search Console",
-    "svc.analytics.title": "Configuración de Google Analytics y Search Console en Lawrence, MA | IC Business Systems",
+    "svc.analytics.title": "Google Analytics y Search Console en Lawrence, MA | IC Business Systems",
     "svc.analytics.description": "Configuro GA4 y Search Console para plomeros, HVAC y negocios de servicio en Lawrence, MA. Cuenta llamadas y pedidos de cotización en cuentas tuyas.",
     "svc.analytics.type": "Configuración de Google Analytics 4 y Search Console",
     "svc.analytics.h1": "Configuración de Google Analytics y Search Console en Lawrence, MA",
