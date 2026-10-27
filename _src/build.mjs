@@ -10,12 +10,25 @@ import { strings } from "./strings.mjs";
 const SRC = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(SRC, "..");
 const ORIGIN = "https://icbusinesssystems.com";
-const ASSET_VERSION = "20";
+const ASSET_VERSION = "21";
 
+// Service pages share _src/pages/service.html. `svc` picks the strings prefix (svc.<svc>.*),
+// `rel` the three related service pages linked at the bottom.
+const service = (svc, en, es, rel) => ({
+  en, es, tpl: "service", svc, rel,
+  out: { en: en.slice(1) + "index.html", es: es.slice(1) + "index.html" },
+});
 const PAGES = {
   index: { en: "/", es: "/es/", out: { en: "index.html", es: "es/index.html" } },
   audit: { en: "/audit.html", es: "/es/audit.html", out: { en: "audit.html", es: "es/audit.html" } },
   thanks: { en: "/thanks.html", es: "/es/gracias.html", out: { en: "thanks.html", es: "es/gracias.html" } },
+  web: service("web", "/websites-for-plumbers-hvac/", "/es/sitios-web-para-plomeros-hvac/", ["gbp", "analytics", "squarespace"]),
+  gbp: service("gbp", "/google-business-profile/", "/es/perfil-de-google-business/", ["gbpSuspended", "web", "aiCheck"]),
+  gbpSuspended: service("gbpSuspended", "/google-business-profile-suspended/", "/es/perfil-de-google-suspendido/", ["gbp", "aiCheck", "web"]),
+  aiCheck: service("aiCheck", "/ai-search-check/", "/es/revision-de-busqueda-con-ia/", ["gbp", "web", "analytics"]),
+  analytics: service("analytics", "/google-analytics-search-console-setup/", "/es/configuracion-google-analytics-search-console/", ["web", "gbp", "aiCheck"]),
+  squarespace: service("squarespace", "/squarespace-website-fixes/", "/es/arreglos-sitio-squarespace/", ["web", "analytics", "video"]),
+  video: service("video", "/website-promo-video/", "/es/video-promocional-de-sitio-web/", ["web", "squarespace", "aiCheck"]),
 };
 
 const escapeHtml = (s) => String(s)
@@ -53,6 +66,18 @@ function render(tpl, lang, page) {
   for (let i = 0; i < 3; i++) {
     tpl = tpl.replace(/\{\{>\s*([\w-]+)\s*\}\}/g, (_, name) => readLf(join(SRC, "partials", name + ".html")));
   }
+  // service template: {{svc}} -> this page's strings prefix, {{rel1}}..{{rel3}} -> related page keys
+  const def = PAGES[page];
+  tpl = tpl.replace(/\{\{(svc|rel[1-3])\}\}/g, (_, name) => {
+    const v = name === "svc" ? def.svc : def.rel && def.rel[Number(name.slice(3)) - 1];
+    if (!v) throw new Error(`{{${name}}} used in ${page}, which has no value for it`);
+    return v;
+  });
+  // {{url:pageKey}} = that page's path in the current language
+  tpl = tpl.replace(/\{\{url:(\w+)\}\}/g, (_, key) => {
+    if (!PAGES[key]) throw new Error(`Unknown page "${key}" in {{url:}} (${page})`);
+    return PAGES[key][lang];
+  });
   const used = new Set();
   let out = tpl
     // {{j:key}} = the string JSON-escaped (no HTML entities), for use inside ld+json blocks
@@ -80,7 +105,7 @@ const check = process.argv.includes("--check");
 let stale = 0;
 const allUsed = new Set();
 for (const page of Object.keys(PAGES)) {
-  const tpl = readLf(join(SRC, "pages", page + ".html"));
+  const tpl = readLf(join(SRC, "pages", (PAGES[page].tpl || page) + ".html"));
   for (const lang of ["en", "es"]) {
     const { html, used } = render(tpl, lang, page);
     used.forEach((k) => allUsed.add(k));
@@ -95,7 +120,7 @@ for (const page of Object.keys(PAGES)) {
   }
 }
 // sitemap.xml (indexable pages only; thanks pages are noindex) with hreflang alternates, plus robots.txt
-const INDEXABLE = ["index", "audit"];
+const INDEXABLE = Object.keys(PAGES).filter((page) => page !== "thanks");
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 ${INDEXABLE.flatMap((page) => ["en", "es"].map((lang) => `  <url>

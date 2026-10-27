@@ -13,6 +13,18 @@
 - [Inicio (español)](https://icbusinesssystems.com/es/): the same page in Spanish
 - [Free website self-check](https://icbusinesssystems.com/audit.html): check a site in 90 seconds
 
+## Services
+
+Each service has its own page in English and Spanish (what's included, who it's for, how it works, honest limits, FAQ).
+
+- [Websites for plumbers and HVAC companies](https://icbusinesssystems.com/websites-for-plumbers-hvac/): fast, phone-first, custom-coded sites for trades (español: https://icbusinesssystems.com/es/sitios-web-para-plomeros-hvac/)
+- [Google Business Profile setup](https://icbusinesssystems.com/google-business-profile/): categories, services, service area, photos and posts; no fake reviews (español: https://icbusinesssystems.com/es/perfil-de-google-business/)
+- [Suspended Google Business Profile help](https://icbusinesssystems.com/google-business-profile-suspended/): find the cause, fix the profile, file the appeal; real businesses only, Google decides every appeal (español: https://icbusinesssystems.com/es/perfil-de-google-suspendido/)
+- [AI search check](https://icbusinesssystems.com/ai-search-check/): what ChatGPT, Perplexity and Google's AI say about a local business, with a ranked fix list (español: https://icbusinesssystems.com/es/revision-de-busqueda-con-ia/)
+- [Google Analytics and Search Console setup](https://icbusinesssystems.com/google-analytics-search-console-setup/): GA4 and Search Console that count calls and quote requests (español: https://icbusinesssystems.com/es/configuracion-google-analytics-search-console/)
+- [Squarespace website fixes](https://icbusinesssystems.com/squarespace-website-fixes/): mobile layout, galleries, Fluid Engine sections, custom CSS and forms (español: https://icbusinesssystems.com/es/arreglos-sitio-squarespace/)
+- [Website promo videos](https://icbusinesssystems.com/website-promo-video/): short videos built from a real site on a phone and a desktop (español: https://icbusinesssystems.com/es/video-promocional-de-sitio-web/)
+
 ## Contact
 
 - Email: irving@icbusinesssystems.com

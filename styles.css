@@ -471,3 +471,37 @@ h1, h2, h3 { margin: 0; text-wrap: balance; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition: none !important; animation: none !important; }
 }
+
+/* ---------------- service pages + service links (2026-10-27) ---------------- */
+.svc-hero { padding-block: clamp(20px, 4vw, 56px) clamp(48px, 7vw, 96px); }
+.svc-head > * { max-width: 46rem; }
+.crumbs ol { list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: 0 10px; margin: 0 0 10px; padding: 0; font: 400 .8125rem/1.4 var(--mono); color: var(--text-faint); }
+.crumbs li { display: inline-flex; align-items: center; min-height: 44px; }
+.crumbs li + li::before { content: "/"; margin-right: 10px; }
+.crumbs a { display: inline-flex; align-items: center; min-height: 44px; color: var(--text-muted); text-underline-offset: 4px; }
+.svc-title { font: 600 clamp(2.2rem, 4.8vw, 3.9rem)/1.04 var(--display); letter-spacing: -.02em; margin: 0 0 24px; }
+.svc-split { display: grid; gap: 40px; }
+@media (min-width: 900px) { .svc-split { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 72px; align-items: start; } }
+.svc-split .section-head { margin-bottom: 0; }
+.svc-list { margin: 0; gap: 14px; font-size: 1.0625rem; }
+.svc-h2 { font: 600 clamp(1.75rem, 3.2vw, 2.6rem)/1.08 var(--display); letter-spacing: -.015em; margin-bottom: 18px; }
+.svc-text { color: var(--text-muted); max-width: 36em; }
+.paper .svc-text { color: var(--ink-muted); }
+.svc-limits { list-style: none; margin: 0; padding: 0; display: grid; gap: 16px; }
+.svc-limits li { padding-left: 16px; border-left: 3px solid var(--gold-ink); }
+@media (min-width: 900px) { .svc-steps { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.svc-links .plan-label { margin: 0 0 4px; }
+.svc-links ul { list-style: none; margin: 0 0 24px; padding: 0; display: grid; }
+.svc-links ul:last-child { margin-bottom: 0; }
+.svc-cta .review-lede { max-width: 40em; margin-bottom: 28px; }
+.svc-cta .button { color: var(--action-text); }
+.svc-write { margin: 0; color: var(--ink-muted); }
+.svc-write a { font-weight: 600; text-underline-offset: 4px; overflow-wrap: anywhere; }
+.jobs .jobs-more { margin: 14px 0 0; font: 400 .8125rem/1.7 var(--mono); color: var(--text-faint); }
+.jobs-more a { color: var(--text-muted); text-underline-offset: 4px; }
+.jobs-more a:hover { color: var(--text); }
+.footer-svc { list-style: none; margin: 0; padding: 0; display: grid; }
+.footer-svc a { display: inline-flex; min-height: 40px; align-items: center; text-underline-offset: 4px; }
+.footer-grid { align-items: start; }
+@media (min-width: 900px) { .footer-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } }
+@media (min-width: 1200px) { .footer-grid { grid-template-columns: minmax(0, .95fr) minmax(0, 1.5fr) minmax(0, 1fr) minmax(0, .75fr); } }

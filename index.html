@@ -29,7 +29,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
-  <link rel="stylesheet" href="/styles.css?v=20">
+  <link rel="stylesheet" href="/styles.css?v=21">
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="IC Business Systems">
@@ -74,7 +74,7 @@
     ],
     "founder": {"@type": "Person", "@id": "https://icbusinesssystems.com/#irving", "name": "Irving Carrion", "jobTitle": "Web designer", "worksFor": {"@id": "https://icbusinesssystems.com/#business"}, "knowsLanguage": ["en", "es"]},
     "knowsLanguage": ["en", "es"],
-    "sameAs": ["https://www.instagram.com/icbusinesssystems/"],
+    "sameAs": ["https://www.instagram.com/icbusinesssystems/", "https://www.fiverr.com/irving1211"],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "What I build, by the job it does.",
@@ -395,9 +395,12 @@
           <p>Each piece is marked honestly: live for a client today, or available to build for you.</p>
         </header>
         <ul class="jobs">
-          <li><h3>Get found and trusted</h3><p>Websites written in code, or built on Squarespace when you want to edit it yourself. Google Business Profile, Search Console and local search basics. English, Spanish, or both.</p><p class="status status-live"><span class="live-dot" aria-hidden="true"></span>Live for clients</p></li>
-          <li><h3>Make asking easy</h3><p>Request and quote forms that ask the right questions for each service, check your service area, take photos, and link to the booking tools you already use.</p><p class="status status-live"><span class="live-dot" aria-hidden="true"></span>Live for a client</p></li>
-          <li><h3>Answer every request</h3><p>Every request delivered to the right inbox the moment it's sent, with the customer's reply-to already set. A tracker that gives each request a status.</p><p class="status status-live"><span class="live-dot" aria-hidden="true"></span>Delivery live · tracker available</p></li>
+          <li><h3>Get found and trusted</h3><p>Websites written in code, or built on Squarespace when you want to edit it yourself. Google Business Profile, Search Console and local search basics. English, Spanish, or both.</p><p class="status status-live"><span class="live-dot" aria-hidden="true"></span>Live for clients</p>
+            <p class="jobs-more">Service pages: <a href="/websites-for-plumbers-hvac/">Websites for plumbers and HVAC</a> · <a href="/squarespace-website-fixes/">Squarespace website fixes</a> · <a href="/google-business-profile/">Google Business Profile setup</a> · <a href="/ai-search-check/">AI search check</a></p></li>
+          <li><h3>Make asking easy</h3><p>Request and quote forms that ask the right questions for each service, check your service area, take photos, and link to the booking tools you already use.</p><p class="status status-live"><span class="live-dot" aria-hidden="true"></span>Live for a client</p>
+            <p class="jobs-more">Service pages: <a href="/websites-for-plumbers-hvac/">Websites for plumbers and HVAC</a></p></li>
+          <li><h3>Answer every request</h3><p>Every request delivered to the right inbox the moment it's sent, with the customer's reply-to already set. A tracker that gives each request a status.</p><p class="status status-live"><span class="live-dot" aria-hidden="true"></span>Delivery live · tracker available</p>
+            <p class="jobs-more">Service pages: <a href="/google-analytics-search-console-setup/">Google Analytics and Search Console setup</a></p></li>
           <li><h3>Spend less time on admin</h3><p>Review requests after a finished job, routing into a CRM, and spreadsheets that do the repetitive math. Scoped one workflow at a time, with a written test for each.</p><p class="status status-avail"><span class="avail-dot" aria-hidden="true"></span>Available</p></li>
         </ul>
       </div>
@@ -655,9 +658,22 @@
         <a class="footer-email" href="mailto:irving@icbusinesssystems.com" data-track="Email Click">irving@icbusinesssystems.com</a>
         <p>Lawrence, Massachusetts</p>
       </div>
+      <nav class="footer-services" aria-labelledby="footer-services-title">
+        <p id="footer-services-title" class="footer-write">Services</p>
+        <ul class="footer-svc">
+          <li><a href="/websites-for-plumbers-hvac/">Websites for plumbers and HVAC</a></li>
+          <li><a href="/google-business-profile/">Google Business Profile setup</a></li>
+          <li><a href="/google-business-profile-suspended/">Suspended Google profile help</a></li>
+          <li><a href="/ai-search-check/">AI search check</a></li>
+          <li><a href="/google-analytics-search-console-setup/">Google Analytics and Search Console setup</a></li>
+          <li><a href="/squarespace-website-fixes/">Squarespace website fixes</a></li>
+          <li><a href="/website-promo-video/">Website promo videos</a></li>
+        </ul>
+      </nav>
       <ul class="footer-links">
         <li><a href="/audit.html">Check your site in 90 seconds</a></li>
         <li><a href="/es/" lang="ES" data-track="Language Switch">Español</a></li>
+        <li><a href="https://www.fiverr.com/irving1211" target="_blank" rel="noopener me" data-track="Fiverr Click">Also on Fiverr</a></li>
         <li>© 2026 IC Business Systems</li>
       </ul>
     </div>
@@ -693,6 +709,6 @@
       track('Quote Prefill Success');
     }).catch(() => { try { sessionStorage.removeItem(STORAGE_KEY); } catch (e) {} track('Quote Prefill Failed'); });
   </script>
-  <script src="/site.js?v=20" defer></script>
+  <script src="/site.js?v=21" defer></script>
 </body>
 </html>

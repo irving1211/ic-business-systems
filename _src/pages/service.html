@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="{{@lang}}">
+<head>
+  <title>{{t:svc.{{svc}}.title}}</title>
+  <meta name="description" content="{{t:svc.{{svc}}.description}}">
+{{> head}}
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="IC Business Systems">
+  <meta property="og:title" content="{{t:svc.{{svc}}.h1}}">
+  <meta property="og:description" content="{{t:svc.{{svc}}.description}}">
+  <meta property="og:url" content="{{@canonical}}">
+  <meta property="og:locale" content="{{@ogLocale}}">
+  <meta property="og:locale:alternate" content="{{@ogLocaleAlt}}">
+  <meta property="og:image" content="https://icbusinesssystems.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="IC Business Systems">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{t:svc.{{svc}}.h1}}">
+  <meta name="twitter:description" content="{{t:svc.{{svc}}.description}}">
+  <meta name="twitter:image" content="https://icbusinesssystems.com/og-image.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Service",
+        "@id": "{{@canonical}}#service",
+        "serviceType": "{{j:svc.{{svc}}.type}}",
+        "name": "{{j:svc.{{svc}}.short}}",
+        "description": "{{j:svc.{{svc}}.lede}}",
+        "url": "{{@canonical}}",
+        "provider": {"@type": "ProfessionalService", "@id": "https://icbusinesssystems.com/#business", "name": "IC Business Systems", "url": "https://icbusinesssystems.com/"},
+        "areaServed": [
+          {"@type": "City", "name": "Lawrence", "containedInPlace": {"@type": "State", "name": "Massachusetts"}},
+          {"@type": "City", "name": "Methuen", "containedInPlace": {"@type": "State", "name": "Massachusetts"}},
+          {"@type": "City", "name": "Andover", "containedInPlace": {"@type": "State", "name": "Massachusetts"}},
+          {"@type": "City", "name": "North Andover", "containedInPlace": {"@type": "State", "name": "Massachusetts"}},
+          {"@type": "City", "name": "Haverhill", "containedInPlace": {"@type": "State", "name": "Massachusetts"}},
+          {"@type": "City", "name": "Lowell", "containedInPlace": {"@type": "State", "name": "Massachusetts"}},
+          {"@type": "City", "name": "Salem", "containedInPlace": {"@type": "State", "name": "New Hampshire"}},
+          {"@type": "State", "name": "Massachusetts"},
+          {"@type": "State", "name": "New Hampshire"}
+        ],
+        "availableChannel": {"@type": "ServiceChannel", "serviceUrl": "{{@canonical}}", "availableLanguage": ["en", "es"]}
+      },
+      {
+        "@type": "WebPage",
+        "@id": "{{@canonical}}#webpage",
+        "url": "{{@canonical}}",
+        "name": "{{j:svc.{{svc}}.title}}",
+        "description": "{{j:svc.{{svc}}.description}}",
+        "inLanguage": "{{@lang}}",
+        "isPartOf": {"@id": "https://icbusinesssystems.com/#website"},
+        "about": {"@id": "{{@canonical}}#service"},
+        "breadcrumb": {"@id": "{{@canonical}}#breadcrumb"},
+        "author": {"@type": "Person", "@id": "https://icbusinesssystems.com/#irving", "name": "Irving Carrion"},
+        "dateModified": "2026-10-27"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "{{@canonical}}#breadcrumb",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "{{j:svc.home}}", "item": "https://icbusinesssystems.com{{@base}}"},
+          {"@type": "ListItem", "position": 2, "name": "{{j:svc.{{svc}}.short}}", "item": "{{@canonical}}"}
+        ]
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": "{{@canonical}}#faq",
+    "mainEntity": [
+      {"@type": "Question", "name": "{{j:svc.{{svc}}.q1}}", "acceptedAnswer": {"@type": "Answer", "text": "{{j:svc.{{svc}}.a1}}"}},
+      {"@type": "Question", "name": "{{j:svc.{{svc}}.q2}}", "acceptedAnswer": {"@type": "Answer", "text": "{{j:svc.{{svc}}.a2}}"}},
+      {"@type": "Question", "name": "{{j:svc.{{svc}}.q3}}", "acceptedAnswer": {"@type": "Answer", "text": "{{j:svc.{{svc}}.a3}}"}},
+      {"@type": "Question", "name": "{{j:svc.{{svc}}.q4}}", "acceptedAnswer": {"@type": "Answer", "text": "{{j:svc.{{svc}}.a4}}"}},
+      {"@type": "Question", "name": "{{j:svc.{{svc}}.q5}}", "acceptedAnswer": {"@type": "Answer", "text": "{{j:svc.{{svc}}.a5}}"}}
+    ]
+  }
+  </script>
+</head>
+<body class="page-service">
+{{> header}}
+
+  <main id="main">
+    <!-- ================= ANSWER FIRST: h1 + the sentence answer engines quote ================= -->
+    <section class="hero svc-hero" aria-labelledby="svc-title">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="wrap svc-head">
+        <nav class="crumbs" aria-label="{{t:svc.crumbLabel}}">
+          <ol>
+            <li><a href="{{@base}}">{{t:svc.home}}</a></li>
+            <li><span aria-current="page">{{t:svc.{{svc}}.short}}</span></li>
+          </ol>
+        </nav>
+        <p class="hero-kicker">{{t:svc.kicker}}</p>
+        <h1 id="svc-title" class="svc-title">{{t:svc.{{svc}}.h1}}</h1>
+        <p class="hero-sub svc-answer">{{t:svc.{{svc}}.lede}}</p>
+        <div class="hero-actions">
+          <a class="button button-large" href="{{@base}}#review" data-track="CTA Click" data-position="service-{{svc}}-hero">{{t:cta.primary}}</a>
+          <a class="text-link" href="#included">{{t:svc.seeIncluded}} <span aria-hidden="true">↓</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= WHAT'S INCLUDED ================= -->
+    <section id="included" class="section svc-included" aria-labelledby="inc-title">
+      <div class="wrap svc-split">
+        <header class="section-head">
+          <h2 id="inc-title">{{t:svc.includedTitle}}</h2>
+          <p>{{t:svc.{{svc}}.why}}</p>
+        </header>
+        <ul class="plan-list svc-list">
+          <li>{{t:svc.{{svc}}.inc.1}}</li>
+          <li>{{t:svc.{{svc}}.inc.2}}</li>
+          <li>{{t:svc.{{svc}}.inc.3}}</li>
+          <li>{{t:svc.{{svc}}.inc.4}}</li>
+          <li>{{t:svc.{{svc}}.inc.5}}</li>
+          <li>{{t:svc.{{svc}}.inc.6}}</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= WHO IT'S FOR + HONEST LIMITS ================= -->
+    <section class="section paper svc-fit" aria-labelledby="who-title">
+      <div class="wrap svc-split">
+        <div>
+          <h2 id="who-title" class="svc-h2">{{t:svc.whoTitle}}</h2>
+          <p class="svc-text">{{t:svc.{{svc}}.who}}</p>
+        </div>
+        <div>
+          <h2 class="svc-h2">{{t:svc.limitsTitle}}</h2>
+          <ul class="svc-limits">
+            <li>{{t:svc.{{svc}}.limit.1}}</li>
+            <li>{{t:svc.{{svc}}.limit.2}}</li>
+            <li>{{t:svc.{{svc}}.limit.3}}</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= HOW + FAQ ================= -->
+    <section class="section how" aria-labelledby="how-title">
+      <div class="wrap">
+        <header class="section-head">
+          <h2 id="how-title">{{t:svc.howTitle}}</h2>
+        </header>
+        <ol class="steps svc-steps">
+          <li><h3>{{t:svc.{{svc}}.step.1.t}}</h3><p>{{t:svc.{{svc}}.step.1.d}}</p></li>
+          <li><h3>{{t:svc.{{svc}}.step.2.t}}</h3><p>{{t:svc.{{svc}}.step.2.d}}</p></li>
+          <li><h3>{{t:svc.{{svc}}.step.3.t}}</h3><p>{{t:svc.{{svc}}.step.3.d}}</p></li>
+        </ol>
+
+        <div class="faq">
+          <h2 class="faq-title">{{t:svc.faqTitle}}</h2>
+          <div class="faq-list">
+            <details><summary>{{t:svc.{{svc}}.q1}}</summary><p>{{t:svc.{{svc}}.a1}}</p></details>
+            <details><summary>{{t:svc.{{svc}}.q2}}</summary><p>{{t:svc.{{svc}}.a2}}</p></details>
+            <details><summary>{{t:svc.{{svc}}.q3}}</summary><p>{{t:svc.{{svc}}.a3}}</p></details>
+            <details><summary>{{t:svc.{{svc}}.q4}}</summary><p>{{t:svc.{{svc}}.a4}}</p></details>
+            <details><summary>{{t:svc.{{svc}}.q5}}</summary><p>{{t:svc.{{svc}}.a5}}</p></details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= COST + RELATED ================= -->
+    <section class="section pricing svc-cost" aria-labelledby="cost-title">
+      <div class="wrap svc-split">
+        <div>
+          <h2 id="cost-title" class="svc-h2">{{t:svc.costTitle}}</h2>
+          <p class="svc-text">{{t:svc.{{svc}}.cost}}</p>
+          <a class="text-link" href="{{@base}}#pricing">{{t:svc.costLink}} <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="svc-links">
+          <h2 class="plan-label">{{t:svc.relatedTitle}}</h2>
+          <ul>
+            <li><a class="text-link" href="{{url:{{rel1}}}}">{{t:svc.{{rel1}}.short}}</a></li>
+            <li><a class="text-link" href="{{url:{{rel2}}}}">{{t:svc.{{rel2}}.short}}</a></li>
+            <li><a class="text-link" href="{{url:{{rel3}}}}">{{t:svc.{{rel3}}.short}}</a></li>
+          </ul>
+          <h2 class="plan-label">{{t:svc.moreTitle}}</h2>
+          <ul>
+            <li><a class="text-link" href="{{@base}}#work">{{t:nav.work}}</a></li>
+            <li><a class="text-link" href="{{@base}}#build">{{t:nav.build}}</a></li>
+            <li><a class="text-link" href="{{@base}}#about">{{t:nav.about}}</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CTA: the free site review form lives on the home page ================= -->
+    <section class="section paper svc-cta" aria-labelledby="cta-title">
+      <div class="wrap">
+        <h2 id="cta-title" class="svc-h2">{{t:svc.ctaTitle}}</h2>
+        <p class="review-lede">{{t:svc.ctaText}}</p>
+        <div class="hero-actions">
+          <a class="button button-large" href="{{@base}}#review" data-track="CTA Click" data-position="service-{{svc}}-bottom">{{t:cta.primary}}</a>
+          <p class="svc-write">{{t:footer.write}} <a href="mailto:irving@icbusinesssystems.com" data-track="Email Click">irving@icbusinesssystems.com</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+{{> footer}}
+
+  <script src="/site.js?v={{@v}}" defer></script>
+</body>
+</html>

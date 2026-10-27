@@ -9,9 +9,22 @@
         <a class="footer-email" href="mailto:irving@icbusinesssystems.com" data-track="Email Click">irving@icbusinesssystems.com</a>
         <p>{{t:footer.place}}</p>
       </div>
+      <nav class="footer-services" aria-labelledby="footer-services-title">
+        <p id="footer-services-title" class="footer-write">{{t:footer.services}}</p>
+        <ul class="footer-svc">
+          <li><a href="{{url:web}}">{{t:svc.web.short}}</a></li>
+          <li><a href="{{url:gbp}}">{{t:svc.gbp.short}}</a></li>
+          <li><a href="{{url:gbpSuspended}}">{{t:svc.gbpSuspended.short}}</a></li>
+          <li><a href="{{url:aiCheck}}">{{t:svc.aiCheck.short}}</a></li>
+          <li><a href="{{url:analytics}}">{{t:svc.analytics.short}}</a></li>
+          <li><a href="{{url:squarespace}}">{{t:svc.squarespace.short}}</a></li>
+          <li><a href="{{url:video}}">{{t:svc.video.short}}</a></li>
+        </ul>
+      </nav>
       <ul class="footer-links">
         <li><a href="{{@auditPath}}">{{t:footer.selfcheck}}</a></li>
         <li><a href="{{@altUrl}}" lang="{{t:lang.switchShort}}" data-track="Language Switch">{{t:lang.switchLong}}</a></li>
+        <li><a href="https://www.fiverr.com/irving1211" target="_blank" rel="noopener me" data-track="Fiverr Click">{{t:footer.fiverr}}</a></li>
         <li>{{t:footer.rights}}</li>
       </ul>
     </div>
