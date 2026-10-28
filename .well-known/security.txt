@@ -1,0 +1,4 @@
+Contact: mailto:irving@icbusinesssystems.com
+Expires: 2027-10-28T00:00:00.000Z
+Preferred-Languages: en, es
+Canonical: https://icbusinesssystems.com/.well-known/security.txt
