@@ -265,4 +265,15 @@
   if (sticky && review && "IntersectionObserver" in window) {
     new IntersectionObserver((entries) => sticky.classList.toggle("is-tucked", entries[0].isIntersecting), { threshold: 0.05 }).observe(review);
   }
+
+  /* ---------- before/after compare: the range input moves the divider ---------- */
+  document.querySelectorAll(".compare").forEach((box) => {
+    const range = box.querySelector(".compare-range");
+    if (!range) return;
+    let used = false;
+    range.addEventListener("input", () => {
+      box.style.setProperty("--pos", range.value + "%");
+      if (!used) { used = true; track("Compare Used", { project: range.dataset.project }); }
+    });
+  });
 })();

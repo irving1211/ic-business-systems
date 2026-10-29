@@ -508,3 +508,29 @@ h1, h2, h3 { margin: 0; text-wrap: balance; }
 .footer-grid { align-items: start; }
 @media (min-width: 900px) { .footer-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } }
 @media (min-width: 1200px) { .footer-grid { grid-template-columns: minmax(0, .95fr) minmax(0, 1.5fr) minmax(0, 1fr) minmax(0, .75fr); } }
+
+/* ---------------- before/after compare (work spread + case study) ----------------
+   The range input sits over the whole image: native keyboard, touch and screen-reader support.
+   Without JS the divider stays at 50%, so both halves still show. */
+.compare-stage { position: relative; aspect-ratio: 16 / 10; overflow: hidden; background: var(--paper-card); }
+.compare-stage img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+.compare-before { clip-path: inset(0 calc(100% - var(--pos)) 0 0); object-position: center 30%; }
+.compare-handle { position: absolute; top: 0; bottom: 0; left: var(--pos); width: 3px; margin-left: -1.5px; background: var(--action); pointer-events: none; }
+.compare-handle::after { content: "‹ ›"; position: absolute; top: 50%; left: 50%; display: grid; place-items: center; width: 44px; height: 44px; margin: -22px 0 0 -22px; border-radius: 50%; background: var(--action); color: var(--action-text); font: 700 1.05rem/1 var(--sans); letter-spacing: .1em; box-shadow: 0 6px 18px rgba(0, 0, 0, .45); }
+.compare-tag { position: absolute; top: 12px; padding: 5px 9px; border-radius: 4px; background: rgba(10, 10, 10, .78); color: var(--text); font: 500 .6875rem/1 var(--mono); letter-spacing: .1em; text-transform: uppercase; pointer-events: none; }
+.compare-tag-before { left: 12px; }
+.compare-tag-after { right: 12px; }
+.compare-range { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: ew-resize; touch-action: pan-y; -webkit-appearance: none; appearance: none; }
+.compare-stage:has(.compare-range:focus-visible) { outline: 3px solid var(--focus); outline-offset: -3px; }
+.case-link { margin-top: 18px; }
+
+/* ---------------- case study page ---------------- */
+.case-compare { padding-top: 0; }
+.case-compare .browser { max-width: 64rem; margin-inline: auto; }
+.paper .case-list { color: var(--ink-muted); }
+.paper .case-list li::before { border-color: var(--gold-ink); }
+.case-list { gap: 14px; }
+.case-shots { display: flex; gap: 20px; align-items: flex-start; }
+.case-shots .phone { position: static; flex: 0 1 220px; padding: 8px; border-radius: 28px; }
+.case-shots .phone img { border-radius: 21px; }
+.case-note { margin: 22px 0 32px; }

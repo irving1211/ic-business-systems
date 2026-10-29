@@ -29,7 +29,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
-  <link rel="stylesheet" href="/styles.css?v=22">
+  <link rel="stylesheet" href="/styles.css?v=23">
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="IC Business Systems">
@@ -95,7 +95,7 @@
     "@context": "https://schema.org",
     "@graph": [
       {"@type": "WebSite", "@id": "https://icbusinesssystems.com/#website", "name": "IC Business Systems", "url": "https://icbusinesssystems.com/", "inLanguage": ["en", "es"], "publisher": {"@id": "https://icbusinesssystems.com/#business"}},
-      {"@type": "WebPage", "@id": "https://icbusinesssystems.com/#webpage", "url": "https://icbusinesssystems.com/", "name": "IC Business Systems · Irving Carrion · Web Design, Lawrence MA", "inLanguage": "en", "isPartOf": {"@id": "https://icbusinesssystems.com/#website"}, "about": {"@id": "https://icbusinesssystems.com/#business"}, "author": {"@type": "Person", "@id": "https://icbusinesssystems.com/#irving", "name": "Irving Carrion"}, "dateModified": "2026-10-27"}
+      {"@type": "WebPage", "@id": "https://icbusinesssystems.com/#webpage", "url": "https://icbusinesssystems.com/", "name": "IC Business Systems · Irving Carrion · Web Design, Lawrence MA", "inLanguage": "en", "isPartOf": {"@id": "https://icbusinesssystems.com/#website"}, "about": {"@id": "https://icbusinesssystems.com/#business"}, "author": {"@type": "Person", "@id": "https://icbusinesssystems.com/#irving", "name": "Irving Carrion"}, "dateModified": "2026-10-29"}
     ]
   }
   </script>
@@ -241,23 +241,28 @@
 
         <article class="spread">
           <div class="spread-media">
-            <a class="browser" href="https://smeredithplumbing.com/" target="_blank" rel="noopener" data-track="Work Open" data-project="smeredith" aria-label="smeredithplumbing.com">
+            <div class="browser compare" style="--pos: 50%">
               <span class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>smeredithplumbing.com</span></span>
-              <img src="/images/work/smeredith-desktop-800.webp" srcset="/images/work/smeredith-desktop-800.webp 800w, /images/work/smeredith-desktop-1600.webp 1600w" sizes="(min-width: 1080px) 640px, 100vw" width="1600" height="1000" alt="After: the live smeredithplumbing.com homepage, “The plumber who answers the phone.”" loading="lazy" decoding="async">
-            </a>
-            <figure class="before">
-              <img src="/images/work/smeredith-before-600.webp" srcset="/images/work/smeredith-before-600.webp 600w, /images/work/smeredith-before-1200.webp 1200w" sizes="(min-width: 1080px) 260px, 60vw" width="1200" height="574" alt="Before: the site builder's coming-soon setup page for S Meredith Plumbing." loading="lazy" decoding="async">
-              <figcaption>Before: a site builder's “coming soon” page</figcaption>
-            </figure>
+              <div class="compare-stage">
+                <img class="compare-after" src="/images/work/smeredith-desktop-800.webp" srcset="/images/work/smeredith-desktop-800.webp 800w, /images/work/smeredith-desktop-1600.webp 1600w" sizes="(min-width: 1080px) 640px, 100vw" width="1600" height="1000" alt="After: the live smeredithplumbing.com homepage, “The plumber who answers the phone.”" loading="lazy" decoding="async">
+                <img class="compare-before" src="/images/work/smeredith-before-1200.webp" width="1200" height="574" alt="Before: the site builder's coming-soon setup page for S Meredith Plumbing." loading="lazy" decoding="async">
+                <span class="compare-tag compare-tag-before" aria-hidden="true">Before</span>
+                <span class="compare-tag compare-tag-after" aria-hidden="true">After</span>
+                <span class="compare-handle" aria-hidden="true"></span>
+                <input class="compare-range" type="range" min="0" max="100" value="50" aria-label="Drag to compare the site before and after" data-project="smeredith">
+              </div>
+            </div>
+
           </div>
           <div class="spread-copy">
             <h3>S. Meredith Plumbing &amp; Heating</h3>
             <p class="spread-where">Owner-operated plumbing and heating · Saugus, MA</p>
             <dl class="ledger">
               <div><dt>Asked for</dt><dd>A real website in place of a site builder's “coming soon” page, and a way for customers to send the job details before Shane calls back.</dd></div>
-              <div><dt>What I built</dt><dd>Six service pages and five town pages. A request form that changes its questions by service, checks the ZIP code against the service area, takes a photo, and emails the whole request to Shane. Google Business Profile service descriptions and Search Console setup.</dd></div>
+              <div><dt>What I built</dt><dd>Ten service pages, nine town pages and a work page with 26 real jobs from his own Instagram. A request form that changes its questions by service, checks the ZIP code against the service area, takes a photo, and emails the whole request to Shane. Google Business Profile service descriptions and Search Console setup.</dd></div>
               <div><dt>Live at</dt><dd><a href="https://smeredithplumbing.com/" target="_blank" rel="noopener" data-track="Work Open" data-project="smeredith"><span class="live-dot" aria-hidden="true"></span>smeredithplumbing.com</a></dd></div>
             </dl>
+            <a class="text-link case-link" href="/work/s-meredith-plumbing/" data-track="Case Study Open" data-project="smeredith">Read the case study <span aria-hidden="true">→</span></a>
           </div>
         </article>
 
@@ -532,7 +537,7 @@
         <div class="faq">
           <div class="faq-head">
             <h2 class="faq-title">Questions owners ask first.</h2>
-            <p class="byline"><span class="author">By <a rel="author" href="/#about">Irving Carrion</a></span> <span aria-hidden="true">·</span> Updated <time datetime="2026-10-27">October 27, 2026</time></p>
+            <p class="byline"><span class="author">By <a rel="author" href="/#about">Irving Carrion</a></span> <span aria-hidden="true">·</span> Updated <time datetime="2026-10-29">October 29, 2026</time></p>
 
           </div>
           <div class="faq-list">
@@ -713,6 +718,6 @@
       track('Quote Prefill Success');
     }).catch(() => { try { sessionStorage.removeItem(STORAGE_KEY); } catch (e) {} track('Quote Prefill Failed'); });
   </script>
-  <script src="/site.js?v=22" defer></script>
+  <script src="/site.js?v=23" defer></script>
 </body>
 </html>

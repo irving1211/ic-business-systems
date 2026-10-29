@@ -10,10 +10,10 @@ import { strings } from "./strings.mjs";
 const SRC = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(SRC, "..");
 const ORIGIN = "https://icbusinesssystems.com";
-const ASSET_VERSION = "22";
+const ASSET_VERSION = "23";
 // Last content update: shown in each page byline and used as dateModified in its structured data.
-const UPDATED = "2026-10-27";
-const UPDATED_TEXT = { en: "October 27, 2026", es: "27 de octubre de 2026" };
+const UPDATED = "2026-10-29";
+const UPDATED_TEXT = { en: "October 29, 2026", es: "29 de octubre de 2026" };
 
 // Service pages share _src/pages/service.html. `svc` picks the strings prefix (svc.<svc>.*),
 // `rel` the three related service pages linked at the bottom.
@@ -32,6 +32,11 @@ const PAGES = {
   analytics: service("analytics", "/google-analytics-search-console-setup/", "/es/configuracion-google-analytics-search-console/", ["web", "gbp", "aiCheck"]),
   squarespace: service("squarespace", "/squarespace-website-fixes/", "/es/arreglos-sitio-squarespace/", ["web", "analytics", "video"]),
   video: service("video", "/website-promo-video/", "/es/video-promocional-de-sitio-web/", ["web", "squarespace", "aiCheck"]),
+  // Case studies share _src/pages/case.html. `cs` picks the strings prefix (case.<cs>.*).
+  caseSm: {
+    en: "/work/s-meredith-plumbing/", es: "/es/trabajos/s-meredith-plumbing/", tpl: "case", cs: "sm",
+    out: { en: "work/s-meredith-plumbing/index.html", es: "es/trabajos/s-meredith-plumbing/index.html" },
+  },
 };
 
 const escapeHtml = (s) => String(s)
@@ -72,9 +77,10 @@ function render(tpl, lang, page) {
     tpl = tpl.replace(/\{\{>\s*([\w-]+)\s*\}\}/g, (_, name) => readLf(join(SRC, "partials", name + ".html")));
   }
   // service template: {{svc}} -> this page's strings prefix, {{rel1}}..{{rel3}} -> related page keys
+  // case template: {{cs}} -> this case study's strings prefix
   const def = PAGES[page];
-  tpl = tpl.replace(/\{\{(svc|rel[1-3])\}\}/g, (_, name) => {
-    const v = name === "svc" ? def.svc : def.rel && def.rel[Number(name.slice(3)) - 1];
+  tpl = tpl.replace(/\{\{(svc|cs|rel[1-3])\}\}/g, (_, name) => {
+    const v = name.startsWith("rel") ? def.rel && def.rel[Number(name.slice(3)) - 1] : def[name];
     if (!v) throw new Error(`{{${name}}} used in ${page}, which has no value for it`);
     return v;
   });

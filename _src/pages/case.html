@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="{{@lang}}">
+<head>
+  <title>{{t:case.{{cs}}.title}}</title>
+  <meta name="description" content="{{t:case.{{cs}}.description}}">
+{{> head}}
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="IC Business Systems">
+  <meta property="og:title" content="IC Business Systems | {{t:case.{{cs}}.h1}}">
+  <meta property="og:description" content="{{t:case.{{cs}}.description}}">
+  <meta property="og:url" content="{{@canonical}}">
+  <meta property="og:locale" content="{{@ogLocale}}">
+  <meta property="og:locale:alternate" content="{{@ogLocaleAlt}}">
+  <meta property="og:image" content="https://icbusinesssystems.com/images/work/smeredith-desktop-1600.webp">
+  <meta property="og:image:alt" content="{{t:work.sm.afterAlt}}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{t:case.{{cs}}.h1}}">
+  <meta name="twitter:description" content="{{t:case.{{cs}}.description}}">
+  <meta name="twitter:image" content="https://icbusinesssystems.com/images/work/smeredith-desktop-1600.webp">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "{{@canonical}}#webpage",
+        "url": "{{@canonical}}",
+        "name": "{{j:case.{{cs}}.title}}",
+        "description": "{{j:case.{{cs}}.description}}",
+        "inLanguage": "{{@lang}}",
+        "isPartOf": {"@id": "https://icbusinesssystems.com/#website"},
+        "about": {"@id": "https://icbusinesssystems.com/#business"},
+        "primaryImageOfPage": "https://icbusinesssystems.com/images/work/smeredith-desktop-1600.webp",
+        "breadcrumb": {"@id": "{{@canonical}}#breadcrumb"},
+        "author": {"@type": "Person", "@id": "https://icbusinesssystems.com/#irving", "name": "Irving Carrion"},
+        "dateModified": "{{@updated}}"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "{{@canonical}}#breadcrumb",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "{{j:svc.home}}", "item": "https://icbusinesssystems.com{{@base}}"},
+          {"@type": "ListItem", "position": 2, "name": "{{j:case.workCrumb}}", "item": "https://icbusinesssystems.com{{@base}}#work"},
+          {"@type": "ListItem", "position": 3, "name": "{{j:case.{{cs}}.crumb}}", "item": "{{@canonical}}"}
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="page-case">
+{{> header}}
+
+  <main id="main">
+    <section class="hero svc-hero" aria-labelledby="case-title">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="wrap svc-head">
+        <nav class="crumbs" aria-label="{{t:svc.crumbLabel}}">
+          <ol>
+            <li><a href="{{@base}}">{{t:svc.home}}</a></li>
+            <li><a href="{{@base}}#work">{{t:case.workCrumb}}</a></li>
+            <li><span aria-current="page">{{t:case.{{cs}}.crumb}}</span></li>
+          </ol>
+        </nav>
+        <p class="hero-kicker">{{t:case.kicker}}</p>
+        <h1 id="case-title" class="svc-title">{{t:case.{{cs}}.h1}}</h1>
+        <p class="hero-sub svc-answer">{{t:case.{{cs}}.lede}}</p>
+        <div class="hero-actions">
+          <a class="text-link" href="https://smeredithplumbing.com/" target="_blank" rel="noopener" data-track="Work Open" data-project="smeredith"><span class="live-dot" aria-hidden="true"></span>{{t:case.liveLink}} <span aria-hidden="true">↗</span></a>
+        </div>
+        {{> byline}}
+      </div>
+    </section>
+
+    <section class="section case-compare" aria-label="{{t:compare.label}}">
+      <div class="wrap">
+{{> compare-sm}}
+      </div>
+    </section>
+
+    <section class="section paper" aria-labelledby="problem-title">
+      <div class="wrap svc-split">
+        <div>
+          <h2 id="problem-title" class="svc-h2">{{t:case.problemTitle}}</h2>
+          <ul class="svc-limits">
+            <li>{{t:case.{{cs}}.problem.1}}</li>
+            <li>{{t:case.{{cs}}.problem.2}}</li>
+            <li>{{t:case.{{cs}}.problem.3}}</li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="svc-h2">{{t:case.builtTitle}}</h2>
+          <ul class="plan-list case-list">
+            <li>{{t:case.{{cs}}.built.1}}</li>
+            <li>{{t:case.{{cs}}.built.2}}</li>
+            <li>{{t:case.{{cs}}.built.3}}</li>
+            <li>{{t:case.{{cs}}.built.4}}</li>
+            <li>{{t:case.{{cs}}.built.5}}</li>
+            <li>{{t:case.{{cs}}.built.6}}</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="shots-title">
+      <div class="wrap svc-split case-shots-row">
+        <div>
+          <h2 id="shots-title" class="svc-h2">{{t:case.shotsTitle}}</h2>
+          <div class="case-shots">
+            <div class="phone"><img src="/images/work/smeredith-phone-300.webp" srcset="/images/work/smeredith-phone-300.webp 300w, /images/work/smeredith-phone-600.webp 600w" sizes="(min-width: 900px) 220px, 42vw" width="300" height="649" alt="{{t:case.{{cs}}.phoneAlt}}" loading="lazy" decoding="async"></div>
+            <div class="phone"><img src="/images/work/smeredith-request-300.webp" srcset="/images/work/smeredith-request-300.webp 300w, /images/work/smeredith-request-600.webp 600w" sizes="(min-width: 900px) 220px, 42vw" width="600" height="1298" alt="{{t:case.{{cs}}.requestAlt}}" loading="lazy" decoding="async"></div>
+          </div>
+        </div>
+        <div>
+          <h2 class="svc-h2">{{t:case.resultsTitle}}</h2>
+          <ul class="plan-list case-list">
+            <li>{{t:case.{{cs}}.result.1}}</li>
+            <li>{{t:case.{{cs}}.result.2}}</li>
+            <li>{{t:case.{{cs}}.result.3}}</li>
+          </ul>
+          <p class="work-honest case-note">{{t:case.{{cs}}.resultsNote}}</p>
+          <div class="svc-links">
+            <h2 class="plan-label">{{t:case.servicesTitle}}</h2>
+            <ul>
+              <li><a class="text-link" href="{{url:web}}">{{t:svc.web.short}}</a></li>
+              <li><a class="text-link" href="{{url:gbp}}">{{t:svc.gbp.short}}</a></li>
+              <li><a class="text-link" href="{{url:analytics}}">{{t:svc.analytics.short}}</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section paper svc-cta" aria-labelledby="cta-title">
+      <div class="wrap">
+        <h2 id="cta-title" class="svc-h2">{{t:case.ctaTitle}}</h2>
+        <p class="review-lede">{{t:case.ctaText}}</p>
+        <div class="hero-actions">
+          <a class="button button-large" href="{{@base}}#review" data-track="CTA Click" data-position="case-{{cs}}-bottom">{{t:cta.primary}}</a>
+          <p class="svc-write">{{t:footer.write}} <a href="mailto:irving@icbusinesssystems.com" data-track="Email Click">irving@icbusinesssystems.com</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+{{> footer}}
+
+  <script src="/site.js?v={{@v}}" defer></script>
+</body>
+</html>

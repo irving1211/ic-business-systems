@@ -108,4 +108,16 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://icbusinesssystems.com/es/video-promocional-de-sitio-web/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://icbusinesssystems.com/website-promo-video/"/>
   </url>
+  <url>
+    <loc>https://icbusinesssystems.com/work/s-meredith-plumbing/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://icbusinesssystems.com/work/s-meredith-plumbing/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://icbusinesssystems.com/es/trabajos/s-meredith-plumbing/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://icbusinesssystems.com/work/s-meredith-plumbing/"/>
+  </url>
+  <url>
+    <loc>https://icbusinesssystems.com/es/trabajos/s-meredith-plumbing/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://icbusinesssystems.com/work/s-meredith-plumbing/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://icbusinesssystems.com/es/trabajos/s-meredith-plumbing/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://icbusinesssystems.com/work/s-meredith-plumbing/"/>
+  </url>
 </urlset>

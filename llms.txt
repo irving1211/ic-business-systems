@@ -25,6 +25,10 @@ Each service has its own page in English and Spanish (what's included, who it's 
 - [Squarespace website fixes](https://icbusinesssystems.com/squarespace-website-fixes/): mobile layout, galleries, Fluid Engine sections, custom CSS and forms (español: https://icbusinesssystems.com/es/arreglos-sitio-squarespace/)
 - [Website promo videos](https://icbusinesssystems.com/website-promo-video/): short videos built from a real site on a phone and a desktop (español: https://icbusinesssystems.com/es/video-promocional-de-sitio-web/)
 
+## Case studies
+
+- [S. Meredith Plumbing & Heating, Saugus MA](https://icbusinesssystems.com/work/s-meredith-plumbing/): a plumber's "coming soon" page replaced with a phone-first site, 10 service pages, 9 town pages, a work page from his own Instagram and a request form that emails the owner (español: https://icbusinesssystems.com/es/trabajos/s-meredith-plumbing/)
+
 ## Contact
 
 - Email: irving@icbusinesssystems.com
