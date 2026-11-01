@@ -10,7 +10,7 @@ import { strings } from "./strings.mjs";
 const SRC = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(SRC, "..");
 const ORIGIN = "https://icbusinesssystems.com";
-const ASSET_VERSION = "23";
+const ASSET_VERSION = "24";
 // Last content update: shown in each page byline and used as dateModified in its structured data.
 const UPDATED = "2026-10-29";
 const UPDATED_TEXT = { en: "October 29, 2026", es: "29 de octubre de 2026" };

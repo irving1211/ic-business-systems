@@ -29,7 +29,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
-  <link rel="stylesheet" href="/styles.css?v=23">
+  <link rel="stylesheet" href="/styles.css?v=24">
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="IC Business Systems">
@@ -588,7 +588,11 @@
         </div>
 
         <div class="form-card" id="quote-form">
-          <form class="review-form" action="https://formsubmit.co/irvingcarrion.17@gmail.com" method="POST" aria-label="Free site review request" data-review-form
+          <noscript><p class="form-privacy">This form needs JavaScript. You can email me instead: <a href="mailto:irving@icbusinesssystems.com">irving@icbusinesssystems.com</a></p></noscript>
+          <!-- Spam guard: no action in the HTML. site.js sets the (base64) FormSubmit endpoint on a real submit,
+               so bots that read the HTML and post the fields directly have nowhere to send them. -->
+          <form class="review-form" method="POST" aria-label="Free site review request" data-review-form
+                data-ep="aHR0cHM6Ly9mb3Jtc3VibWl0LmNvL2lydmluZ2NhcnJpb24uMTdAZ21haWwuY29t"
                 data-err-site="Add your website or Google listing so I know what to review." data-err-name="Add your name so I know who I'm writing to." data-err-email="Add an email address like name@business.com." data-err-phone="Add a phone number with at least 10 digits."
                 data-label-email="Email address" data-label-text="Mobile number" data-label-call="Phone number" data-sending="Sending…"
                 data-site-required="Website or Google listing" data-site-optional="Website or Google listing (if you have one)" data-topic-note="You're asking about {topic}. I'll reply within 2 business days to set up a short call. The free site review is a separate option."
@@ -599,6 +603,7 @@
             <input type="hidden" name="_subject" value="IC Business Systems: free site review request">
             <input type="hidden" name="_captcha" value="false">
             <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_blacklist" value="wholesale prices, shop now, buy backlinks, guest post, casino, viagra, cialis">
             <input type="hidden" name="_autoresponse" value="Thanks for asking for a site review. I got your request and will send your video and fixes within 3 business days. Irving, IC Business Systems">
             <input type="hidden" name="_next" value="https://icbusinesssystems.com/thanks.html">
             <input type="hidden" name="page_language" value="en">
@@ -718,6 +723,6 @@
       track('Quote Prefill Success');
     }).catch(() => { try { sessionStorage.removeItem(STORAGE_KEY); } catch (e) {} track('Quote Prefill Failed'); });
   </script>
-  <script src="/site.js?v=23" defer></script>
+  <script src="/site.js?v=24" defer></script>
 </body>
 </html>

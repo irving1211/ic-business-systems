@@ -517,7 +517,11 @@
         </div>
 
         <div class="form-card" id="quote-form">
-          <form class="review-form" action="https://formsubmit.co/irvingcarrion.17@gmail.com" method="POST" aria-label="{{t:form.label}}" data-review-form
+          <noscript><p class="form-privacy">{{t:form.noscript}} <a href="mailto:irving@icbusinesssystems.com">irving@icbusinesssystems.com</a></p></noscript>
+          <!-- Spam guard: no action in the HTML. site.js sets the (base64) FormSubmit endpoint on a real submit,
+               so bots that read the HTML and post the fields directly have nowhere to send them. -->
+          <form class="review-form" method="POST" aria-label="{{t:form.label}}" data-review-form
+                data-ep="aHR0cHM6Ly9mb3Jtc3VibWl0LmNvL2lydmluZ2NhcnJpb24uMTdAZ21haWwuY29t"
                 data-err-site="{{t:form.errSite}}" data-err-name="{{t:form.errName}}" data-err-email="{{t:form.errEmail}}" data-err-phone="{{t:form.errPhone}}"
                 data-label-email="{{t:form.contactEmail}}" data-label-text="{{t:form.contactText}}" data-label-call="{{t:form.contactCall}}" data-sending="{{t:form.sending}}"
                 data-site-required="{{t:form.site}}" data-site-optional="{{t:form.siteOptional}}" data-topic-note="{{t:form.topicNote}}"
@@ -528,6 +532,7 @@
             <input type="hidden" name="_subject" value="{{t:form.subject}}">
             <input type="hidden" name="_captcha" value="false">
             <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_blacklist" value="wholesale prices, shop now, buy backlinks, guest post, casino, viagra, cialis">
             <input type="hidden" name="_autoresponse" value="{{t:form.autoresponse}}">
             <input type="hidden" name="_next" value="{{@thanksAbs}}">
             <input type="hidden" name="page_language" value="{{@lang}}">

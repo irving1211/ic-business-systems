@@ -309,6 +309,7 @@ export const strings = {
     "form.subject": "IC Business Systems: free site review request",
     "form.autoresponse": "Thanks for asking for a site review. I got your request and will send your video and fixes within 3 business days. Irving, IC Business Systems",
     "form.sending": "Sending…",
+    "form.noscript": "This form needs JavaScript. You can email me instead:",
 
     // ---------- sticky bar ----------
     "sticky.label": "Quick actions",
@@ -956,6 +957,7 @@ export const strings = {
     "form.subject": "IC Business Systems: solicitud de revisión gratis (ES)",
     "form.autoresponse": "Gracias por pedir una revisión de tu sitio. Recibí tu solicitud y te mando tu video y tus arreglos en 3 días hábiles. Irving, IC Business Systems",
     "form.sending": "Enviando…",
+    "form.noscript": "Este formulario necesita JavaScript. También me puedes escribir:",
 
     "sticky.label": "Acciones rápidas",
 

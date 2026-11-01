@@ -29,7 +29,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
-  <link rel="stylesheet" href="/styles.css?v=23">
+  <link rel="stylesheet" href="/styles.css?v=24">
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="IC Business Systems">
@@ -588,7 +588,11 @@
         </div>
 
         <div class="form-card" id="quote-form">
-          <form class="review-form" action="https://formsubmit.co/irvingcarrion.17@gmail.com" method="POST" aria-label="Solicitud de revisión gratis" data-review-form
+          <noscript><p class="form-privacy">Este formulario necesita JavaScript. También me puedes escribir: <a href="mailto:irving@icbusinesssystems.com">irving@icbusinesssystems.com</a></p></noscript>
+          <!-- Spam guard: no action in the HTML. site.js sets the (base64) FormSubmit endpoint on a real submit,
+               so bots that read the HTML and post the fields directly have nowhere to send them. -->
+          <form class="review-form" method="POST" aria-label="Solicitud de revisión gratis" data-review-form
+                data-ep="aHR0cHM6Ly9mb3Jtc3VibWl0LmNvL2lydmluZ2NhcnJpb24uMTdAZ21haWwuY29t"
                 data-err-site="Agrega tu sitio web o tu perfil de Google para saber qué revisar." data-err-name="Agrega tu nombre para saber a quién le escribo." data-err-email="Agrega un correo como nombre@negocio.com." data-err-phone="Agrega un número de teléfono de al menos 10 dígitos."
                 data-label-email="Correo electrónico" data-label-text="Número de celular" data-label-call="Número de teléfono" data-sending="Enviando…"
                 data-site-required="Sitio web o perfil de Google" data-site-optional="Sitio web o perfil de Google (si tienes)" data-topic-note="Me preguntas por {topic}. Te respondo en 2 días hábiles para coordinar una llamada corta. La revisión gratis es una opción aparte."
@@ -599,6 +603,7 @@
             <input type="hidden" name="_subject" value="IC Business Systems: solicitud de revisión gratis (ES)">
             <input type="hidden" name="_captcha" value="false">
             <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_blacklist" value="wholesale prices, shop now, buy backlinks, guest post, casino, viagra, cialis">
             <input type="hidden" name="_autoresponse" value="Gracias por pedir una revisión de tu sitio. Recibí tu solicitud y te mando tu video y tus arreglos en 3 días hábiles. Irving, IC Business Systems">
             <input type="hidden" name="_next" value="https://icbusinesssystems.com/es/gracias.html">
             <input type="hidden" name="page_language" value="es">
@@ -718,6 +723,6 @@
       track('Quote Prefill Success');
     }).catch(() => { try { sessionStorage.removeItem(STORAGE_KEY); } catch (e) {} track('Quote Prefill Failed'); });
   </script>
-  <script src="/site.js?v=23" defer></script>
+  <script src="/site.js?v=24" defer></script>
 </body>
 </html>

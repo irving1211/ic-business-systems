@@ -163,6 +163,8 @@
     const methods = form.querySelectorAll('[name="contact_method"]');
     const submitBtn = form.querySelector('[type="submit"]');
     let started = false;
+    let touched = false;
+    ["pointerdown", "keydown", "input"].forEach((t) => form.addEventListener(t, (e) => { if (e.isTrusted) touched = true; }, true));
 
     const setMethod = (m) => {
       const isEmail = m === "email";
@@ -249,6 +251,10 @@
         track("Review Form Error", { fields: String(problems.length) });
         return;
       }
+      // Spam guard: the endpoint is only set after a real tap, click or key press in the form
+      // (every person does one to send it); scripted submits without one go nowhere.
+      if (!touched) { ev.preventDefault(); return; }
+      form.action = atob(form.dataset.ep);
       summary.hidden = true;
       submitBtn.disabled = true;
       submitBtn.textContent = form.dataset.sending;
